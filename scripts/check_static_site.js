@@ -155,6 +155,9 @@ function main() {
     if (!text.includes("sample data")) {
       disclosureMisses.push(`${path.relative(outDir, file)} missing sample data disclosure`);
     }
+    if (!text.includes("added sugar")) {
+      disclosureMisses.push(`${path.relative(outDir, file)} missing added sugar comparison column`);
+    }
   }
 
   const guideFiles = walk(path.join(outDir, "guides")).filter(
