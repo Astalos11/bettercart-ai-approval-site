@@ -35,6 +35,22 @@ a {
   text-decoration: none;
 }
 
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -48px;
+  z-index: 20;
+  background: var(--green-dark);
+  color: white;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-weight: 800;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
 .site-shell {
   min-height: 100vh;
   display: flex;

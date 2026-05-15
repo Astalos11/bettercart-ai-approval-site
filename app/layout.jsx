@@ -120,8 +120,9 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         <div className="site-shell">
+          <a className="skip-link" href="#main-content">Skip to main content</a>
           <Header />
-          <main>{children}</main>
+          <main id="main-content">{children}</main>
           <Footer />
         </div>
       </body>
