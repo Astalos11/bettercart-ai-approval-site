@@ -87,6 +87,7 @@ Before affiliate applications, complete:
 - `docs/20260515_affiliate_application_notes.md`
 - `docs/20260515_approval_site_review_checklist.md`
 - `docs/20260515_domain_cutover_runbook.md`
+- `docs/20260515_netlify_stale_deploy_troubleshooting.md`
 
 ## Important Pages
 
