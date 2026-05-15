@@ -6,7 +6,10 @@ const requiredPages = [
   ["/", "BetterCart AI"],
   ["/for-reviewers/", "Fast review path"],
   ["/publisher-kit/", "Publisher Kit"],
+  ["/affiliate-disclosure/", "Affiliate Disclosure"],
+  ["/review-process/", "Review Process"],
   ["/site-index/", "Browse BetterCart AI"],
+  ["/icon.svg", "<svg"],
   ["/robots.txt", "Sitemap:"],
   ["/sitemap.xml", siteUrl]
 ];
