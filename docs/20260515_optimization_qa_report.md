@@ -80,5 +80,7 @@ No live-page placeholder email remained. The only intentional matches were in do
 
 ## Notes
 
+- The live Netlify site currently uses `https://illustrious-cranachan-4a01a9.netlify.app`.
+- A stale placeholder Netlify URL was found during extended QA and corrected in the default metadata, sitemap, robots, and Netlify environment config.
 - The site still needs the final custom domain and working domain email before affiliate applications.
-- After `bettercartai.com` is connected, update `NEXT_PUBLIC_SITE_URL` in Netlify and redeploy so sitemap and robots use the production domain.
+- After `bettercartai.com` is connected, update `NEXT_PUBLIC_SITE_URL` in Netlify to `https://bettercartai.com` and redeploy so sitemap and robots use the production domain.

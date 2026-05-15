@@ -17,6 +17,12 @@ Date: 2026-05-15
    - `contact@bettercartai.com`
 8. Send a test email to confirm receiving works.
 
+Current temporary Netlify site URL:
+
+- `https://illustrious-cranachan-4a01a9.netlify.app`
+
+Do not use the old placeholder `bettercart-ai-approval-site.netlify.app`; it returned 404 during QA.
+
 ## Site Review Checklist
 
 Before submitting an affiliate network application, check:
@@ -80,4 +86,3 @@ It may still be weak for strict advertiser-level approval because it does not ye
 - author biographies with credentials
 - social presence
 - hands-on review content
-
