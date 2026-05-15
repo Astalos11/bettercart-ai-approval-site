@@ -38,12 +38,24 @@ export default function ForReviewersPage() {
             <Link href="/about">About</Link>
             <Link href="/affiliate-disclosure">Affiliate Disclosure</Link>
             <Link href="/editorial-policy">Editorial Policy</Link>
+            <Link href="/publishing-standards">Publishing Standards</Link>
             <Link href="/methodology">Methodology</Link>
             <Link href="/partner-policy">Partner Policy</Link>
             <Link href="/data-sources">Data Sources</Link>
             <Link href="/corrections-policy">Corrections Policy</Link>
+            <Link href="/authors/bettercart-editorial-team">Editorial Team</Link>
             <Link href="/tools/food-comparison-demo">Demo Tool</Link>
           </div>
+        </div>
+
+        <div className="callout">
+          <h2>Fast review path</h2>
+          <ol>
+            <li>Check the homepage to understand the audience and site positioning.</li>
+            <li>Open a guide and a comparison page to review the content format.</li>
+            <li>Review affiliate disclosure, editorial policy, methodology, and privacy pages.</li>
+            <li>Open the demo to understand the future AI-assisted comparison direction.</li>
+          </ol>
         </div>
 
         <div className="disclaimer">
