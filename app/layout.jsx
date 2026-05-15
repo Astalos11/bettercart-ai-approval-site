@@ -90,6 +90,7 @@ function Footer() {
           <Link href="/data-sources">Data Sources</Link>
           <Link href="/corrections-policy">Corrections</Link>
           <Link href="/partner-policy">Partner Policy</Link>
+          <Link href="/program-compliance">Program Compliance</Link>
           <Link href="/faq">FAQ</Link>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms & Disclaimer</Link>

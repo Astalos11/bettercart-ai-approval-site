@@ -9,6 +9,7 @@ const requiredPages = [
   ["/affiliate-disclosure/", "Affiliate Disclosure"],
   ["/how-we-make-money/", "How We Make Money"],
   ["/review-process/", "Review Process"],
+  ["/program-compliance/", "Program Compliance Notes"],
   ["/site-index/", "Browse BetterCart AI"],
   ["/icon.svg", "<svg"],
   ["/robots.txt", "Sitemap:"],

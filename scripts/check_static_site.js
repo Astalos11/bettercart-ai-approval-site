@@ -22,6 +22,7 @@ const requiredRoutes = [
   "/review-process/",
   "/methodology/",
   "/partner-policy/",
+  "/program-compliance/",
   "/data-sources/",
   "/corrections-policy/",
   "/publishing-standards/",
@@ -58,6 +59,7 @@ const requiredSitemapPaths = [
   "/how-we-make-money",
   "/editorial-policy",
   "/review-process",
+  "/program-compliance",
   "/site-index"
 ];
 

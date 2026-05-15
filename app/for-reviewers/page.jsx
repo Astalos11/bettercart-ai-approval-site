@@ -52,6 +52,7 @@ export default function ForReviewersPage() {
             <Link href="/partner-policy">Partner Policy</Link>
             <Link href="/data-sources">Data Sources</Link>
             <Link href="/corrections-policy">Corrections Policy</Link>
+            <Link href="/program-compliance">Program Compliance</Link>
             <Link href="/authors/bettercart-editorial-team">Editorial Team</Link>
             <Link href="/publisher-kit">Publisher Kit</Link>
             <Link href="/tools/food-comparison-demo">Demo Tool</Link>
