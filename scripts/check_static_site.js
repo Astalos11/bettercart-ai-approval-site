@@ -158,6 +158,9 @@ function main() {
     if (!text.includes("added sugar")) {
       disclosureMisses.push(`${path.relative(outDir, file)} missing added sugar comparison column`);
     }
+    if (!text.includes('scope="col"')) {
+      accessibilityMisses.push(`${path.relative(outDir, file)} missing table column scopes`);
+    }
   }
 
   const guideFiles = walk(path.join(outDir, "guides")).filter(
