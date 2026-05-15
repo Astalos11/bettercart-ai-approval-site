@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { reviewerSections } from "../../lib/content";
+import { comparisons, guides, reviewerSections, trustPages } from "../../lib/content";
 
 export const metadata = {
   title: "For Reviewers",
@@ -30,6 +30,13 @@ export default function ForReviewersPage() {
               </ul>
             </div>
           ))}
+        </div>
+
+        <div className="stats-row" aria-label="Current site content snapshot">
+          <div><strong>{guides.length}</strong><span>food guides</span></div>
+          <div><strong>{comparisons.length}</strong><span>comparison examples</span></div>
+          <div><strong>{Object.keys(trustPages).length}</strong><span>trust pages</span></div>
+          <div><strong>0</strong><span>undisclosed affiliate links</span></div>
         </div>
 
         <div className="callout">
