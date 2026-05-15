@@ -32,7 +32,9 @@ Latest local checks:
 
 - `npm run build` passes.
 - `npm run check:static` passes.
-- `npm run check:live` passes against the temporary Netlify URL.
+- `npm run check:docs` passes.
+- `npm run check:local` passes.
+- `npm run check:live` currently shows the temporary Netlify deploy is stale for newly added routes.
 
 Current QA coverage includes:
 
@@ -41,8 +43,14 @@ Current QA coverage includes:
 - obvious placeholder markers
 - high-risk claim phrases
 - missing image alt text
+- unexpected external anchor links
+- skip link and main content anchor
+- comparison table header scopes
 - key live route availability
 - stale invalid Netlify URL detection
+- sample data disclosure on comparison detail pages
+- non-medical disclaimer on guide detail pages
+- docs referenced from README exist
 
 ## Current Approval Strengths
 
