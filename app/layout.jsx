@@ -28,6 +28,7 @@ function Header() {
           <Link href="/compare">Compare</Link>
           <Link href="/tools/food-comparison-demo">Demo</Link>
           <Link href="/methodology">Methodology</Link>
+          <Link href="/faq">FAQ</Link>
           <Link href="/about">About</Link>
         </div>
       </nav>
@@ -59,6 +60,8 @@ function Footer() {
           <strong>Trust</strong>
           <Link href="/affiliate-disclosure">Affiliate Disclosure</Link>
           <Link href="/editorial-policy">Editorial Policy</Link>
+          <Link href="/partner-policy">Partner Policy</Link>
+          <Link href="/faq">FAQ</Link>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms & Disclaimer</Link>
         </div>
