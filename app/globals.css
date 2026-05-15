@@ -315,6 +315,21 @@ h3 {
   margin-top: 8px;
 }
 
+.link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.link-list a {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: var(--paper);
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
 .table-wrap {
   overflow-x: auto;
   background: var(--paper);

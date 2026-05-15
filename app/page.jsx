@@ -35,6 +35,7 @@ export default function HomePage() {
             <div className="hero-actions">
               <Link href="/guides" className="button">Explore Food Guides</Link>
               <Link href="/tools/food-comparison-demo" className="button secondary">Try the Demo</Link>
+              <Link href="/for-reviewers" className="button secondary">For Reviewers</Link>
             </div>
             <p className="small-note">
               Independent editorial shopping resource. Not medical advice. Product labels should be verified before purchase.

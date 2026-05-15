@@ -28,6 +28,7 @@ function Header() {
           <Link href="/compare">Compare</Link>
           <Link href="/tools/food-comparison-demo">Demo</Link>
           <Link href="/methodology">Methodology</Link>
+          <Link href="/for-reviewers">For Reviewers</Link>
           <Link href="/faq">FAQ</Link>
           <Link href="/about">About</Link>
         </div>
@@ -54,6 +55,7 @@ function Footer() {
           <Link href="/guides">Food Guides</Link>
           <Link href="/compare">Comparison Examples</Link>
           <Link href="/tools/food-comparison-demo">Demo Tool</Link>
+          <Link href="/for-reviewers">For Reviewers</Link>
           <Link href="/contact">Contact</Link>
         </div>
         <div>
