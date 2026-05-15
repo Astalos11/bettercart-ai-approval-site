@@ -114,6 +114,7 @@ function main() {
   const missingImageAltHits = [];
   const sitemapPathMisses = [];
   const disclosureMisses = [];
+  const externalAnchorHits = [];
   for (const file of searchableFiles) {
     const text = fs.readFileSync(file, "utf8");
     for (const pattern of placeholderPatterns) {
@@ -128,6 +129,9 @@ function main() {
         if (!/\balt="[^"]+"/i.test(tag)) {
           missingImageAltHits.push(`${path.relative(outDir, file)} has image without non-empty alt`);
         }
+      }
+      for (const match of text.matchAll(/<a\b[^>]*href="https?:\/\/[^"]+"/gi)) {
+        externalAnchorHits.push(`${path.relative(outDir, file)} has external anchor ${match[0]}`);
       }
     }
   }
@@ -184,6 +188,7 @@ function main() {
   console.log(`placeholder_hits=${placeholderHits.length}`);
   console.log(`high_risk_claim_hits=${highRiskClaimHits.length}`);
   console.log(`missing_image_alt_hits=${missingImageAltHits.length}`);
+  console.log(`external_anchor_hits=${externalAnchorHits.length}`);
   console.log(`sitemap_path_misses=${sitemapPathMisses.length}`);
   console.log(`disclosure_misses=${disclosureMisses.length}`);
 
@@ -192,10 +197,11 @@ function main() {
   if (placeholderHits.length) console.log(`Placeholder hits:\n${placeholderHits.join("\n")}`);
   if (highRiskClaimHits.length) console.log(`High-risk claim hits:\n${highRiskClaimHits.join("\n")}`);
   if (missingImageAltHits.length) console.log(`Missing image alt hits:\n${missingImageAltHits.join("\n")}`);
+  if (externalAnchorHits.length) console.log(`External anchor hits:\n${externalAnchorHits.join("\n")}`);
   if (sitemapPathMisses.length) console.log(`Sitemap path misses:\n${sitemapPathMisses.join("\n")}`);
   if (disclosureMisses.length) console.log(`Disclosure misses:\n${disclosureMisses.join("\n")}`);
 
-  if (missingRequired.length || badLinks.length || placeholderHits.length || highRiskClaimHits.length || missingImageAltHits.length || sitemapPathMisses.length || disclosureMisses.length) process.exit(1);
+  if (missingRequired.length || badLinks.length || placeholderHits.length || highRiskClaimHits.length || missingImageAltHits.length || externalAnchorHits.length || sitemapPathMisses.length || disclosureMisses.length) process.exit(1);
 }
 
 main();
