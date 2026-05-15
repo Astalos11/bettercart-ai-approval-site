@@ -115,6 +115,7 @@ function main() {
   const sitemapPathMisses = [];
   const disclosureMisses = [];
   const externalAnchorHits = [];
+  const accessibilityMisses = [];
   for (const file of searchableFiles) {
     const text = fs.readFileSync(file, "utf8");
     for (const pattern of placeholderPatterns) {
@@ -182,6 +183,13 @@ function main() {
     }
   }
 
+  const homePath = path.join(outDir, "index.html");
+  if (fs.existsSync(homePath)) {
+    const homeText = fs.readFileSync(homePath, "utf8");
+    if (!homeText.includes('href="#main-content"')) accessibilityMisses.push("index.html missing skip link");
+    if (!homeText.includes('id="main-content"')) accessibilityMisses.push("index.html missing main content anchor");
+  }
+
   console.log(`required_routes=${requiredRoutes.length}`);
   console.log(`missing_required=${missingRequired.length}`);
   console.log(`bad_internal_links=${badLinks.length}`);
@@ -189,6 +197,7 @@ function main() {
   console.log(`high_risk_claim_hits=${highRiskClaimHits.length}`);
   console.log(`missing_image_alt_hits=${missingImageAltHits.length}`);
   console.log(`external_anchor_hits=${externalAnchorHits.length}`);
+  console.log(`accessibility_misses=${accessibilityMisses.length}`);
   console.log(`sitemap_path_misses=${sitemapPathMisses.length}`);
   console.log(`disclosure_misses=${disclosureMisses.length}`);
 
@@ -198,10 +207,11 @@ function main() {
   if (highRiskClaimHits.length) console.log(`High-risk claim hits:\n${highRiskClaimHits.join("\n")}`);
   if (missingImageAltHits.length) console.log(`Missing image alt hits:\n${missingImageAltHits.join("\n")}`);
   if (externalAnchorHits.length) console.log(`External anchor hits:\n${externalAnchorHits.join("\n")}`);
+  if (accessibilityMisses.length) console.log(`Accessibility misses:\n${accessibilityMisses.join("\n")}`);
   if (sitemapPathMisses.length) console.log(`Sitemap path misses:\n${sitemapPathMisses.join("\n")}`);
   if (disclosureMisses.length) console.log(`Disclosure misses:\n${disclosureMisses.join("\n")}`);
 
-  if (missingRequired.length || badLinks.length || placeholderHits.length || highRiskClaimHits.length || missingImageAltHits.length || externalAnchorHits.length || sitemapPathMisses.length || disclosureMisses.length) process.exit(1);
+  if (missingRequired.length || badLinks.length || placeholderHits.length || highRiskClaimHits.length || missingImageAltHits.length || externalAnchorHits.length || accessibilityMisses.length || sitemapPathMisses.length || disclosureMisses.length) process.exit(1);
 }
 
 main();
