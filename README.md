@@ -69,13 +69,19 @@ If recently pushed routes return 404 but `npm run build` and `npm run check:stat
 
 ## Full QA
 
-Before a final application submission or domain cutover, run:
+For local build, static export, and docs-index validation, run:
+
+```bash
+npm run check:local
+```
+
+Before a final application submission or domain cutover, run the full local and live suite:
 
 ```bash
 npm run check:all
 ```
 
-This runs the production build, static export QA, and live site QA in sequence.
+This runs the production build, static export QA, docs QA, and live site QA in sequence.
 
 ## Deployment Notes
 
