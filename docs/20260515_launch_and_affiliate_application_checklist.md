@@ -32,6 +32,7 @@ Before submitting an affiliate network application, check:
 - Affiliate Disclosure is visible.
 - How We Make Money is visible.
 - Privacy Policy is visible.
+- Cookie Policy is visible.
 - Terms and Disclaimer is visible.
 - Editorial Policy is visible.
 - Methodology is visible.

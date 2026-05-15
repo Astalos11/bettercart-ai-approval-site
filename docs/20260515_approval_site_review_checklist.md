@@ -30,6 +30,7 @@ Trust and policy pages:
 - Editorial Policy
 - Methodology
 - Privacy Policy
+- Cookie Policy
 - Terms and Disclaimer
 - FAQ
 - Partner and Advertiser Policy
@@ -105,4 +106,4 @@ Latest local production build during optimization:
 - `npm run build` passed.
 - Static export generated successfully.
 - `npm run check:static` passed.
-- Current static page count: 49 generated routes.
+- Current static page count: 50 generated routes.

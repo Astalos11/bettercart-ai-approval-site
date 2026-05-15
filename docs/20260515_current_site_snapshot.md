@@ -19,7 +19,7 @@ The final domain is not active in the site build until domain review, DNS, HTTPS
 
 - 11 food guides
 - 7 comparison examples
-- 17 trust / policy pages
+- 18 trust / policy pages
 - 1 demo tool
 - 1 reviewer overview page
 - 1 publisher kit page
