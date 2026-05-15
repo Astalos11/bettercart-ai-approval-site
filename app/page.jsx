@@ -1,0 +1,100 @@
+import Link from "next/link";
+
+const previewProducts = [
+  { name: "Sea Salt Lentil Crisps", metric: "1g sugar / serving", label: "Low sugar, check sodium" },
+  { name: "Peanut Butter Protein Bar", metric: "20g protein / serving", label: "Better high-protein fit" },
+  { name: "Chocolate Granola Clusters", metric: "12g sugar / serving", label: "Not a strong low-sugar fit" }
+];
+
+export default function HomePage() {
+  return (
+    <>
+      <section className="hero">
+        <div className="container hero-grid">
+          <div>
+            <div className="eyebrow">AI-assisted food comparison</div>
+            <h1>A clearer way to compare packaged foods.</h1>
+            <p className="lead">
+              BetterCart AI helps shoppers compare snacks, cereals, protein bars, pantry foods, and other packaged groceries using nutrition facts, ingredient context, and simple buying guides.
+            </p>
+            <div className="hero-actions">
+              <Link href="/guides" className="button">Explore Food Guides</Link>
+              <Link href="/tools/food-comparison-demo" className="button secondary">Try the Demo</Link>
+            </div>
+          </div>
+          <div className="product-panel" aria-label="Example product comparison">
+            <div className="eyebrow">Example comparison</div>
+            {previewProducts.map((product, index) => (
+              <div className="panel-row" key={product.name}>
+                <div>
+                  <strong>{product.name}</strong>
+                  <div className="metric">{product.metric}</div>
+                </div>
+                <span className={`badge ${index === 1 ? "green" : index === 2 ? "orange" : "blue"}`}>
+                  {product.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section alt">
+        <div className="container">
+          <div className="section-head">
+            <h2>Built for everyday grocery decisions</h2>
+            <p className="lead">Simple context for common packaged food choices, without turning every product into a universal score.</p>
+          </div>
+          <div className="grid three">
+            <div className="card">
+              <h3>Nutrition context</h3>
+              <p>Compare sugar, sodium, protein, calories, and serving sizes without reading every label from scratch.</p>
+            </div>
+            <div className="card">
+              <h3>Ingredient awareness</h3>
+              <p>Understand ingredient lists and spot items you may want to compare more carefully.</p>
+            </div>
+            <div className="card">
+              <h3>Intent-based shopping</h3>
+              <p>Look for products that better fit goals like lower sugar, higher protein, or lower sodium.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-head">
+            <h2>Start with common packaged food categories</h2>
+          </div>
+          <div className="grid three">
+            {["Low sugar snacks", "Protein bars", "Breakfast cereals", "Kids snacks", "Pantry staples", "Packaged beverages"].map((category) => (
+              <div className="card" key={category}>
+                <h3>{category}</h3>
+                <p>Compare similar products using facts that match the category and shopping intent.</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section alt">
+        <div className="container grid two">
+          <div>
+            <h2>Evidence first, not hype</h2>
+            <p className="lead">
+              Our guides focus on product facts such as nutrition labels, ingredient lists, serving sizes, and category comparisons.
+            </p>
+            <p>
+              BetterCart AI is not a medical advisor and does not assign universal food grades. We help users understand tradeoffs and choose products that better match their shopping intent.
+            </p>
+            <Link href="/methodology" className="button">Read Our Methodology</Link>
+          </div>
+          <div className="disclaimer">
+            Some links may be affiliate links. If you buy through those links, we may earn a commission. This does not change our editorial approach.
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
