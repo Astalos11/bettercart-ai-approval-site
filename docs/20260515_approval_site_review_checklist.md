@@ -13,6 +13,8 @@ The site is not presented as a final retailer product, medical tool, or live rec
 Core pages:
 
 - Home
+- For Reviewers
+- Topics
 - About
 - Contact
 - Food Guides index
@@ -30,6 +32,8 @@ Trust and policy pages:
 - Partner and Advertiser Policy
 - Data Sources
 - Corrections Policy
+- Publishing Standards
+- Content Calendar
 
 Content pages:
 
@@ -46,6 +50,8 @@ Comparison examples:
 
 - Low Sugar Snack Comparison
 - High Protein Bar Comparison
+- Breakfast Cereal Comparison
+- Lower Sodium Pantry Food Comparison
 
 ## Approval Strengths
 
@@ -58,6 +64,9 @@ Comparison examples:
 - Site discloses that sample comparisons are not live product reviews.
 - Static export works for Netlify.
 - Sitemap and robots routes are generated.
+- A reviewer overview page exists for affiliate network and advertiser review.
+- A topic hub connects related guides and comparison examples.
+- A reusable static QA script checks required routes, internal links, and obvious placeholders.
 
 ## Known Manual Follow-Ups
 
@@ -81,5 +90,5 @@ Latest local production build during optimization:
 
 - `npm run build` passed.
 - Static export generated successfully.
-- Current static page count: 30 generated routes.
-
+- `npm run check:static` passed.
+- Current static page count: 36 generated routes.

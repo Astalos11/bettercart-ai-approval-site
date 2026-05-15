@@ -14,7 +14,23 @@ Result:
 
 - Passed.
 - Static export completed.
-- Generated routes increased from 24 to 30 after optimization.
+- Generated routes increased from 24 to 36 after optimization.
+
+## Static QA Script
+
+Command:
+
+```bash
+npm run check:static
+```
+
+Result:
+
+- Passed.
+- Required routes checked: 21.
+- Missing required routes: 0.
+- Bad internal links: 0.
+- Placeholder hits: 0.
 
 ## Static HTTP Route Check
 
@@ -32,6 +48,8 @@ All checked routes returned `200`:
 - `/compare/`
 - `/compare/low-sugar-snacks/`
 - `/tools/food-comparison-demo/`
+- `/topics/`
+- `/for-reviewers/`
 - `/about/`
 - `/contact/`
 - `/affiliate-disclosure/`
@@ -43,6 +61,8 @@ All checked routes returned `200`:
 - `/partner-policy/`
 - `/data-sources/`
 - `/corrections-policy/`
+- `/publishing-standards/`
+- `/content-calendar/`
 - `/robots.txt`
 - `/sitemap.xml`
 - `/images/food-comparison-workspace.png`
@@ -62,4 +82,3 @@ No live-page placeholder email remained. The only intentional matches were in do
 
 - The site still needs the final custom domain and working domain email before affiliate applications.
 - After `bettercartai.com` is connected, update `NEXT_PUBLIC_SITE_URL` in Netlify and redeploy so sitemap and robots use the production domain.
-
