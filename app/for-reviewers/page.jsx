@@ -39,6 +39,7 @@ export default function ForReviewersPage() {
             <Link href="/affiliate-disclosure">Affiliate Disclosure</Link>
             <Link href="/editorial-policy">Editorial Policy</Link>
             <Link href="/publishing-standards">Publishing Standards</Link>
+            <Link href="/review-process">Review Process</Link>
             <Link href="/methodology">Methodology</Link>
             <Link href="/partner-policy">Partner Policy</Link>
             <Link href="/data-sources">Data Sources</Link>
