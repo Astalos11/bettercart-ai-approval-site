@@ -111,6 +111,7 @@ function main() {
   const highRiskClaimHits = [];
   const missingImageAltHits = [];
   const sitemapPathMisses = [];
+  const disclosureMisses = [];
   for (const file of searchableFiles) {
     const text = fs.readFileSync(file, "utf8");
     for (const pattern of placeholderPatterns) {
@@ -139,6 +140,26 @@ function main() {
     sitemapPathMisses.push("sitemap.xml missing");
   }
 
+  const comparisonFiles = walk(path.join(outDir, "compare")).filter(
+    (file) => file.endsWith("index.html") && path.dirname(file) !== path.join(outDir, "compare")
+  );
+  for (const file of comparisonFiles) {
+    const text = fs.readFileSync(file, "utf8").toLowerCase();
+    if (!text.includes("sample data")) {
+      disclosureMisses.push(`${path.relative(outDir, file)} missing sample data disclosure`);
+    }
+  }
+
+  const guideFiles = walk(path.join(outDir, "guides")).filter(
+    (file) => file.endsWith("index.html") && path.dirname(file) !== path.join(outDir, "guides")
+  );
+  for (const file of guideFiles) {
+    const text = fs.readFileSync(file, "utf8").toLowerCase();
+    if (!text.includes("not medical advice")) {
+      disclosureMisses.push(`${path.relative(outDir, file)} missing non-medical disclaimer`);
+    }
+  }
+
   console.log(`required_routes=${requiredRoutes.length}`);
   console.log(`missing_required=${missingRequired.length}`);
   console.log(`bad_internal_links=${badLinks.length}`);
@@ -146,6 +167,7 @@ function main() {
   console.log(`high_risk_claim_hits=${highRiskClaimHits.length}`);
   console.log(`missing_image_alt_hits=${missingImageAltHits.length}`);
   console.log(`sitemap_path_misses=${sitemapPathMisses.length}`);
+  console.log(`disclosure_misses=${disclosureMisses.length}`);
 
   if (missingRequired.length) console.log(`Missing required routes:\n${missingRequired.join("\n")}`);
   if (badLinks.length) console.log(`Bad internal links:\n${badLinks.join("\n")}`);
@@ -153,8 +175,9 @@ function main() {
   if (highRiskClaimHits.length) console.log(`High-risk claim hits:\n${highRiskClaimHits.join("\n")}`);
   if (missingImageAltHits.length) console.log(`Missing image alt hits:\n${missingImageAltHits.join("\n")}`);
   if (sitemapPathMisses.length) console.log(`Sitemap path misses:\n${sitemapPathMisses.join("\n")}`);
+  if (disclosureMisses.length) console.log(`Disclosure misses:\n${disclosureMisses.join("\n")}`);
 
-  if (missingRequired.length || badLinks.length || placeholderHits.length || highRiskClaimHits.length || missingImageAltHits.length || sitemapPathMisses.length) process.exit(1);
+  if (missingRequired.length || badLinks.length || placeholderHits.length || highRiskClaimHits.length || missingImageAltHits.length || sitemapPathMisses.length || disclosureMisses.length) process.exit(1);
 }
 
 main();
