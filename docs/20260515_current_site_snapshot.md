@@ -19,7 +19,7 @@ The final domain is not active in the site build until domain review, DNS, HTTPS
 
 - 8 food guides
 - 4 comparison examples
-- 15 trust / policy pages
+- 16 trust / policy pages
 - 1 demo tool
 - 1 reviewer overview page
 - 1 publisher kit page
@@ -47,6 +47,7 @@ Current QA coverage includes:
 
 - Clear packaged-food comparison positioning.
 - Affiliate disclosure, privacy, terms, methodology, editorial policy, corrections, partner policy, and review process pages exist.
+- A monetization transparency page explains how affiliate compensation should work without guaranteeing favorable coverage.
 - Reviewer-facing and publisher-facing summary pages exist.
 - Sample data is disclosed on demo and comparison pages.
 - No real affiliate links are present yet, so there are no undisclosed affiliate placements.

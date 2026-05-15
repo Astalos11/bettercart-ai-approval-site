@@ -26,6 +26,7 @@ Core pages:
 Trust and policy pages:
 
 - Affiliate Disclosure
+- How We Make Money
 - Editorial Policy
 - Methodology
 - Privacy Policy
@@ -71,7 +72,7 @@ Comparison examples:
 - A publisher kit page summarizes audience, content formats, promotional methods, and non-goals.
 - A topic hub connects related guides and comparison examples.
 - A site index page exposes all guides, comparisons, tools, and trust pages in one place.
-- A reusable static QA script checks required routes, internal links, and obvious placeholders.
+- A reusable static QA script checks required routes, internal links, obvious placeholders, high-risk claims, and image alt text.
 
 ## Known Manual Follow-Ups
 
@@ -96,4 +97,4 @@ Latest local production build during optimization:
 - `npm run build` passed.
 - Static export generated successfully.
 - `npm run check:static` passed.
-- Current static page count: 40 generated routes.
+- Current static page count: 42 generated routes.

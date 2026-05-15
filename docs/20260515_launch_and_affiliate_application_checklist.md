@@ -30,6 +30,7 @@ Before submitting an affiliate network application, check:
 - Home page loads on desktop and mobile.
 - Contact page shows working email.
 - Affiliate Disclosure is visible.
+- How We Make Money is visible.
 - Privacy Policy is visible.
 - Terms and Disclaimer is visible.
 - Editorial Policy is visible.
