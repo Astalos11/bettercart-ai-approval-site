@@ -22,6 +22,18 @@ export default function EditorialTeamPage() {
         BetterCart AI does not provide medical advice. Pages should avoid disease-treatment claims, fake hands-on testing claims, undisclosed paid placement, and unsupported health claims.
       </p>
       <div className="callout">
+        <h2>What the team checks</h2>
+        <ul>
+          <li>Whether a page clearly identifies the shopping intent and product category.</li>
+          <li>Whether nutrition and ingredient statements are framed as shopping context rather than medical advice.</li>
+          <li>Whether sample data, affiliate disclosure, and product-data uncertainty are visible where relevant.</li>
+          <li>Whether correction requests can be routed to a clear contact path.</li>
+        </ul>
+      </div>
+      <p>
+        The current site uses an organizational author model rather than named expert bylines. If future content requires specialist review, that review should be disclosed on the relevant page instead of implied globally.
+      </p>
+      <div className="callout">
         <h2>Editorial references</h2>
         <div className="link-list">
           <Link href="/editorial-policy">Editorial Policy</Link>
