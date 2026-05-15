@@ -52,6 +52,7 @@ Content pages:
 - How to Choose Pantry Staples
 - How to Compare Ready-to-Drink Beverages
 - How to Compare Frozen Meals
+- How to Compare Sauces and Condiments
 
 Comparison examples:
 
@@ -61,6 +62,7 @@ Comparison examples:
 - Lower Sodium Pantry Food Comparison
 - Lower Sugar Beverage Comparison
 - Frozen Meal Tradeoff Comparison
+- Sauce and Condiment Tradeoff Comparison
 
 ## Approval Strengths
 
@@ -103,4 +105,4 @@ Latest local production build during optimization:
 - `npm run build` passed.
 - Static export generated successfully.
 - `npm run check:static` passed.
-- Current static page count: 47 generated routes.
+- Current static page count: 49 generated routes.
