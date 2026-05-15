@@ -32,6 +32,23 @@ Result:
 - Bad internal links: 0.
 - Placeholder hits: 0.
 
+## Live Netlify Smoke Check
+
+Checked live temporary Netlify URL:
+
+```text
+https://illustrious-cranachan-4a01a9.netlify.app/for-reviewers/
+```
+
+Result after URL guard fix:
+
+- Page returned live HTML.
+- New reviewer content was present.
+- `Fast review path` appeared.
+- `Editorial Team` appeared.
+- Old invalid domain `bettercart-ai-approval-site.netlify.app` occurrences: 0.
+- Current temporary Netlify domain occurrences: 4.
+
 ## Static HTTP Route Check
 
 Method:
