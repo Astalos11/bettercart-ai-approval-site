@@ -39,6 +39,17 @@ const placeholderPatterns = [
   /todo/i
 ];
 
+const highRiskClaimPatterns = [
+  /miracle/i,
+  /\b(cures|cured|cure) (diabetes|cancer|disease|illness|obesity|anxiety|depression|hypertension)\b/i,
+  /\b(treats|treated|treat) (diabetes|cancer|disease|illness|obesity|anxiety|depression|hypertension)\b/i,
+  /\b(prevents|prevented|prevent) (diabetes|cancer|disease|illness|obesity|anxiety|depression|hypertension)\b/i,
+  /guaranteed results/i,
+  /best product/i,
+  /must buy/i,
+  /clinically proven/i
+];
+
 function routeExists(route) {
   if (route === "/") return fs.existsSync(path.join(outDir, "index.html"));
   if (route.endsWith(".txt") || route.endsWith(".xml")) {
@@ -84,10 +95,14 @@ function main() {
 
   const searchableFiles = walk(outDir).filter((file) => file.endsWith(".html") || file.endsWith(".txt") || file.endsWith(".xml"));
   const placeholderHits = [];
+  const highRiskClaimHits = [];
   for (const file of searchableFiles) {
     const text = fs.readFileSync(file, "utf8");
     for (const pattern of placeholderPatterns) {
       if (pattern.test(text)) placeholderHits.push(`${path.relative(outDir, file)} matched ${pattern}`);
+    }
+    for (const pattern of highRiskClaimPatterns) {
+      if (pattern.test(text)) highRiskClaimHits.push(`${path.relative(outDir, file)} matched ${pattern}`);
     }
   }
 
@@ -95,12 +110,14 @@ function main() {
   console.log(`missing_required=${missingRequired.length}`);
   console.log(`bad_internal_links=${badLinks.length}`);
   console.log(`placeholder_hits=${placeholderHits.length}`);
+  console.log(`high_risk_claim_hits=${highRiskClaimHits.length}`);
 
   if (missingRequired.length) console.log(`Missing required routes:\n${missingRequired.join("\n")}`);
   if (badLinks.length) console.log(`Bad internal links:\n${badLinks.join("\n")}`);
   if (placeholderHits.length) console.log(`Placeholder hits:\n${placeholderHits.join("\n")}`);
+  if (highRiskClaimHits.length) console.log(`High-risk claim hits:\n${highRiskClaimHits.join("\n")}`);
 
-  if (missingRequired.length || badLinks.length || placeholderHits.length) process.exit(1);
+  if (missingRequired.length || badLinks.length || placeholderHits.length || highRiskClaimHits.length) process.exit(1);
 }
 
 main();
