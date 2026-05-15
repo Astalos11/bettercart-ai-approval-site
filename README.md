@@ -63,8 +63,11 @@ Before affiliate applications, complete:
 ## Important Pages
 
 - `/for-reviewers`
+- `/publisher-kit`
+- `/site-index`
 - `/affiliate-disclosure`
 - `/editorial-policy`
+- `/review-process`
 - `/methodology`
 - `/partner-policy`
 - `/data-sources`

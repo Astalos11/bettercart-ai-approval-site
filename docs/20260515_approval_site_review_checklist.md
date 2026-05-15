@@ -16,6 +16,7 @@ Core pages:
 - For Reviewers
 - Publisher Kit
 - Topics
+- Site Index
 - About
 - Contact
 - Food Guides index
@@ -69,6 +70,7 @@ Comparison examples:
 - A reviewer overview page exists for affiliate network and advertiser review.
 - A publisher kit page summarizes audience, content formats, promotional methods, and non-goals.
 - A topic hub connects related guides and comparison examples.
+- A site index page exposes all guides, comparisons, tools, and trust pages in one place.
 - A reusable static QA script checks required routes, internal links, and obvious placeholders.
 
 ## Known Manual Follow-Ups
@@ -94,4 +96,4 @@ Latest local production build during optimization:
 - `npm run build` passed.
 - Static export generated successfully.
 - `npm run check:static` passed.
-- Current static page count: 39 generated routes.
+- Current static page count: 40 generated routes.
