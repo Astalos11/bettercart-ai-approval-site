@@ -295,6 +295,24 @@ h3 {
   margin: 16px 0 28px;
 }
 
+.faq-list {
+  display: grid;
+  gap: 14px;
+  margin: 28px 0;
+}
+
+.faq-item {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 20px 22px;
+}
+
+.faq-item h2 {
+  font-size: 1.22rem;
+  margin-bottom: 10px;
+}
+
 .callout {
   background: var(--paper);
   border: 1px solid var(--line);
