@@ -24,6 +24,7 @@ The final domain is not active in the site build until domain review, DNS, HTTPS
 - 1 reviewer overview page
 - 1 publisher kit page
 - 1 site index page
+- 1 `humans.txt` reviewer/contact file
 
 ## Current QA Status
 
@@ -53,6 +54,7 @@ Current QA coverage includes:
 - Sample data is disclosed on demo and comparison pages.
 - No real affiliate links are present yet, so there are no undisclosed affiliate placements.
 - Site avoids medical advice, fake traffic claims, fake testimonials, and universal food scores.
+- A `humans.txt` file exposes reviewer, disclosure, and contact paths.
 
 ## Manual Blockers Before Application
 

@@ -93,6 +93,7 @@ Before affiliate applications, complete:
 - `/for-reviewers`
 - `/publisher-kit`
 - `/site-index`
+- `/humans.txt`
 - `/affiliate-disclosure`
 - `/editorial-policy`
 - `/review-process`
