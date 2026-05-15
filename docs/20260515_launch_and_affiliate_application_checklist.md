@@ -36,6 +36,7 @@ Before submitting an affiliate network application, check:
 - Editorial Policy is visible.
 - Methodology is visible.
 - Partner Policy is visible.
+- Program Compliance is visible.
 - For Reviewers page is visible.
 - Publisher Kit page is visible.
 - Demo page clearly says it uses sample data.

@@ -33,6 +33,7 @@ Trust and policy pages:
 - Terms and Disclaimer
 - FAQ
 - Partner and Advertiser Policy
+- Program Compliance Notes
 - Data Sources
 - Corrections Policy
 - Publishing Standards
@@ -72,6 +73,7 @@ Comparison examples:
 - Sitemap and robots routes are generated.
 - A reviewer overview page exists for affiliate network and advertiser review.
 - A publisher kit page summarizes audience, content formats, promotional methods, and non-goals.
+- A program compliance page summarizes allowed promotional methods, prohibited tactics, and claim boundaries.
 - A topic hub connects related guides and comparison examples.
 - A site index page exposes all guides, comparisons, tools, and trust pages in one place.
 - A reusable static QA script checks required routes, internal links, obvious placeholders, high-risk claims, and image alt text.
@@ -99,4 +101,4 @@ Latest local production build during optimization:
 - `npm run build` passed.
 - Static export generated successfully.
 - `npm run check:static` passed.
-- Current static page count: 44 generated routes.
+- Current static page count: 45 generated routes.
