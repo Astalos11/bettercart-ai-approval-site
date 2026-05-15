@@ -1,7 +1,9 @@
+import { getSiteUrl } from "../lib/site";
+
 export const dynamic = "force-static";
 
 export default function robots() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://illustrious-cranachan-4a01a9.netlify.app";
+  const siteUrl = getSiteUrl();
 
   return {
     rules: {

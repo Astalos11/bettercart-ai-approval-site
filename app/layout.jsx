@@ -1,8 +1,9 @@
 import "./globals.css";
 import Link from "next/link";
+import { getSiteUrl } from "../lib/site";
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://illustrious-cranachan-4a01a9.netlify.app"),
+  metadataBase: new URL(getSiteUrl()),
   title: {
     default: "BetterCart AI | Packaged Food Comparison Guides",
     template: "%s | BetterCart AI"
@@ -82,11 +83,12 @@ function Footer() {
 }
 
 export default function RootLayout({ children }) {
+  const siteUrl = getSiteUrl();
   const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "BetterCart AI",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://illustrious-cranachan-4a01a9.netlify.app",
+    url: siteUrl,
     email: "contact@bettercartai.com",
     description: "Packaged food comparison guides for everyday grocery decisions."
   };

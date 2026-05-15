@@ -1,11 +1,12 @@
 import { comparisons, guides, trustPages } from "../lib/content";
+import { getSiteUrl } from "../lib/site";
 
 export const dynamic = "force-static";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://illustrious-cranachan-4a01a9.netlify.app";
 const lastModified = new Date("2026-05-15");
 
 export default function sitemap() {
+  const baseUrl = getSiteUrl();
   const staticRoutes = [
     "",
     "/guides",
