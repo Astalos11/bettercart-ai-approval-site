@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { comparisons, guides } from "../lib/content";
+import { comparisons, guides, trustPages } from "../lib/content";
 
 const previewProducts = [
   { name: "Sea Salt Lentil Crisps", metric: "1g sugar / serving", label: "Low sugar, check sodium" },
@@ -80,7 +80,7 @@ export default function HomePage() {
               <span>comparison examples</span>
             </div>
             <div>
-              <strong>10+</strong>
+              <strong>{Object.keys(trustPages).length}</strong>
               <span>trust and policy pages</span>
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function HomePage() {
             <p className="lead">The early site focuses on categories where nutrition labels and ingredient lists are useful for everyday decisions.</p>
           </div>
           <div className="grid three">
-            {["Low sugar snacks", "Protein bars", "Breakfast cereals", "Kids snacks", "Pantry staples", "Packaged beverages"].map((category) => (
+            {["Low sugar snacks", "Protein bars", "Breakfast cereals", "Kids snacks", "Pantry staples", "Packaged beverages", "Frozen meals"].map((category) => (
               <div className="card" key={category}>
                 <h3>{category}</h3>
                 <p>Compare similar products using facts that match the category and shopping intent.</p>
