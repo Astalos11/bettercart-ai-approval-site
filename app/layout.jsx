@@ -15,7 +15,22 @@ export const metadata = {
     description: "AI-assisted packaged food comparison guides for everyday grocery decisions.",
     type: "website",
     url: "/",
-    siteName: "BetterCart AI"
+    siteName: "BetterCart AI",
+    images: [
+      {
+        url: "/images/food-comparison-workspace.png",
+        width: 1200,
+        height: 800,
+        alt: "BetterCart AI packaged food comparison workspace"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BetterCart AI | Packaged Food Comparison Guides",
+    description:
+      "Compare packaged foods by nutrition facts, ingredients, and shopping intent.",
+    images: ["/images/food-comparison-workspace.png"]
   }
 };
 
