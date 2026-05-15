@@ -12,6 +12,7 @@ const requiredPages = [
   ["/program-compliance/", "Program Compliance Notes"],
   ["/site-index/", "Browse BetterCart AI"],
   ["/icon.svg", "<svg"],
+  ["/humans.txt", "BetterCart AI"],
   ["/robots.txt", "Sitemap:"],
   ["/sitemap.xml", siteUrl]
 ];

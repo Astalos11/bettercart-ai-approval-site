@@ -30,6 +30,7 @@ const requiredRoutes = [
   "/privacy/",
   "/terms/",
   "/faq/",
+  "/humans.txt",
   "/robots.txt",
   "/sitemap.xml"
 ];

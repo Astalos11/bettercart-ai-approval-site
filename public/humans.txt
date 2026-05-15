@@ -1,0 +1,19 @@
+/* TEAM */
+
+Site: BetterCart AI
+Contact: contact@bettercartai.com
+Purpose: Packaged food comparison guides for US grocery shoppers.
+
+/* REVIEW */
+
+Reviewer page: /for-reviewers/
+Publisher kit: /publisher-kit/
+Affiliate disclosure: /affiliate-disclosure/
+Editorial policy: /editorial-policy/
+Program compliance: /program-compliance/
+
+/* NOTES */
+
+BetterCart AI is an early publisher property.
+The site provides shopping information, not medical advice.
+Current comparison examples use sample editorial data unless a page states otherwise.
