@@ -14,6 +14,7 @@ Core pages:
 
 - Home
 - For Reviewers
+- Publisher Kit
 - Topics
 - About
 - Contact
@@ -33,6 +34,7 @@ Trust and policy pages:
 - Data Sources
 - Corrections Policy
 - Publishing Standards
+- Review Process
 - Content Calendar
 
 Content pages:
@@ -65,6 +67,7 @@ Comparison examples:
 - Static export works for Netlify.
 - Sitemap and robots routes are generated.
 - A reviewer overview page exists for affiliate network and advertiser review.
+- A publisher kit page summarizes audience, content formats, promotional methods, and non-goals.
 - A topic hub connects related guides and comparison examples.
 - A reusable static QA script checks required routes, internal links, and obvious placeholders.
 
@@ -91,4 +94,4 @@ Latest local production build during optimization:
 - `npm run build` passed.
 - Static export generated successfully.
 - `npm run check:static` passed.
-- Current static page count: 36 generated routes.
+- Current static page count: 39 generated routes.

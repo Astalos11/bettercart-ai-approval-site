@@ -36,6 +36,7 @@ Before submitting an affiliate network application, check:
 - Methodology is visible.
 - Partner Policy is visible.
 - For Reviewers page is visible.
+- Publisher Kit page is visible.
 - Demo page clearly says it uses sample data.
 - No fake reviews or fake traffic claims are present.
 - No medical advice claims are present.
@@ -58,6 +59,11 @@ Promotional methods:
 - Product comparison pages
 - Shopping guides
 - Future AI-assisted product discovery tools
+
+Reviewer-friendly pages to include if the application allows notes:
+
+- `https://bettercartai.com/for-reviewers/`
+- `https://bettercartai.com/publisher-kit/`
 
 Avoid claiming:
 
