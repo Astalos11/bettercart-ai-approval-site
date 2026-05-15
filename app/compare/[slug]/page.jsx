@@ -71,13 +71,13 @@ export default function ComparisonPage({ params }) {
           <caption>Sample product comparison fields used for shopping education.</caption>
           <thead>
             <tr>
-              <th>Product</th>
-              <th>Calories</th>
-              <th>Total sugar</th>
-              <th>Added sugar</th>
-              <th>Protein</th>
-              <th>Sodium</th>
-              <th>Fit</th>
+              <th scope="col">Product</th>
+              <th scope="col">Calories</th>
+              <th scope="col">Total sugar</th>
+              <th scope="col">Added sugar</th>
+              <th scope="col">Protein</th>
+              <th scope="col">Sodium</th>
+              <th scope="col">Fit</th>
             </tr>
           </thead>
           <tbody>
