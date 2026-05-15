@@ -56,6 +56,14 @@ const topics = [
       ["/guides/how-to-choose-pantry-staples", "Pantry staples guide"],
       ["/guides/how-to-compare-breakfast-cereals", "Breakfast cereal guide"]
     ]
+  },
+  {
+    title: "Frozen meal tradeoffs",
+    text: "Frozen meal content for comparing sodium, calories, protein, serving realism, and meal role.",
+    links: [
+      ["/guides/how-to-compare-frozen-meals", "Frozen meal guide"],
+      ["/compare/frozen-meal-tradeoffs", "Frozen meal comparison"]
+    ]
   }
 ];
 
