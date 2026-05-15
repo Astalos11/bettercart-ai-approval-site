@@ -45,6 +45,16 @@ npm run check:static
 
 This checks required exported routes, internal links, and obvious placeholder text.
 
+## Live QA
+
+After Netlify deploys, run:
+
+```bash
+npm run check:live
+```
+
+This checks the live temporary Netlify site for key pages, expected content, and stale invalid-domain metadata.
+
 ## Deployment Notes
 
 Current hosting target:

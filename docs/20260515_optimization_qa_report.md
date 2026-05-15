@@ -31,6 +31,25 @@ Result:
 - Missing required routes: 0.
 - Bad internal links: 0.
 - Placeholder hits: 0.
+- High-risk claim hits: 0.
+
+## Live QA Script
+
+Command:
+
+```bash
+npm run check:live
+```
+
+Latest result:
+
+- `/` returned 200.
+- `/for-reviewers/` returned 200.
+- `/publisher-kit/` returned 200.
+- `/site-index/` returned 200.
+- `/robots.txt` returned 200.
+- `/sitemap.xml` returned 200.
+- Old invalid domain occurrences: 0.
 
 ## Live Netlify Smoke Check
 
