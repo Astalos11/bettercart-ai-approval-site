@@ -34,6 +34,7 @@ Result:
 - High-risk claim hits: 0.
 - Missing image alt hits: 0.
 - External anchor hits: 0.
+- Accessibility misses: 0.
 - Sitemap path misses: 0.
 - Disclosure misses: 0.
 
@@ -132,6 +133,7 @@ Additional static checks now cover:
 - high-risk claims such as unsupported cure/treat/prevent wording
 - missing image alt text
 - unexpected external anchor links
+- skip link and main content anchor
 - critical reviewer pages in sitemap
 - sample data disclosure on comparison detail pages
 - non-medical disclaimer on guide detail pages
