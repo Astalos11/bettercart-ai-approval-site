@@ -6,7 +6,7 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bettercart-ai-appro
 const lastModified = new Date("2026-05-15");
 
 export default function sitemap() {
-  const staticRoutes = ["", "/guides", "/compare", "/tools/food-comparison-demo", "/for-reviewers"];
+  const staticRoutes = ["", "/guides", "/compare", "/topics", "/tools/food-comparison-demo", "/for-reviewers"];
   const trustRoutes = Object.keys(trustPages).map((page) => `/${page}`);
   const guideRoutes = guides.map((guide) => `/guides/${guide.slug}`);
   const comparisonRoutes = comparisons.map((comparison) => `/compare/${comparison.slug}`);

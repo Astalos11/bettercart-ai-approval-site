@@ -1,0 +1,81 @@
+import Link from "next/link";
+import { comparisons, guides } from "../../lib/content";
+
+export const metadata = {
+  title: "Food Comparison Topics",
+  description:
+    "Browse BetterCart AI topics for low sugar, high protein, lower sodium, cereal, pantry, kids snacks, and ingredient label reading."
+};
+
+const topics = [
+  {
+    title: "Low sugar shopping",
+    text: "Guides and comparisons for shoppers trying to compare total sugar, added sugar when available, serving size, and sweetener context.",
+    links: [
+      ["/guides/how-to-choose-low-sugar-snacks", "Low sugar snack guide"],
+      ["/compare/low-sugar-snacks", "Low sugar snack comparison"]
+    ]
+  },
+  {
+    title: "High protein options",
+    text: "Protein-focused content for bars and packaged snacks, with calories, sugar, sodium, and ingredient style kept visible.",
+    links: [
+      ["/guides/how-to-compare-protein-bars", "Protein bar guide"],
+      ["/compare/high-protein-bars", "High protein bar comparison"]
+    ]
+  },
+  {
+    title: "Lower sodium decisions",
+    text: "Sodium-focused content for pantry foods, snacks, soups, sauces, and shelf-stable products where serving use matters.",
+    links: [
+      ["/guides/how-to-compare-lower-sodium-packaged-foods", "Lower sodium guide"],
+      ["/compare/lower-sodium-pantry-foods", "Lower sodium pantry comparison"]
+    ]
+  },
+  {
+    title: "Label reading basics",
+    text: "Educational content for understanding serving size, nutrition facts, ingredients, allergens, and category context.",
+    links: [
+      ["/guides/how-to-read-nutrition-labels", "Nutrition label guide"],
+      ["/guides/ingredient-red-flags-in-packaged-foods", "Ingredient list guide"]
+    ]
+  }
+];
+
+export default function TopicsPage() {
+  return (
+    <section className="section">
+      <div className="container">
+        <div className="section-head">
+          <div className="eyebrow">Topics</div>
+          <h1>Food Comparison Topics</h1>
+          <p className="lead">
+            Browse the main shopping topics currently covered by BetterCart AI. These topic groups show how guides, comparison pages, and future product tools fit together.
+          </p>
+        </div>
+
+        <div className="grid two">
+          {topics.map((topic) => (
+            <div className="card" key={topic.title}>
+              <h2>{topic.title}</h2>
+              <p>{topic.text}</p>
+              <div className="link-list">
+                {topic.links.map(([href, label]) => (
+                  <Link href={href} key={href}>{label}</Link>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="callout">
+          <h2>Current content inventory</h2>
+          <p>
+            BetterCart AI currently publishes {guides.length} food guides and {comparisons.length} comparison examples.
+            More category-specific content can be added as product data coverage improves.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
