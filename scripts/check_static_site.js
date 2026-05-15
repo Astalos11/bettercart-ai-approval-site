@@ -17,6 +17,7 @@ const requiredRoutes = [
   "/about/",
   "/contact/",
   "/affiliate-disclosure/",
+  "/how-we-make-money/",
   "/editorial-policy/",
   "/review-process/",
   "/methodology/",

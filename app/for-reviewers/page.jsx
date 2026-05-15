@@ -44,6 +44,7 @@ export default function ForReviewersPage() {
           <div className="link-list">
             <Link href="/about">About</Link>
             <Link href="/affiliate-disclosure">Affiliate Disclosure</Link>
+            <Link href="/how-we-make-money">How We Make Money</Link>
             <Link href="/editorial-policy">Editorial Policy</Link>
             <Link href="/publishing-standards">Publishing Standards</Link>
             <Link href="/review-process">Review Process</Link>
