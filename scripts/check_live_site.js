@@ -2,6 +2,7 @@ const https = require("https");
 const { getSiteUrl } = require("../lib/site-cjs.cjs");
 
 const siteUrl = getSiteUrl();
+const requestTimeoutMs = 8000;
 const requiredPages = [
   ["/", "BetterCart AI"],
   ["/for-reviewers/", "Fast review path"],
@@ -22,7 +23,7 @@ const forbiddenText = ["bettercart-ai-approval-site.netlify.app"];
 
 function fetchText(url) {
   return new Promise((resolve, reject) => {
-    https
+    const req = https
       .get(url, (res) => {
         let data = "";
         res.setEncoding("utf8");
@@ -32,6 +33,9 @@ function fetchText(url) {
         res.on("end", () => resolve({ statusCode: res.statusCode, data }));
       })
       .on("error", reject);
+    req.setTimeout(requestTimeoutMs, () => {
+      req.destroy(new Error(`Request timed out after ${requestTimeoutMs}ms: ${url}`));
+    });
   });
 }
 
