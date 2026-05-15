@@ -34,6 +34,7 @@ function Header() {
           <Link href="/tools/food-comparison-demo">Demo</Link>
           <Link href="/methodology">Methodology</Link>
           <Link href="/for-reviewers">For Reviewers</Link>
+          <Link href="/publisher-kit">Publisher Kit</Link>
           <Link href="/faq">FAQ</Link>
           <Link href="/about">About</Link>
         </div>
@@ -62,6 +63,7 @@ function Footer() {
           <Link href="/topics">Topics</Link>
           <Link href="/tools/food-comparison-demo">Demo Tool</Link>
           <Link href="/for-reviewers">For Reviewers</Link>
+          <Link href="/publisher-kit">Publisher Kit</Link>
           <Link href="/contact">Contact</Link>
         </div>
         <div>

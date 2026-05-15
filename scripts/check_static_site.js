@@ -10,6 +10,7 @@ const requiredRoutes = [
   "/compare/",
   "/topics/",
   "/for-reviewers/",
+  "/publisher-kit/",
   "/authors/bettercart-editorial-team/",
   "/tools/food-comparison-demo/",
   "/about/",
