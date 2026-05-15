@@ -51,6 +51,16 @@ const highRiskClaimPatterns = [
   /clinically proven/i
 ];
 
+const requiredSitemapPaths = [
+  "/for-reviewers",
+  "/publisher-kit",
+  "/affiliate-disclosure",
+  "/how-we-make-money",
+  "/editorial-policy",
+  "/review-process",
+  "/site-index"
+];
+
 function routeExists(route) {
   if (route === "/") return fs.existsSync(path.join(outDir, "index.html"));
   if (route.endsWith(".txt") || route.endsWith(".xml")) {
@@ -98,6 +108,7 @@ function main() {
   const placeholderHits = [];
   const highRiskClaimHits = [];
   const missingImageAltHits = [];
+  const sitemapPathMisses = [];
   for (const file of searchableFiles) {
     const text = fs.readFileSync(file, "utf8");
     for (const pattern of placeholderPatterns) {
@@ -116,20 +127,32 @@ function main() {
     }
   }
 
+  const sitemapPath = path.join(outDir, "sitemap.xml");
+  if (fs.existsSync(sitemapPath)) {
+    const sitemapText = fs.readFileSync(sitemapPath, "utf8");
+    for (const route of requiredSitemapPaths) {
+      if (!sitemapText.includes(route)) sitemapPathMisses.push(route);
+    }
+  } else {
+    sitemapPathMisses.push("sitemap.xml missing");
+  }
+
   console.log(`required_routes=${requiredRoutes.length}`);
   console.log(`missing_required=${missingRequired.length}`);
   console.log(`bad_internal_links=${badLinks.length}`);
   console.log(`placeholder_hits=${placeholderHits.length}`);
   console.log(`high_risk_claim_hits=${highRiskClaimHits.length}`);
   console.log(`missing_image_alt_hits=${missingImageAltHits.length}`);
+  console.log(`sitemap_path_misses=${sitemapPathMisses.length}`);
 
   if (missingRequired.length) console.log(`Missing required routes:\n${missingRequired.join("\n")}`);
   if (badLinks.length) console.log(`Bad internal links:\n${badLinks.join("\n")}`);
   if (placeholderHits.length) console.log(`Placeholder hits:\n${placeholderHits.join("\n")}`);
   if (highRiskClaimHits.length) console.log(`High-risk claim hits:\n${highRiskClaimHits.join("\n")}`);
   if (missingImageAltHits.length) console.log(`Missing image alt hits:\n${missingImageAltHits.join("\n")}`);
+  if (sitemapPathMisses.length) console.log(`Sitemap path misses:\n${sitemapPathMisses.join("\n")}`);
 
-  if (missingRequired.length || badLinks.length || placeholderHits.length || highRiskClaimHits.length || missingImageAltHits.length) process.exit(1);
+  if (missingRequired.length || badLinks.length || placeholderHits.length || highRiskClaimHits.length || missingImageAltHits.length || sitemapPathMisses.length) process.exit(1);
 }
 
 main();
