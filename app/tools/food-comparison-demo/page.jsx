@@ -78,6 +78,15 @@ export default function DemoPage() {
 
         <p className="small-note">{getMetricFocus(intent)} The demo shows tradeoffs rather than a universal food score.</p>
 
+        <div className="callout">
+          <h2>What the demo reads</h2>
+          <ul>
+            <li>Serving-level calories, total sugar, protein, and sodium.</li>
+            <li>A shopper intent such as low sugar, high protein, low sodium, or balanced snack.</li>
+            <li>Simple tradeoff notes instead of a universal product grade.</li>
+          </ul>
+        </div>
+
         <div className="grid three">
           {sortedProducts.map((product) => {
             const fit = getFit(product, intent);
@@ -100,6 +109,21 @@ export default function DemoPage() {
         <div className="section-head" style={{ marginTop: 28 }}>
           <div className="disclaimer">
             This demo uses sample data to illustrate comparison logic. It does not use live retailer inventory, medical rules, or paid placement. Always verify current product labels and retailer information before purchase.
+          </div>
+        </div>
+
+        <div className="grid two">
+          <div className="card">
+            <h2>What a full version would add</h2>
+            <p>
+              A production version would connect verified product data, retailer availability, UPC matching, and clearer product evidence before showing purchase links.
+            </p>
+          </div>
+          <div className="card">
+            <h2>What this demo avoids</h2>
+            <p>
+              It does not create medical recommendations, hidden paid rankings, or universal healthy/unhealthy scores.
+            </p>
           </div>
         </div>
       </div>
