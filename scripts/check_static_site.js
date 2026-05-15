@@ -169,6 +169,14 @@ function main() {
     }
   }
 
+  const contactPath = path.join(outDir, "contact", "index.html");
+  if (fs.existsSync(contactPath)) {
+    const contactText = fs.readFileSync(contactPath, "utf8").toLowerCase();
+    if (!contactText.includes("mailto:contact@bettercartai.com")) {
+      disclosureMisses.push("contact/index.html missing mailto contact action");
+    }
+  }
+
   console.log(`required_routes=${requiredRoutes.length}`);
   console.log(`missing_required=${missingRequired.length}`);
   console.log(`bad_internal_links=${badLinks.length}`);
