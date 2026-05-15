@@ -22,6 +22,22 @@ const processSteps = [
   }
 ];
 
+export const metadata = {
+  title: "BetterCart AI | Packaged Food Comparison Guides",
+  description:
+    "Compare packaged foods by nutrition facts, ingredients, and shopping intent. Browse guides, comparison examples, and reviewer-friendly trust pages.",
+  alternates: {
+    canonical: "/"
+  },
+  openGraph: {
+    title: "BetterCart AI | Packaged Food Comparison Guides",
+    description:
+      "AI-assisted packaged food comparison guides for everyday grocery decisions.",
+    type: "website",
+    url: "/"
+  }
+};
+
 export default function HomePage() {
   return (
     <>
