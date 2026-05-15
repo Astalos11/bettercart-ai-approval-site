@@ -10,8 +10,8 @@
 
 ## 当前站点包含什么
 
-- 11 篇 packaged food buying guides
-- 7 个 sample comparison pages
+- 12 篇 packaged food buying guides
+- 8 个 sample comparison pages
 - 17 个 trust / policy pages
 - 1 个 food comparison demo
 - 1 个 For Reviewers 页面

@@ -54,6 +54,7 @@ Content pages:
 - How to Compare Ready-to-Drink Beverages
 - How to Compare Frozen Meals
 - How to Compare Sauces and Condiments
+- How to Compare Nut Butters and Spreads
 
 Comparison examples:
 
@@ -64,6 +65,7 @@ Comparison examples:
 - Lower Sugar Beverage Comparison
 - Frozen Meal Tradeoff Comparison
 - Sauce and Condiment Tradeoff Comparison
+- Nut Butter and Spread Tradeoff Comparison
 
 ## Approval Strengths
 
@@ -106,4 +108,4 @@ Latest local production build during optimization:
 - `npm run build` passed.
 - Static export generated successfully.
 - `npm run check:static` passed.
-- Current static page count: 50 generated routes.
+- Current static page count: 52 generated routes.
