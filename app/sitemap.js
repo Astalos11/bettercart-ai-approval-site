@@ -2,7 +2,7 @@ import { comparisons, guides, trustPages } from "../lib/content";
 
 export const dynamic = "force-static";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bettercart-ai-approval-site.netlify.app";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://illustrious-cranachan-4a01a9.netlify.app";
 const lastModified = new Date("2026-05-15");
 
 export default function sitemap() {

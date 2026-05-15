@@ -2,7 +2,7 @@ import "./globals.css";
 import Link from "next/link";
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://bettercart-ai-approval-site.netlify.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://illustrious-cranachan-4a01a9.netlify.app"),
   title: {
     default: "BetterCart AI | Packaged Food Comparison Guides",
     template: "%s | BetterCart AI"
@@ -15,9 +15,6 @@ export const metadata = {
     type: "website",
     url: "/",
     siteName: "BetterCart AI"
-  },
-  alternates: {
-    canonical: "/"
   }
 };
 
@@ -89,7 +86,7 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "BetterCart AI",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://bettercart-ai-approval-site.netlify.app",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://illustrious-cranachan-4a01a9.netlify.app",
     email: "contact@bettercartai.com",
     description: "Packaged food comparison guides for everyday grocery decisions."
   };
