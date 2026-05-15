@@ -1,6 +1,9 @@
 import { comparisons, guides, trustPages } from "../lib/content";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bettercart-ai-approval-site.vercel.app";
+export const dynamic = "force-static";
+
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bettercart-ai-approval-site.netlify.app";
+const lastModified = new Date("2026-05-15");
 
 export default function sitemap() {
   const staticRoutes = ["", "/guides", "/compare", "/tools/food-comparison-demo"];
@@ -10,6 +13,6 @@ export default function sitemap() {
 
   return [...staticRoutes, ...trustRoutes, ...guideRoutes, ...comparisonRoutes].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date()
+    lastModified
   }));
 }
