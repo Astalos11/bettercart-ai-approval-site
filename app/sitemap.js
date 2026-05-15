@@ -1,6 +1,6 @@
 import { comparisons, guides, trustPages } from "../lib/content";
 
-const baseUrl = "https://example.com";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bettercart-ai-approval-site.vercel.app";
 
 export default function sitemap() {
   const staticRoutes = ["", "/guides", "/compare", "/tools/food-comparison-demo"];

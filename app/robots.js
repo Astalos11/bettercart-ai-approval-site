@@ -1,9 +1,11 @@
 export default function robots() {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bettercart-ai-approval-site.vercel.app";
+
   return {
     rules: {
       userAgent: "*",
       allow: "/"
     },
-    sitemap: "https://example.com/sitemap.xml"
+    sitemap: `${siteUrl}/sitemap.xml`
   };
 }
