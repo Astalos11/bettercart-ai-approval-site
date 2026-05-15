@@ -9,16 +9,43 @@ export function generateMetadata({ params }) {
   const guide = guides.find((item) => item.slug === params.slug);
   return {
     title: guide?.title || "Guide",
-    description: guide?.excerpt
+    description: guide?.excerpt,
+    alternates: {
+      canonical: guide ? `/guides/${guide.slug}` : "/guides"
+    },
+    openGraph: {
+      title: guide?.title || "Guide",
+      description: guide?.excerpt,
+      type: "article"
+    }
   };
 }
 
 export default function GuidePage({ params }) {
   const guide = guides.find((item) => item.slug === params.slug);
   if (!guide) notFound();
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: guide.title,
+    description: guide.excerpt,
+    dateModified: "2026-05-15",
+    author: {
+      "@type": "Organization",
+      name: "BetterCart AI"
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "BetterCart AI"
+    }
+  };
 
   return (
     <article className="article">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <div className="eyebrow">Food guide</div>
       <h1>{guide.title}</h1>
       <div className="article-meta">Updated May 15, 2026 · BetterCart AI Editorial Team</div>

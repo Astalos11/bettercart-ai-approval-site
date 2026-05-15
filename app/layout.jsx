@@ -2,6 +2,7 @@ import "./globals.css";
 import Link from "next/link";
 
 export const metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://bettercart-ai-approval-site.netlify.app"),
   title: {
     default: "BetterCart AI | Packaged Food Comparison Guides",
     template: "%s | BetterCart AI"
@@ -11,7 +12,12 @@ export const metadata = {
   openGraph: {
     title: "BetterCart AI",
     description: "AI-assisted packaged food comparison guides for everyday grocery decisions.",
-    type: "website"
+    type: "website",
+    url: "/",
+    siteName: "BetterCart AI"
+  },
+  alternates: {
+    canonical: "/"
   }
 };
 
@@ -79,9 +85,22 @@ function Footer() {
 }
 
 export default function RootLayout({ children }) {
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "BetterCart AI",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://bettercart-ai-approval-site.netlify.app",
+    email: "contact@bettercartai.com",
+    description: "Packaged food comparison guides for everyday grocery decisions."
+  };
+
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <div className="site-shell">
           <Header />
           <main>{children}</main>

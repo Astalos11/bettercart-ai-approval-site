@@ -9,16 +9,43 @@ export function generateMetadata({ params }) {
   const comparison = comparisons.find((item) => item.slug === params.slug);
   return {
     title: comparison?.title || "Comparison",
-    description: comparison?.intro
+    description: comparison?.intro,
+    alternates: {
+      canonical: comparison ? `/compare/${comparison.slug}` : "/compare"
+    },
+    openGraph: {
+      title: comparison?.title || "Comparison",
+      description: comparison?.intro,
+      type: "article"
+    }
   };
 }
 
 export default function ComparisonPage({ params }) {
   const comparison = comparisons.find((item) => item.slug === params.slug);
   if (!comparison) notFound();
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: comparison.title,
+    description: comparison.intro,
+    dateModified: "2026-05-15",
+    author: {
+      "@type": "Organization",
+      name: "BetterCart AI"
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "BetterCart AI"
+    }
+  };
 
   return (
     <article className="article">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <div className="eyebrow">Comparison example</div>
       <h1>{comparison.title}</h1>
       <div className="article-meta">Updated May 15, 2026 · Sample editorial data</div>
