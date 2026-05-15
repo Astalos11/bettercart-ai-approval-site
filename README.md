@@ -55,6 +55,8 @@ npm run check:live
 
 This checks the live temporary Netlify site for key pages, expected content, and stale invalid-domain metadata.
 
+If recently pushed routes return 404 but `npm run build` and `npm run check:static` pass, wait for the latest Netlify production deploy to finish and rerun the live check.
+
 ## Full QA
 
 Before a final application submission or domain cutover, run:
