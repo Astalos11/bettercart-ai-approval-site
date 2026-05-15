@@ -93,6 +93,7 @@ function Footer() {
           <Link href="/program-compliance">Program Compliance</Link>
           <Link href="/faq">FAQ</Link>
           <Link href="/privacy">Privacy Policy</Link>
+          <Link href="/cookie-policy">Cookie Policy</Link>
           <Link href="/terms">Terms & Disclaimer</Link>
         </div>
       </div>

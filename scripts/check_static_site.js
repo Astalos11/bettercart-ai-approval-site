@@ -28,6 +28,7 @@ const requiredRoutes = [
   "/publishing-standards/",
   "/content-calendar/",
   "/privacy/",
+  "/cookie-policy/",
   "/terms/",
   "/faq/",
   "/humans.txt",
