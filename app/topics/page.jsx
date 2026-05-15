@@ -72,6 +72,14 @@ const topics = [
       ["/guides/how-to-compare-sauces-and-condiments", "Sauce and condiment guide"],
       ["/compare/sauce-and-condiment-tradeoffs", "Sauce and condiment comparison"]
     ]
+  },
+  {
+    title: "Nut butters and spreads",
+    text: "Spread comparison content for sugar, protein, oils, sodium, serving size, and allergen context.",
+    links: [
+      ["/guides/how-to-compare-nut-butters-and-spreads", "Nut butter and spread guide"],
+      ["/compare/nut-butter-and-spread-tradeoffs", "Nut butter and spread comparison"]
+    ]
   }
 ];
 

@@ -124,7 +124,7 @@ export default function HomePage() {
             <p className="lead">The early site focuses on categories where nutrition labels and ingredient lists are useful for everyday decisions.</p>
           </div>
           <div className="grid three">
-            {["Low sugar snacks", "Protein bars", "Breakfast cereals", "Kids snacks", "Pantry staples", "Packaged beverages", "Frozen meals", "Sauces and condiments"].map((category) => (
+            {["Low sugar snacks", "Protein bars", "Breakfast cereals", "Kids snacks", "Pantry staples", "Packaged beverages", "Frozen meals", "Sauces and condiments", "Nut butters and spreads"].map((category) => (
               <div className="card" key={category}>
                 <h3>{category}</h3>
                 <p>Compare similar products using facts that match the category and shopping intent.</p>
