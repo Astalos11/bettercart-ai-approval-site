@@ -17,8 +17,8 @@ The final domain is not active in the site build until domain review, DNS, HTTPS
 
 ## Current Site Assets
 
-- 8 food guides
-- 4 comparison examples
+- 9 food guides
+- 5 comparison examples
 - 16 trust / policy pages
 - 1 demo tool
 - 1 reviewer overview page

@@ -49,6 +49,7 @@ Content pages:
 - Ingredient Red Flags in Packaged Foods
 - How to Compare Lower Sodium Packaged Foods
 - How to Choose Pantry Staples
+- How to Compare Ready-to-Drink Beverages
 
 Comparison examples:
 
@@ -56,6 +57,7 @@ Comparison examples:
 - High Protein Bar Comparison
 - Breakfast Cereal Comparison
 - Lower Sodium Pantry Food Comparison
+- Lower Sugar Beverage Comparison
 
 ## Approval Strengths
 
@@ -97,4 +99,4 @@ Latest local production build during optimization:
 - `npm run build` passed.
 - Static export generated successfully.
 - `npm run check:static` passed.
-- Current static page count: 42 generated routes.
+- Current static page count: 44 generated routes.
