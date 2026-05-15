@@ -9,7 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "echo \"No ESLint config is installed; run npm run check:local for project QA.\"",
     "check:static": "node scripts/check_static_site.js",
     "check:live": "node scripts/check_live_site.js",
     "check:docs": "node scripts/check_docs_index.js",
