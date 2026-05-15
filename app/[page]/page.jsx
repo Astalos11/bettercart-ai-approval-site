@@ -46,6 +46,14 @@ export default function TrustPage({ params }) {
           <p key={paragraph}>{paragraph}</p>
         ))
       )}
+      {params.page === "contact" ? (
+        <div className="callout">
+          <h2>Email BetterCart AI</h2>
+          <p>
+            Use <a href="mailto:contact@bettercartai.com">contact@bettercartai.com</a> for corrections, affiliate review questions, or partnership inquiries.
+          </p>
+        </div>
+      ) : null}
       <div className="callout">
         <h2>Questions or corrections?</h2>
         <p>
