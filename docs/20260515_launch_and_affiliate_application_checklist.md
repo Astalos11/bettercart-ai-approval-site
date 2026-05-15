@@ -65,6 +65,10 @@ Reviewer-friendly pages to include if the application allows notes:
 - `https://bettercartai.com/for-reviewers/`
 - `https://bettercartai.com/publisher-kit/`
 
+Reusable application wording is stored in:
+
+- `docs/20260515_affiliate_application_notes.md`
+
 Avoid claiming:
 
 - Established traffic if traffic is not available.
