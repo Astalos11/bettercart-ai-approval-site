@@ -85,6 +85,8 @@ a {
 .nav-links {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   gap: 18px;
   color: var(--muted);
   font-size: 0.96rem;
@@ -416,6 +418,7 @@ th {
   .nav-links {
     flex-wrap: wrap;
     gap: 12px;
+    justify-content: flex-start;
   }
 
   .hero-grid,
