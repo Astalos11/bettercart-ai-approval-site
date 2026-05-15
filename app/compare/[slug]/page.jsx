@@ -53,6 +53,9 @@ export default function ComparisonPage({ params }) {
         Updated May 15, 2026 · <Link href="/authors/bettercart-editorial-team">BetterCart AI Editorial Team</Link> · Sample editorial data
       </div>
       <p className="lead">{comparison.intro}</p>
+      <div className="sample-data-note">
+        <strong>Sample data notice:</strong> This page demonstrates comparison format and editorial logic. It is not a paid product placement, live retailer feed, or hands-on product test.
+      </div>
       {comparison.criteria?.length ? (
         <div className="callout">
           <h2>Comparison criteria</h2>
@@ -65,6 +68,7 @@ export default function ComparisonPage({ params }) {
       ) : null}
       <div className="table-wrap">
         <table>
+          <caption>Sample product comparison fields used for shopping education.</caption>
           <thead>
             <tr>
               <th>Product</th>

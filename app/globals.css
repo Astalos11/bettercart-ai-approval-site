@@ -350,6 +350,15 @@ h3 {
   font-weight: 700;
 }
 
+.sample-data-note {
+  border: 1px solid #f2c28f;
+  border-radius: 8px;
+  background: #fff8ef;
+  color: #6b3a12;
+  padding: 14px 16px;
+  margin: 22px 0;
+}
+
 .table-wrap {
   overflow-x: auto;
   background: var(--paper);
@@ -361,6 +370,14 @@ table {
   width: 100%;
   border-collapse: collapse;
   min-width: 720px;
+}
+
+caption {
+  text-align: left;
+  color: var(--muted);
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  font-weight: 700;
 }
 
 th,
