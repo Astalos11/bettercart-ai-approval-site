@@ -13,6 +13,12 @@ export function generateMetadata({ params }) {
     description: content?.body?.[0],
     alternates: {
       canonical: content ? `/${params.page}` : "/"
+    },
+    openGraph: {
+      title: content?.title || "BetterCart AI",
+      description: content?.body?.[0],
+      type: "website",
+      url: content ? `/${params.page}` : "/"
     }
   };
 }
