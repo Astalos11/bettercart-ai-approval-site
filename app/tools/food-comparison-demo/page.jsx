@@ -78,6 +78,10 @@ export default function DemoPage() {
 
         <p className="small-note">{getMetricFocus(intent)} The demo shows tradeoffs rather than a universal food score.</p>
 
+        <div className="sample-data-note">
+          <strong>Reviewer note:</strong> This is a static sample-data demo. It does not contain affiliate links, live retailer inventory, paid placement, or advertiser-specific ranking.
+        </div>
+
         <div className="callout">
           <h2>What the demo reads</h2>
           <ul>
