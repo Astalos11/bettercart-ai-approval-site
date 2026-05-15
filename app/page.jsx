@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { comparisons, guides } from "../lib/content";
 
 const previewProducts = [
   { name: "Sea Salt Lentil Crisps", metric: "1g sugar / serving", label: "Low sugar, check sodium" },
@@ -68,6 +69,20 @@ export default function HomePage() {
           <div className="section-head">
             <h2>Built for everyday grocery decisions</h2>
             <p className="lead">Simple context for common packaged food choices, without turning every product into a universal score.</p>
+          </div>
+          <div className="stats-row">
+            <div>
+              <strong>{guides.length}</strong>
+              <span>food guides</span>
+            </div>
+            <div>
+              <strong>{comparisons.length}</strong>
+              <span>comparison examples</span>
+            </div>
+            <div>
+              <strong>10+</strong>
+              <span>trust and policy pages</span>
+            </div>
           </div>
           <div className="grid three">
             <div className="card">
