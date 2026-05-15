@@ -12,7 +12,8 @@
     "lint": "next lint",
     "check:static": "node scripts/check_static_site.js",
     "check:live": "node scripts/check_live_site.js",
-    "check:all": "npm run build && npm run check:static && npm run check:live"
+    "check:docs": "node scripts/check_docs_index.js",
+    "check:all": "npm run build && npm run check:static && npm run check:docs && npm run check:live"
   },
   "dependencies": {
     "next": "^15.3.2",

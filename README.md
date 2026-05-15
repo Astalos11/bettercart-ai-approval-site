@@ -45,6 +45,16 @@ npm run check:static
 
 This checks required exported routes, internal links, and obvious placeholder text.
 
+## Docs QA
+
+After editing README document references, run:
+
+```bash
+npm run check:docs
+```
+
+This verifies that README-listed `docs/*.md` files exist.
+
 ## Live QA
 
 After Netlify deploys, run:
