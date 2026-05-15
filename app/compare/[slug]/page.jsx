@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { comparisons } from "../../../lib/content";
 
 export function generateStaticParams() {
@@ -48,7 +49,9 @@ export default function ComparisonPage({ params }) {
       />
       <div className="eyebrow">Comparison example</div>
       <h1>{comparison.title}</h1>
-      <div className="article-meta">Updated May 15, 2026 · Sample editorial data</div>
+      <div className="article-meta">
+        Updated May 15, 2026 · <Link href="/authors/bettercart-editorial-team">BetterCart AI Editorial Team</Link> · Sample editorial data
+      </div>
       <p className="lead">{comparison.intro}</p>
       {comparison.criteria?.length ? (
         <div className="callout">

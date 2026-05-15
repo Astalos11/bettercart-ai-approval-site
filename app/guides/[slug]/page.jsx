@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { guides } from "../../../lib/content";
 
 export function generateStaticParams() {
@@ -48,7 +49,9 @@ export default function GuidePage({ params }) {
       />
       <div className="eyebrow">Food guide</div>
       <h1>{guide.title}</h1>
-      <div className="article-meta">Updated May 15, 2026 · BetterCart AI Editorial Team</div>
+      <div className="article-meta">
+        Updated May 15, 2026 · <Link href="/authors/bettercart-editorial-team">BetterCart AI Editorial Team</Link>
+      </div>
       <p className="lead">{guide.excerpt}</p>
       {guide.checklist?.length ? (
         <div className="callout">
