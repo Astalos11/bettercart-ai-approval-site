@@ -161,6 +161,14 @@ function main() {
     }
   }
 
+  const demoPath = path.join(outDir, "tools", "food-comparison-demo", "index.html");
+  if (fs.existsSync(demoPath)) {
+    const demoText = fs.readFileSync(demoPath, "utf8").toLowerCase();
+    for (const phrase of ["sample-data demo", "does not contain affiliate links", "paid placement"]) {
+      if (!demoText.includes(phrase)) disclosureMisses.push(`tools/food-comparison-demo/index.html missing ${phrase}`);
+    }
+  }
+
   console.log(`required_routes=${requiredRoutes.length}`);
   console.log(`missing_required=${missingRequired.length}`);
   console.log(`bad_internal_links=${badLinks.length}`);
