@@ -64,6 +64,14 @@ const topics = [
       ["/guides/how-to-compare-frozen-meals", "Frozen meal guide"],
       ["/compare/frozen-meal-tradeoffs", "Frozen meal comparison"]
     ]
+  },
+  {
+    title: "Sauces and condiments",
+    text: "Sauce and condiment content for comparing sodium, sugar, small serving sizes, and ingredient style.",
+    links: [
+      ["/guides/how-to-compare-sauces-and-condiments", "Sauce and condiment guide"],
+      ["/compare/sauce-and-condiment-tradeoffs", "Sauce and condiment comparison"]
+    ]
   }
 ];
 
