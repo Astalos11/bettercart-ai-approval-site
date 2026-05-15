@@ -11,6 +11,7 @@ const requiredRoutes = [
   "/topics/",
   "/for-reviewers/",
   "/publisher-kit/",
+  "/site-index/",
   "/authors/bettercart-editorial-team/",
   "/tools/food-comparison-demo/",
   "/about/",

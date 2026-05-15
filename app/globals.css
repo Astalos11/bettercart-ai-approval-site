@@ -377,6 +377,11 @@ h3 {
   font-weight: 700;
 }
 
+.link-list.vertical {
+  align-items: stretch;
+  flex-direction: column;
+}
+
 .sample-data-note {
   border: 1px solid #f2c28f;
   border-radius: 8px;

@@ -14,6 +14,7 @@ export default function sitemap() {
     "/topics",
     "/tools/food-comparison-demo",
     "/for-reviewers",
+    "/site-index",
     "/authors/bettercart-editorial-team"
   ];
   const trustRoutes = Object.keys(trustPages).map((page) => `/${page}`);
