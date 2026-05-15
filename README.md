@@ -73,6 +73,7 @@ Before affiliate applications, complete:
 ## Application Docs
 
 - `docs/20260515_launch_and_affiliate_application_checklist.md`
+- `docs/20260515_current_site_snapshot.md`
 - `docs/20260515_affiliate_application_notes.md`
 - `docs/20260515_approval_site_review_checklist.md`
 - `docs/20260515_domain_cutover_runbook.md`
