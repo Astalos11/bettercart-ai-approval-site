@@ -74,6 +74,7 @@ export default function ComparisonPage({ params }) {
               <th>Product</th>
               <th>Calories</th>
               <th>Total sugar</th>
+              <th>Added sugar</th>
               <th>Protein</th>
               <th>Sodium</th>
               <th>Fit</th>
@@ -88,6 +89,7 @@ export default function ComparisonPage({ params }) {
                 </td>
                 <td>{product.calories}</td>
                 <td>{product.totalSugar}g</td>
+                <td>{product.addedSugar === null || product.addedSugar === undefined ? "Not listed" : `${product.addedSugar}g`}</td>
                 <td>{product.protein}g</td>
                 <td>{product.sodium}mg</td>
                 <td>{product.fit}</td>
