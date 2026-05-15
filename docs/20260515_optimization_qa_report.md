@@ -14,7 +14,7 @@ Result:
 
 - Passed.
 - Static export completed.
-- Generated routes increased from 24 to 36 after optimization.
+- Generated routes increased from 24 to 45 after optimization.
 
 ## Static QA Script
 
@@ -27,11 +27,14 @@ npm run check:static
 Result:
 
 - Passed.
-- Required routes checked: 21.
+- Required routes checked: 27.
 - Missing required routes: 0.
 - Bad internal links: 0.
 - Placeholder hits: 0.
 - High-risk claim hits: 0.
+- Missing image alt hits: 0.
+- Sitemap path misses: 0.
+- Disclosure misses: 0.
 
 ## Live QA Script
 
@@ -46,10 +49,18 @@ Latest result:
 - `/` returned 200.
 - `/for-reviewers/` returned 200.
 - `/publisher-kit/` returned 200.
+- `/affiliate-disclosure/` returned 200.
+- `/how-we-make-money/` returned 200.
+- `/review-process/` returned 200.
 - `/site-index/` returned 200.
+- `/icon.svg` returned 200.
 - `/robots.txt` returned 200.
 - `/sitemap.xml` returned 200.
 - Old invalid domain occurrences: 0.
+
+Temporary observation:
+
+- `/program-compliance/` passed local build/static QA but returned 404 on the temporary live Netlify site immediately after push. This is likely deploy propagation lag and should be rechecked after Netlify finishes the latest build.
 
 ## Live Netlify Smoke Check
 
@@ -95,6 +106,7 @@ All checked routes returned `200`:
 - `/terms/`
 - `/faq/`
 - `/partner-policy/`
+- `/program-compliance/`
 - `/data-sources/`
 - `/corrections-policy/`
 - `/publishing-standards/`
@@ -113,6 +125,14 @@ Checked for obvious placeholder markers:
 - `lorem`
 
 No live-page placeholder email remained. The only intentional matches were in documentation or sample-data disclaimers.
+
+Additional static checks now cover:
+
+- high-risk claims such as unsupported cure/treat/prevent wording
+- missing image alt text
+- critical reviewer pages in sitemap
+- sample data disclosure on comparison detail pages
+- non-medical disclaimer on guide detail pages
 
 ## Notes
 
