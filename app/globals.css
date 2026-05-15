@@ -35,6 +35,12 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(47, 95, 152, 0.45);
+  outline-offset: 3px;
+}
+
 .skip-link {
   position: absolute;
   left: 16px;
