@@ -51,6 +51,7 @@ Content pages:
 - How to Compare Lower Sodium Packaged Foods
 - How to Choose Pantry Staples
 - How to Compare Ready-to-Drink Beverages
+- How to Compare Frozen Meals
 
 Comparison examples:
 
@@ -59,6 +60,7 @@ Comparison examples:
 - Breakfast Cereal Comparison
 - Lower Sodium Pantry Food Comparison
 - Lower Sugar Beverage Comparison
+- Frozen Meal Tradeoff Comparison
 
 ## Approval Strengths
 
@@ -101,4 +103,4 @@ Latest local production build during optimization:
 - `npm run build` passed.
 - Static export generated successfully.
 - `npm run check:static` passed.
-- Current static page count: 45 generated routes.
+- Current static page count: 47 generated routes.
