@@ -55,6 +55,16 @@ npm run check:live
 
 This checks the live temporary Netlify site for key pages, expected content, and stale invalid-domain metadata.
 
+## Full QA
+
+Before a final application submission or domain cutover, run:
+
+```bash
+npm run check:all
+```
+
+This runs the production build, static export QA, and live site QA in sequence.
+
 ## Deployment Notes
 
 Current hosting target:
