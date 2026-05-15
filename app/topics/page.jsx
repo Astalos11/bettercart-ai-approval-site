@@ -33,11 +33,28 @@ const topics = [
     ]
   },
   {
+    title: "Beverage comparisons",
+    text: "Ready-to-drink beverage content for comparing sugar, calories, serving size, protein drinks, and ingredient context.",
+    links: [
+      ["/guides/how-to-compare-ready-to-drink-beverages", "Ready-to-drink beverage guide"],
+      ["/compare/lower-sugar-beverages", "Lower sugar beverage comparison"]
+    ]
+  },
+  {
     title: "Label reading basics",
     text: "Educational content for understanding serving size, nutrition facts, ingredients, allergens, and category context.",
     links: [
       ["/guides/how-to-read-nutrition-labels", "Nutrition label guide"],
       ["/guides/ingredient-red-flags-in-packaged-foods", "Ingredient list guide"]
+    ]
+  },
+  {
+    title: "Household staples and kids snacks",
+    text: "Practical packaged-food guides for pantry staples, kids snacks, cereals, and repeat household purchases.",
+    links: [
+      ["/guides/what-to-check-in-kids-snacks", "Kids snack guide"],
+      ["/guides/how-to-choose-pantry-staples", "Pantry staples guide"],
+      ["/guides/how-to-compare-breakfast-cereals", "Breakfast cereal guide"]
     ]
   }
 ];
