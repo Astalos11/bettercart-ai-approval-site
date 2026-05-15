@@ -10,6 +10,7 @@ const requiredPages = [
   ["/how-we-make-money/", "How We Make Money"],
   ["/review-process/", "Review Process"],
   ["/program-compliance/", "Program Compliance Notes"],
+  ["/authors/bettercart-editorial-team/", "BetterCart AI Editorial Team"],
   ["/site-index/", "Browse BetterCart AI"],
   ["/icon.svg", "<svg"],
   ["/humans.txt", "BetterCart AI"],
