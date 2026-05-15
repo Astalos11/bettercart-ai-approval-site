@@ -62,6 +62,8 @@ function Footer() {
           <strong>Trust</strong>
           <Link href="/affiliate-disclosure">Affiliate Disclosure</Link>
           <Link href="/editorial-policy">Editorial Policy</Link>
+          <Link href="/publishing-standards">Publishing Standards</Link>
+          <Link href="/content-calendar">Content Calendar</Link>
           <Link href="/data-sources">Data Sources</Link>
           <Link href="/corrections-policy">Corrections</Link>
           <Link href="/partner-policy">Partner Policy</Link>
