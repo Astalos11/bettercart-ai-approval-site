@@ -32,12 +32,8 @@ function Header() {
           <Link href="/compare">Compare</Link>
           <Link href="/topics">Topics</Link>
           <Link href="/tools/food-comparison-demo">Demo</Link>
-          <Link href="/methodology">Methodology</Link>
           <Link href="/for-reviewers">For Reviewers</Link>
-          <Link href="/publisher-kit">Publisher Kit</Link>
           <Link href="/site-index">Index</Link>
-          <Link href="/faq">FAQ</Link>
-          <Link href="/about">About</Link>
         </div>
       </nav>
     </header>
