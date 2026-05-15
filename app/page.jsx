@@ -6,6 +6,21 @@ const previewProducts = [
   { name: "Chocolate Granola Clusters", metric: "12g sugar / serving", label: "Not a strong low-sugar fit" }
 ];
 
+const processSteps = [
+  {
+    title: "Start with intent",
+    text: "A shopper may want lower sugar, higher protein, lower sodium, or a simpler ingredient list."
+  },
+  {
+    title: "Compare similar products",
+    text: "We keep category context visible so a cereal is compared with cereals and a protein bar with protein bars."
+  },
+  {
+    title: "Show tradeoffs",
+    text: "A product can be low in sugar but higher in sodium, or high in protein but higher in calories."
+  }
+];
+
 export default function HomePage() {
   return (
     <>
@@ -21,6 +36,9 @@ export default function HomePage() {
               <Link href="/guides" className="button">Explore Food Guides</Link>
               <Link href="/tools/food-comparison-demo" className="button secondary">Try the Demo</Link>
             </div>
+            <p className="small-note">
+              Independent editorial shopping resource. Not medical advice. Product labels should be verified before purchase.
+            </p>
           </div>
           <div className="product-panel" aria-label="Example product comparison">
             <div className="eyebrow">Example comparison</div>
@@ -66,6 +84,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-head">
             <h2>Start with common packaged food categories</h2>
+            <p className="lead">The early site focuses on categories where nutrition labels and ingredient lists are useful for everyday decisions.</p>
           </div>
           <div className="grid three">
             {["Low sugar snacks", "Protein bars", "Breakfast cereals", "Kids snacks", "Pantry staples", "Packaged beverages"].map((category) => (
@@ -92,6 +111,23 @@ export default function HomePage() {
           </div>
           <div className="disclaimer">
             Some links may be affiliate links. If you buy through those links, we may earn a commission. This does not change our editorial approach.
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-head">
+            <h2>How the comparison approach works</h2>
+            <p className="lead">The site is built around practical shopping questions instead of universal food grades.</p>
+          </div>
+          <div className="grid three">
+            {processSteps.map((step) => (
+              <div className="card" key={step.title}>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -23,6 +23,16 @@ export default function GuidePage({ params }) {
       <h1>{guide.title}</h1>
       <div className="article-meta">Updated May 15, 2026 · BetterCart AI Editorial Team</div>
       <p className="lead">{guide.excerpt}</p>
+      {guide.checklist?.length ? (
+        <div className="callout">
+          <h2>Quick checklist</h2>
+          <ul>
+            {guide.checklist.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
       {guide.body.map((paragraph) => (
         <p key={paragraph}>{paragraph}</p>
       ))}

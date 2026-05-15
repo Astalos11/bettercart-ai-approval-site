@@ -23,6 +23,16 @@ export default function ComparisonPage({ params }) {
       <h1>{comparison.title}</h1>
       <div className="article-meta">Updated May 15, 2026 · Sample editorial data</div>
       <p className="lead">{comparison.intro}</p>
+      {comparison.criteria?.length ? (
+        <div className="callout">
+          <h2>Comparison criteria</h2>
+          <ul>
+            {comparison.criteria.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
       <div className="table-wrap">
         <table>
           <thead>
@@ -53,6 +63,16 @@ export default function ComparisonPage({ params }) {
         </table>
       </div>
       <p>{comparison.conclusion}</p>
+      {comparison.buyingNotes?.length ? (
+        <div className="callout">
+          <h2>Before buying</h2>
+          <ul>
+            {comparison.buyingNotes.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
       <div className="disclaimer">Example comparison for editorial demonstration. Verify current labels and retailer information before purchase.</div>
     </article>
   );
