@@ -97,6 +97,13 @@ const publisherSnapshot = [
   ["Current status", "No live affiliate links, no fake traffic claims, and no direct checkout."]
 ];
 
+const dataSourceSnapshot = [
+  ["Nutrition facts", "Used in demo", "Rounded USDA-derived sample examples for product experience only."],
+  ["Ingredient lists", "Planned", "Used when reliable product labels or structured sources are available."],
+  ["Retailer availability", "Future", "Not connected in the current approval site."],
+  ["Affiliate feeds", "Future", "Only after network and advertiser approval, with disclosure."]
+];
+
 export function generateStaticParams() {
   return Object.keys(trustPages).map((page) => ({ page }));
 }
@@ -162,6 +169,22 @@ export default function TrustPage({ params }) {
             <div className="readiness-row" key={area}>
               <strong>{area}</strong>
               <span className="badge green">Ready</span>
+              <span>{note}</span>
+            </div>
+          ))}
+        </div>
+      ) : null}
+      {params.page === "data-sources" ? (
+        <div className="readiness-matrix" aria-label="Data source coverage snapshot">
+          <div className="readiness-row head">
+            <span>Data area</span>
+            <span>Status</span>
+            <span>Current boundary</span>
+          </div>
+          {dataSourceSnapshot.map(([area, status, note]) => (
+            <div className="readiness-row" key={area}>
+              <strong>{area}</strong>
+              <span className={`badge ${status === "Used in demo" ? "green" : status === "Planned" ? "blue" : "orange"}`}>{status}</span>
               <span>{note}</span>
             </div>
           ))}
