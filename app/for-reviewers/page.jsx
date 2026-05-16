@@ -44,7 +44,7 @@ export default function ForReviewersPage() {
 
         <div className="reviewer-hero-card">
           <img
-            src="/images/food-comparison-visual-v2.png"
+            src="/images/food-comparison-visual-v2.webp"
             alt="Illustration of packaged food comparison dashboard for reviewer context"
           />
           <div>
