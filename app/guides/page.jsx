@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { guides } from "../../lib/content";
+import GuidesBrowser from "./GuidesBrowser";
 
 const guideIcons = ["🍪", "💪", "🏷️", "🧒", "🥣", "🔎", "🧂", "🥫", "🥤", "🧊", "🥄", "🥜"];
 
@@ -41,16 +41,7 @@ export default function GuidesIndexPage() {
             <span>Keep affiliate context separate from product facts.</span>
           </div>
         </div>
-        <div className="grid three">
-          {guides.map((guide, index) => (
-            <Link className="card" href={`/guides/${guide.slug}`} key={guide.slug}>
-              <div className="card-icon" aria-hidden="true">{guideIcons[index % guideIcons.length]}</div>
-              <h3>{guide.title}</h3>
-              <p>{guide.excerpt}</p>
-              <span className="text-link">Read guide</span>
-            </Link>
-          ))}
-        </div>
+        <GuidesBrowser guides={guides} icons={guideIcons} />
       </div>
     </section>
   );
