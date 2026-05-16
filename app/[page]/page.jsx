@@ -126,7 +126,7 @@ export default function TrustPage({ params }) {
     <article className="article">
       <div className="eyebrow">BetterCart AI</div>
       <h1>{content.title}</h1>
-      <div className="article-meta">Updated May 15, 2026</div>
+      <div className="article-meta">Updated May 16, 2026</div>
       {trustVisuals[params.page]?.length ? (
         <div className="trust-visual-grid" aria-label={`${content.title} summary`}>
           {trustVisuals[params.page].map(([icon, label]) => (

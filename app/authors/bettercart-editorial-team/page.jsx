@@ -11,7 +11,7 @@ export default function EditorialTeamPage() {
     <article className="article">
       <div className="eyebrow">Author</div>
       <h1>BetterCart AI Editorial Team</h1>
-      <div className="article-meta">Updated May 15, 2026</div>
+      <div className="article-meta">Updated May 16, 2026</div>
       <p className="lead">
         The BetterCart AI Editorial Team creates packaged food shopping guides, comparison examples, and label-reading resources for US grocery shoppers.
       </p>

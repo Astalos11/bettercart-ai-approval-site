@@ -13,14 +13,17 @@ export default function NotFound() {
         </div>
         <div className="grid three">
           <Link className="card" href="/guides">
+            <div className="card-icon" aria-hidden="true">📚</div>
             <h2>Food Guides</h2>
             <p>Read practical packaged food buying guides.</p>
           </Link>
           <Link className="card" href="/compare">
+            <div className="card-icon" aria-hidden="true">📊</div>
             <h2>Comparisons</h2>
             <p>See sample food comparison formats.</p>
           </Link>
           <Link className="card" href="/for-reviewers">
+            <div className="card-icon" aria-hidden="true">🧾</div>
             <h2>For Reviewers</h2>
             <p>Review the site purpose, policies, and affiliate use case.</p>
           </Link>
