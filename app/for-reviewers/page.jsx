@@ -7,6 +7,29 @@ export const metadata = {
     "A quick overview of BetterCart AI for affiliate network, advertiser, and partner review."
 };
 
+const reviewerPath = [
+  {
+    icon: "🏠",
+    title: "Homepage",
+    text: "Check positioning, audience, sample visual, and content model."
+  },
+  {
+    icon: "📚",
+    title: "Guides + comparisons",
+    text: "Review how food choices are explained with label facts and tradeoffs."
+  },
+  {
+    icon: "🧾",
+    title: "Trust pages",
+    text: "Confirm disclosure, privacy, editorial standards, and compliance boundaries."
+  },
+  {
+    icon: "🧪",
+    title: "Demo tool",
+    text: "Try the sample AI-assisted comparison flow without live affiliate links."
+  }
+];
+
 export default function ForReviewersPage() {
   return (
     <section className="section">
@@ -17,6 +40,20 @@ export default function ForReviewersPage() {
           <p className="lead">
             This page summarizes what the site is, how it expects to use affiliate partnerships, and where to find the important trust pages.
           </p>
+        </div>
+
+        <div className="reviewer-hero-card">
+          <img
+            src="/images/food-comparison-visual-v2.png"
+            alt="Illustration of packaged food comparison dashboard for reviewer context"
+          />
+          <div>
+            <div className="eyebrow">30-second context</div>
+            <h2>What reviewers should see first</h2>
+            <p>
+              BetterCart AI is a content-first packaged food comparison site. It shows sample guides, transparent affiliate boundaries, and a prototype comparison demo before adding live commerce links.
+            </p>
+          </div>
         </div>
 
         <div className="grid two">
@@ -37,6 +74,15 @@ export default function ForReviewersPage() {
           <div><strong>{comparisons.length}</strong><span>comparison examples</span></div>
           <div><strong>{Object.keys(trustPages).length}</strong><span>trust pages</span></div>
           <div><strong>0</strong><span>undisclosed affiliate links</span></div>
+        </div>
+
+        <div className="visual-strip" aria-label="Fast reviewer path">
+          {reviewerPath.map((item) => (
+            <div key={item.title}>
+              <strong>{item.icon} {item.title}</strong>
+              <span>{item.text}</span>
+            </div>
+          ))}
         </div>
 
         <div className="callout">
