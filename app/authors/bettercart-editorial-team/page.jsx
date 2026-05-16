@@ -15,6 +15,11 @@ export default function EditorialTeamPage() {
       <p className="lead">
         The BetterCart AI Editorial Team creates packaged food shopping guides, comparison examples, and label-reading resources for US grocery shoppers.
       </p>
+      <div className="trust-visual-grid" aria-label="Editorial team focus">
+        <div><span aria-hidden="true">🏷️</span><strong>Label facts</strong></div>
+        <div><span aria-hidden="true">⚖️</span><strong>Tradeoffs</strong></div>
+        <div><span aria-hidden="true">🧾</span><strong>Disclosure</strong></div>
+      </div>
       <p>
         The team focuses on practical product facts: serving size, nutrition labels, ingredient lists, category context, and shopping intent. Content should help readers compare tradeoffs clearly instead of treating every food as universally good or bad.
       </p>
