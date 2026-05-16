@@ -241,6 +241,9 @@ export default function DemoPage() {
             <p>
               Choose products below to see how the same label fields change across a small shopping set.
             </p>
+            <p className="selection-status" role="status">
+              Selected {selectedProducts.length} of 3 sample products.
+            </p>
           </div>
           <div className="selected-grid">
             {selectedProducts.map((product) => (
