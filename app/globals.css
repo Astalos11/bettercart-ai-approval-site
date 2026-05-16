@@ -972,6 +972,25 @@ th {
   white-space: nowrap;
 }
 
+.selected-summary {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.selected-summary span {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  padding: 10px;
+}
+
+.selected-summary strong {
+  color: var(--ink);
+}
+
 .readiness-matrix {
   background: var(--paper);
   border: 1px solid var(--line);
@@ -1123,6 +1142,7 @@ th {
   .compare-tray,
   .top-result-card,
   .readiness-row,
+  .selected-summary,
   .selected-card {
     grid-template-columns: 1fr;
   }

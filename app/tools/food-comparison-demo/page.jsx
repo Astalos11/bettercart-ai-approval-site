@@ -52,6 +52,14 @@ function barWidth(value, max) {
   return `${Math.max(4, Math.min(100, Math.round((value / max) * 100)))}%`;
 }
 
+function findByMetric(products, metric, direction) {
+  if (!products.length) return null;
+  return products.reduce((best, product) => {
+    if (direction === "min") return product[metric] < best[metric] ? product : best;
+    return product[metric] > best[metric] ? product : best;
+  }, products[0]);
+}
+
 export default function DemoPage() {
   const [intent, setIntent] = useState("low_sugar");
   const [category, setCategory] = useState("all");
@@ -74,6 +82,9 @@ export default function DemoPage() {
     return demoProducts.filter((product) => selectedNames.includes(product.name));
   }, [selectedNames]);
   const topProduct = sortedProducts[0];
+  const selectedLowestSugar = findByMetric(selectedProducts, "totalSugar", "min");
+  const selectedHighestProtein = findByMetric(selectedProducts, "protein", "max");
+  const selectedLowestSodium = findByMetric(selectedProducts, "sodium", "min");
 
   function toggleSelected(productName) {
     setSelectedNames((current) => {
@@ -200,6 +211,11 @@ export default function DemoPage() {
                 <span>{product.sodium}mg sodium</span>
               </div>
             ))}
+          </div>
+          <div className="selected-summary">
+            <span>🍬 Lowest sugar: <strong>{selectedLowestSugar?.name || "Select products"}</strong></span>
+            <span>💪 Highest protein: <strong>{selectedHighestProtein?.name || "Select products"}</strong></span>
+            <span>🧂 Lowest sodium: <strong>{selectedLowestSodium?.name || "Select products"}</strong></span>
           </div>
         </div>
 
