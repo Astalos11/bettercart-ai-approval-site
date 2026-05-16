@@ -31,6 +31,10 @@
 - 所有 sample comparison 都明确标注 sample data。
 - Demo 明确说明不是 live retailer inventory、不是 paid placement、不是 affiliate ranking。
 - Demo 现在支持 intent 选择、category filter、选择产品对比、top sample card、颜色图例和营养指标条。
+- Demo 进一步加入了视觉说明卡、已选产品数量提示，以及“为什么当前样本排第一”的动态说明。
+- Guides、Compare、Topics 和 Site Index 都有可搜索入口，并显示当前结果数量。
+- For Reviewers 页面加入了可点击的 hands-on checkpoints，审核者可以直接打开 demo、搜索索引和比较页。
+- Publisher Kit 加入了 application snapshot 矩阵，能快速说明受众、内容形式、推广方式和当前状态。
 - 首页、guide、comparison、topics、reviewer、FAQ、trust pages 都加入了不同程度的视觉摘要、图片、emoji 或折叠交互。
 - 静态 QA 会检查关键页面、内部链接、placeholder、高风险 claim、图片 alt、sitemap、sample data disclosure 和非医疗免责声明。
 - 静态 QA 也会检查图片大小和 demo 的 USDA FDC provenance。

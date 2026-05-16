@@ -37,7 +37,12 @@ Primary goals:
 - Added visual summaries to key trust pages and the editorial team page.
 - Converted FAQ entries to native expandable details.
 - Added a searchable Site Index client component.
+- Added searchable guide, comparison, and topic index components with visible result counts.
 - Added demo selected-product summary cards.
+- Added a visual intro panel, selected-count status, and dynamic top-result reasoning to the demo.
+- Added reviewer-facing interactive checkpoints for demo, site search, and comparison pages.
+- Expanded visual summary cards across most trust and policy pages.
+- Added a publisher application snapshot matrix to the Publisher Kit page.
 - Added reduced-motion handling for hover interactions.
 - Added QA coverage for forbidden medical-symbol visuals.
 - Expanded live QA expectations for demo provenance and image assets.
