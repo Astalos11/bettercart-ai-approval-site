@@ -123,6 +123,25 @@ export default function DemoPage() {
           </p>
         </div>
 
+        <div className="demo-visual-card">
+          <img
+            src="/images/food-comparison-visual-v2.webp"
+            alt="Illustration of packaged food comparison cards and nutrition metrics"
+          />
+          <div>
+            <div className="eyebrow">What to try</div>
+            <h2>Change the intent and watch the sample set reorder</h2>
+            <div className="chip-row">
+              <span className="chip">intent controls</span>
+              <span className="chip">category filter</span>
+              <span className="chip">up to 3 selected products</span>
+            </div>
+            <p>
+              This keeps the demo visual and reviewer-friendly while avoiding fake retailer inventory or undisclosed paid placement.
+            </p>
+          </div>
+        </div>
+
         <div className="demo-controls" aria-label="Choose a shopping intent">
           {intents.map((item) => (
             <button

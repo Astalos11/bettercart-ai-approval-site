@@ -880,6 +880,36 @@ th {
   margin: 20px 0;
 }
 
+.demo-visual-card {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.1fr);
+  gap: 18px;
+  align-items: center;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+  margin-bottom: 22px;
+}
+
+.demo-visual-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+
+.demo-visual-card h2 {
+  font-size: 1.55rem;
+}
+
+.demo-visual-card p {
+  color: var(--muted);
+}
+
 .demo-controls button {
   background: var(--paper);
   color: var(--ink);
@@ -1205,6 +1235,7 @@ th {
   .metric-preview-head,
   .metric-preview-row,
   .demo-table-row,
+  .demo-visual-card,
   .compare-tray,
   .top-result-card,
   .readiness-row,
