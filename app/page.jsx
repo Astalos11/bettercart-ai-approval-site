@@ -7,6 +7,40 @@ const previewProducts = [
   { name: "Chocolate Granola Clusters", metric: "12g sugar / serving", label: "Not a strong low-sugar fit" }
 ];
 
+const shoppingScenarios = [
+  {
+    icon: "🍪",
+    need: "Lower-sugar snack",
+    checks: ["total sugar", "serving size", "fiber"],
+    outcome: "Find options that keep sweetness visible without hiding tradeoffs."
+  },
+  {
+    icon: "🥤",
+    need: "Better beverage choice",
+    checks: ["sugar", "calories", "serving"],
+    outcome: "Compare drinks by label facts before treating them as everyday picks."
+  },
+  {
+    icon: "🥫",
+    need: "Lower-sodium pantry item",
+    checks: ["sodium", "portion", "category"],
+    outcome: "Spot when a convenient pantry food is mainly a sodium tradeoff."
+  },
+  {
+    icon: "💪",
+    need: "High-protein option",
+    checks: ["protein", "calories", "sugar"],
+    outcome: "Separate genuinely protein-forward products from sweet snacks with protein."
+  }
+];
+
+const metricPreview = [
+  { label: "Total sugar", low: "1g", mid: "5g", high: "12g" },
+  { label: "Sodium", low: "85mg", mid: "180mg", high: "410mg" },
+  { label: "Protein", low: "3g", mid: "8g", high: "20g" },
+  { label: "Calories", low: "90", mid: "160", high: "260" }
+];
+
 const processSteps = [
   {
     title: "Start with intent",
@@ -102,15 +136,15 @@ export default function HomePage() {
           </div>
           <div className="grid three">
             <div className="card">
-              <h3>Nutrition context</h3>
+              <h3>📊 Nutrition context</h3>
               <p>Compare sugar, sodium, protein, calories, and serving sizes without reading every label from scratch.</p>
             </div>
             <div className="card">
-              <h3>Ingredient awareness</h3>
+              <h3>🔎 Ingredient awareness</h3>
               <p>Understand ingredient lists and spot items you may want to compare more carefully.</p>
             </div>
             <div className="card">
-              <h3>Intent-based shopping</h3>
+              <h3>🛒 Intent-based shopping</h3>
               <p>Look for products that better fit goals like lower sugar, higher protein, or lower sodium.</p>
             </div>
           </div>
@@ -118,6 +152,46 @@ export default function HomePage() {
       </section>
 
       <section className="section">
+        <div className="container">
+          <div className="section-head">
+            <div className="eyebrow">Use cases</div>
+            <h2>Common shopping moments, shown visually</h2>
+            <p className="lead">The site should help a reviewer immediately see what a shopper would compare and why.</p>
+          </div>
+          <div className="scenario-grid">
+            {shoppingScenarios.map((scenario) => (
+              <div className="scenario-card" key={scenario.need}>
+                <div className="scenario-icon" aria-hidden="true">{scenario.icon}</div>
+                <div>
+                  <h3>{scenario.need}</h3>
+                  <div className="chip-row">
+                    {scenario.checks.map((check) => (
+                      <span className="chip" key={check}>{check}</span>
+                    ))}
+                  </div>
+                  <p>{scenario.outcome}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="metric-preview" aria-label="Example color-coded nutrition comparison">
+            <div className="metric-preview-head">
+              <strong>Example metric scan</strong>
+              <span>Illustrative values per serving</span>
+            </div>
+            {metricPreview.map((metric) => (
+              <div className="metric-preview-row" key={metric.label}>
+                <span>{metric.label}</span>
+                <span className="metric-cell green">{metric.low}</span>
+                <span className="metric-cell blue">{metric.mid}</span>
+                <span className="metric-cell orange">{metric.high}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section alt">
         <div className="container">
           <div className="section-head">
             <h2>Start with common packaged food categories</h2>
@@ -134,7 +208,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section alt">
+      <section className="section">
         <div className="container grid two">
           <div>
             <h2>Evidence first, not hype</h2>

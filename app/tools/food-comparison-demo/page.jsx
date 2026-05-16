@@ -4,11 +4,13 @@ import { useMemo, useState } from "react";
 import { demoProducts } from "../../../lib/content";
 
 const intents = [
-  { id: "low_sugar", label: "Low sugar" },
-  { id: "high_protein", label: "High protein" },
-  { id: "low_sodium", label: "Low sodium" },
-  { id: "balanced_snack", label: "Balanced snack" }
+  { id: "low_sugar", label: "🍬 Low sugar" },
+  { id: "high_protein", label: "💪 High protein" },
+  { id: "low_sodium", label: "🧂 Low sodium" },
+  { id: "balanced_snack", label: "⚖️ Balanced snack" }
 ];
+
+const categories = ["all", "snack", "bar", "beverage", "pantry", "breakfast"];
 
 function getFit(product, intent) {
   if (intent === "low_sugar") {
@@ -40,8 +42,9 @@ function getMetricFocus(intent) {
 
 export default function DemoPage() {
   const [intent, setIntent] = useState("low_sugar");
+  const [category, setCategory] = useState("all");
   const sortedProducts = useMemo(() => {
-    return [...demoProducts].sort((a, b) => {
+    return demoProducts.filter((product) => category === "all" || product.category === category).sort((a, b) => {
       if (intent === "low_sugar") return a.totalSugar - b.totalSugar;
       if (intent === "high_protein") return b.protein - a.protein;
       if (intent === "balanced_snack") {
@@ -50,7 +53,7 @@ export default function DemoPage() {
       }
       return a.sodium - b.sodium;
     });
-  }, [intent]);
+  }, [intent, category]);
 
   return (
     <section className="section">
@@ -76,7 +79,20 @@ export default function DemoPage() {
           ))}
         </div>
 
-        <p className="small-note">{getMetricFocus(intent)} The demo shows tradeoffs rather than a universal food score.</p>
+        <div className="demo-controls compact" aria-label="Filter sample product category">
+          {categories.map((item) => (
+            <button
+              key={item}
+              className={item === category ? "active" : ""}
+              onClick={() => setCategory(item)}
+              type="button"
+            >
+              {item === "all" ? "All examples" : item}
+            </button>
+          ))}
+        </div>
+
+        <p className="small-note">{getMetricFocus(intent)} Showing {sortedProducts.length} sample products. The demo shows tradeoffs rather than a universal food score.</p>
 
         <div className="sample-data-note">
           <strong>Reviewer note:</strong> This is a static sample-data demo. It does not contain affiliate links, live retailer inventory, paid placement, or advertiser-specific ranking.
@@ -91,7 +107,26 @@ export default function DemoPage() {
           </ul>
         </div>
 
-        <div className="grid three">
+        <div className="demo-table" aria-label="Sample product comparison table">
+          <div className="demo-table-row head">
+            <span>Product</span>
+            <span>Sugar</span>
+            <span>Protein</span>
+            <span>Sodium</span>
+            <span>Calories</span>
+          </div>
+          {sortedProducts.slice(0, 5).map((product) => (
+            <div className="demo-table-row" key={product.name}>
+              <strong>{product.name}</strong>
+              <span className={`metric-cell ${product.totalSugar <= 2 ? "green" : product.totalSugar <= 8 ? "blue" : "orange"}`}>{product.totalSugar}g</span>
+              <span className={`metric-cell ${product.protein >= 15 ? "green" : product.protein >= 6 ? "blue" : "orange"}`}>{product.protein}g</span>
+              <span className={`metric-cell ${product.sodium <= 120 ? "green" : product.sodium <= 260 ? "blue" : "orange"}`}>{product.sodium}mg</span>
+              <span className={`metric-cell ${product.calories <= 130 ? "green" : product.calories <= 220 ? "blue" : "orange"}`}>{product.calories}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid three" style={{ marginTop: 22 }}>
           {sortedProducts.map((product) => {
             const fit = getFit(product, intent);
             return (
@@ -99,6 +134,7 @@ export default function DemoPage() {
                 <span className={`badge ${fit === "Better fit" ? "green" : fit === "Moderate fit" ? "blue" : "orange"}`}>
                   {fit}
                 </span>
+                <span className="badge blue" style={{ marginLeft: 8 }}>{product.category}</span>
                 <h3 style={{ marginTop: 14 }}>{product.name}</h3>
                 <p>{product.note}</p>
                 <p><strong>Tradeoff:</strong> {product.tradeoff}</p>
