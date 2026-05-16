@@ -3,6 +3,16 @@ import Link from "next/link";
 import { trustPages } from "../../lib/content";
 
 const trustVisuals = {
+  about: [
+    ["🛒", "Packaged food comparison"],
+    ["📊", "Label facts first"],
+    ["🚫", "No universal food scores"]
+  ],
+  contact: [
+    ["✉️", "Correction requests"],
+    ["🤝", "Partner questions"],
+    ["🏷️", "Product data updates"]
+  ],
   "affiliate-disclosure": [
     ["🤝", "Affiliate links disclosed"],
     ["🧾", "Editorial facts stay visible"],
@@ -27,6 +37,56 @@ const trustVisuals = {
     ["🎯", "Intent first"],
     ["📊", "Label fields"],
     ["⚖️", "Tradeoffs shown"]
+  ],
+  "editorial-policy": [
+    ["🧾", "Evidence-based guides"],
+    ["🚫", "No fake testing claims"],
+    ["⚖️", "Tradeoffs allowed"]
+  ],
+  "publishing-standards": [
+    ["📚", "Useful comparison content"],
+    ["🏷️", "Sample data labeled"],
+    ["🚫", "No pressure claims"]
+  ],
+  "review-process": [
+    ["🔎", "Source check"],
+    ["📋", "Editorial review"],
+    ["🛠️", "Corrections path"]
+  ],
+  "program-compliance": [
+    ["✅", "Allowed methods only"],
+    ["🚫", "No spam tactics"],
+    ["📌", "Advertiser rules reviewed"]
+  ],
+  "partner-policy": [
+    ["🤝", "Publisher partnerships"],
+    ["📊", "Comparison context"],
+    ["🚫", "No guaranteed favorable rank"]
+  ],
+  privacy: [
+    ["🔐", "Privacy-aware"],
+    ["📉", "Basic analytics only"],
+    ["🚫", "No direct checkout"]
+  ],
+  "cookie-policy": [
+    ["🍪", "Cookie notice"],
+    ["📈", "Analytics context"],
+    ["🔗", "Affiliate tracking later"]
+  ],
+  terms: [
+    ["📌", "Shopping information"],
+    ["🚫", "Not medical advice"],
+    ["🏷️", "Verify current labels"]
+  ],
+  "corrections-policy": [
+    ["🛠️", "Correction path"],
+    ["🏷️", "UPC helpful"],
+    ["📎", "Source links preferred"]
+  ],
+  "content-calendar": [
+    ["📅", "Repeatable topics"],
+    ["🥣", "Category coverage"],
+    ["📌", "Quality over volume"]
   ]
 };
 
