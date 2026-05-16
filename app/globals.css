@@ -881,6 +881,44 @@ th {
   font-size: 1.9rem;
 }
 
+.metric-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.metric-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 800;
+  padding: 6px 10px;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+.legend-dot.green {
+  background: var(--green);
+}
+
+.legend-dot.blue {
+  background: var(--blue);
+}
+
+.legend-dot.orange {
+  background: var(--orange);
+}
+
 .compare-tray {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);

@@ -128,6 +128,12 @@ export default function DemoPage() {
 
         <p className="small-note">{getMetricFocus(intent)} Showing {sortedProducts.length} sample products. The demo shows tradeoffs rather than a universal food score.</p>
 
+        <div className="metric-legend" aria-label="Demo color legend">
+          <span><i className="legend-dot green" /> stronger sample fit</span>
+          <span><i className="legend-dot blue" /> moderate sample fit</span>
+          <span><i className="legend-dot orange" /> tradeoff to review</span>
+        </div>
+
         {topProduct ? (
           <div className="top-result-card">
             <div className="top-result-icon" aria-hidden="true">✨</div>
