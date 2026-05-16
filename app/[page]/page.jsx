@@ -104,6 +104,13 @@ const dataSourceSnapshot = [
   ["Affiliate feeds", "Future", "Only after network and advertiser approval, with disclosure."]
 ];
 
+const programComplianceSnapshot = [
+  ["Allowed methods", "Ready", "Editorial guides, comparison pages, label education, and disclosed links where permitted."],
+  ["Not used", "Blocked", "Forced clicks, cookie stuffing, spam, fake reviews, and undisclosed sponsored claims."],
+  ["Needs review", "Per program", "Trademark bidding, coupon wording, paid social, email, and negative comparison rules."],
+  ["Food claims", "Bounded", "No disease-treatment claims, medical advice, or unsupported health-effect claims."]
+];
+
 export function generateStaticParams() {
   return Object.keys(trustPages).map((page) => ({ page }));
 }
@@ -185,6 +192,22 @@ export default function TrustPage({ params }) {
             <div className="readiness-row" key={area}>
               <strong>{area}</strong>
               <span className={`badge ${status === "Used in demo" ? "green" : status === "Planned" ? "blue" : "orange"}`}>{status}</span>
+              <span>{note}</span>
+            </div>
+          ))}
+        </div>
+      ) : null}
+      {params.page === "program-compliance" ? (
+        <div className="readiness-matrix" aria-label="Program compliance snapshot">
+          <div className="readiness-row head">
+            <span>Compliance area</span>
+            <span>Status</span>
+            <span>Boundary</span>
+          </div>
+          {programComplianceSnapshot.map(([area, status, note]) => (
+            <div className="readiness-row" key={area}>
+              <strong>{area}</strong>
+              <span className={`badge ${status === "Ready" ? "green" : status === "Blocked" ? "orange" : "blue"}`}>{status}</span>
               <span>{note}</span>
             </div>
           ))}
