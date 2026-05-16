@@ -34,13 +34,13 @@ BetterCart AI is an AI-assisted packaged food comparison guide for US grocery sh
 ## Longer Description
 
 ```text
-BetterCart AI helps shoppers compare packaged foods such as snacks, protein bars, cereals, pantry foods, beverages, frozen meals, sauces, and condiments. The site focuses on nutrition facts, ingredient context, serving size, category tradeoffs, and shopping intent. Current content includes food guides, sample comparison pages, disclosure pages, editorial standards, a publisher kit, and a small demo tool.
+BetterCart AI helps shoppers compare packaged foods such as snacks, protein bars, cereals, pantry foods, beverages, frozen meals, sauces, and condiments. The site focuses on nutrition facts, ingredient context, serving size, category tradeoffs, and shopping intent. Current content includes food guides, sample comparison pages, disclosure pages, editorial standards, a publisher kit, searchable topic/index pages, and a static USDA-derived comparison demo.
 ```
 
 ## Promotional Methods
 
 ```text
-Editorial shopping guides, packaged food comparison pages, nutrition-label education content, and future AI-assisted product discovery tools. Affiliate links, if added, will be clearly disclosed and used only where they fit the reader's shopping context and program rules.
+Editorial shopping guides, packaged food comparison pages, nutrition-label education content, searchable topic pages, and future AI-assisted product discovery tools. Affiliate links, if added, will be clearly disclosed and used only where they fit the reader's shopping context and program rules.
 ```
 
 ## Traffic / History Note
@@ -61,6 +61,8 @@ Use final domain URLs:
 - `https://bettercartai.com/editorial-policy/`
 - `https://bettercartai.com/privacy/`
 - `https://bettercartai.com/contact/`
+- `https://bettercartai.com/tools/food-comparison-demo/`
+- `https://bettercartai.com/site-index/`
 
 ## Claims To Avoid In Applications
 
