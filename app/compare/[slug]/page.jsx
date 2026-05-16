@@ -50,6 +50,9 @@ export function generateMetadata({ params }) {
 export default function ComparisonPage({ params }) {
   const comparison = comparisons.find((item) => item.slug === params.slug);
   if (!comparison) notFound();
+  const lowestSugar = comparison.products.reduce((best, product) => product.totalSugar < best.totalSugar ? product : best, comparison.products[0]);
+  const highestProtein = comparison.products.reduce((best, product) => product.protein > best.protein ? product : best, comparison.products[0]);
+  const highestSodium = comparison.products.reduce((best, product) => product.sodium > best.sodium ? product : best, comparison.products[0]);
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -80,6 +83,23 @@ export default function ComparisonPage({ params }) {
       <p className="lead">{comparison.intro}</p>
       <div className="sample-data-note">
         <strong>Sample data notice:</strong> This page demonstrates comparison format and editorial logic. It is not a paid product placement, live retailer feed, or hands-on product test.
+      </div>
+      <div className="comparison-highlights" aria-label="Quick comparison highlights">
+        <div>
+          <span aria-hidden="true">🍬</span>
+          <strong>Lowest sugar</strong>
+          <p>{lowestSugar.name}: {lowestSugar.totalSugar}g per serving</p>
+        </div>
+        <div>
+          <span aria-hidden="true">💪</span>
+          <strong>Highest protein</strong>
+          <p>{highestProtein.name}: {highestProtein.protein}g per serving</p>
+        </div>
+        <div>
+          <span aria-hidden="true">🧂</span>
+          <strong>Sodium watch</strong>
+          <p>{highestSodium.name}: {highestSodium.sodium}mg per serving</p>
+        </div>
       </div>
       {comparison.criteria?.length ? (
         <div className="callout">

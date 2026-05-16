@@ -388,6 +388,40 @@ h3 {
   color: var(--muted);
 }
 
+.comparison-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.comparison-highlights div {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.comparison-highlights span {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--soft-green);
+  margin-bottom: 10px;
+}
+
+.comparison-highlights strong,
+.comparison-highlights p {
+  display: block;
+}
+
+.comparison-highlights p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
 .scenario-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -791,6 +825,7 @@ th {
   .scenario-grid,
   .visual-strip,
   .reviewer-hero-card,
+  .comparison-highlights,
   .stats-row,
   .grid.three,
   .grid.two,
