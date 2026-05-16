@@ -8,6 +8,8 @@ Purpose: Packaged food comparison guides for US grocery shoppers.
 
 Reviewer page: /for-reviewers/
 Publisher kit: /publisher-kit/
+Demo tool: /tools/food-comparison-demo/
+Site index: /site-index/
 Affiliate disclosure: /affiliate-disclosure/
 Editorial policy: /editorial-policy/
 Program compliance: /program-compliance/
