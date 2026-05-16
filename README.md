@@ -44,6 +44,7 @@ npm run check:static
 ```
 
 This checks required exported routes, internal links, and obvious placeholder text.
+It also checks sample-data disclosures, provenance notes, image alt text, interactive search controls, structured data, image size limits, and security header artifacts.
 
 ## Docs QA
 
