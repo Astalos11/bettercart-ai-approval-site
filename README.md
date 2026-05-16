@@ -114,6 +114,7 @@ Before affiliate applications, complete:
 - `docs/20260516_visual_interactive_optimization_plan.md`
 - `docs/20260516_visual_interactive_optimization_log.md`
 - `docs/20260516_visual_content_guidelines.md`
+- `docs/20260516_autonomous_visual_evolution_run_report.md`
 
 ## Important Pages
 
