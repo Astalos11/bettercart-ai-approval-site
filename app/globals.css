@@ -323,6 +323,46 @@ h3 {
   color: var(--muted);
 }
 
+.card-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--soft-blue);
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+}
+
+.text-link {
+  color: var(--green-dark);
+  font-weight: 900;
+}
+
+.visual-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: -4px 0 24px;
+}
+
+.visual-strip div {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  padding: 16px;
+}
+
+.visual-strip strong,
+.visual-strip span {
+  display: block;
+}
+
+.visual-strip span {
+  color: var(--muted);
+  margin-top: 4px;
+}
+
 .scenario-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -644,6 +684,7 @@ th {
 
   .hero-grid,
   .scenario-grid,
+  .visual-strip,
   .stats-row,
   .grid.three,
   .grid.two,

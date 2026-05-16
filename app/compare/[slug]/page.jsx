@@ -2,6 +2,31 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { comparisons } from "../../../lib/content";
 
+function metricTone(metric, value) {
+  if (value === null || value === undefined) return "blue";
+  if (metric === "sugar") {
+    if (value <= 2) return "green";
+    if (value <= 8) return "blue";
+    return "orange";
+  }
+  if (metric === "protein") {
+    if (value >= 15) return "green";
+    if (value >= 6) return "blue";
+    return "orange";
+  }
+  if (metric === "sodium") {
+    if (value <= 120) return "green";
+    if (value <= 260) return "blue";
+    return "orange";
+  }
+  if (metric === "calories") {
+    if (value <= 130) return "green";
+    if (value <= 220) return "blue";
+    return "orange";
+  }
+  return "blue";
+}
+
 export function generateStaticParams() {
   return comparisons.map((comparison) => ({ slug: comparison.slug }));
 }
@@ -87,11 +112,11 @@ export default function ComparisonPage({ params }) {
                   <strong>{product.name}</strong>
                   <div className="metric">{product.category}</div>
                 </td>
-                <td>{product.calories}</td>
-                <td>{product.totalSugar}g</td>
-                <td>{product.addedSugar === null || product.addedSugar === undefined ? "Not listed" : `${product.addedSugar}g`}</td>
-                <td>{product.protein}g</td>
-                <td>{product.sodium}mg</td>
+                <td><span className={`metric-cell ${metricTone("calories", product.calories)}`}>{product.calories}</span></td>
+                <td><span className={`metric-cell ${metricTone("sugar", product.totalSugar)}`}>{product.totalSugar}g</span></td>
+                <td>{product.addedSugar === null || product.addedSugar === undefined ? <span className="metric-cell blue">Not listed</span> : <span className={`metric-cell ${metricTone("sugar", product.addedSugar)}`}>{product.addedSugar}g</span>}</td>
+                <td><span className={`metric-cell ${metricTone("protein", product.protein)}`}>{product.protein}g</span></td>
+                <td><span className={`metric-cell ${metricTone("sodium", product.sodium)}`}>{product.sodium}mg</span></td>
                 <td>{product.fit}</td>
               </tr>
             ))}
