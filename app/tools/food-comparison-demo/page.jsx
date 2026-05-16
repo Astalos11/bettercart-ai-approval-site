@@ -10,7 +10,7 @@ const intents = [
   { id: "balanced_snack", label: "⚖️ Balanced snack" }
 ];
 
-const categories = ["all", "snack", "bar", "beverage", "pantry", "breakfast"];
+const categories = ["all", "snack", "bar", "pantry", "breakfast", "dessert"];
 
 function getFit(product, intent) {
   if (intent === "low_sugar") {
@@ -44,8 +44,8 @@ export default function DemoPage() {
   const [intent, setIntent] = useState("low_sugar");
   const [category, setCategory] = useState("all");
   const [selectedNames, setSelectedNames] = useState([
-    "Sea Salt Lentil Crisps",
-    "Peanut Butter Protein Bar"
+    "Garlic Herb Pita Chips",
+    "Double Dark Chocolate Protein Bar"
   ]);
   const sortedProducts = useMemo(() => {
     return demoProducts.filter((product) => category === "all" || product.category === category).sort((a, b) => {
@@ -114,7 +114,7 @@ export default function DemoPage() {
         <p className="small-note">{getMetricFocus(intent)} Showing {sortedProducts.length} sample products. The demo shows tradeoffs rather than a universal food score.</p>
 
         <div className="sample-data-note">
-          <strong>Reviewer note:</strong> This is a static sample-data demo. It does not contain affiliate links, live retailer inventory, paid placement, or advertiser-specific ranking.
+          <strong>Reviewer note:</strong> This is a static sample-data demo using rounded USDA-derived examples. It does not contain affiliate links, live retailer inventory, paid placement, or advertiser-specific ranking.
         </div>
 
         <div className="callout">
@@ -181,6 +181,7 @@ export default function DemoPage() {
                 <p className="metric">
                   {product.calories} calories · {product.totalSugar}g sugar · {product.protein}g protein · {product.sodium}mg sodium
                 </p>
+                <p className="metric">{product.source}</p>
                 <button
                   className={`button ${isSelected ? "" : "secondary"}`}
                   type="button"
