@@ -65,6 +65,8 @@ const requiredSitemapPaths = [
   "/site-index"
 ];
 
+const maxPublicImageBytes = 500 * 1024;
+
 function routeExists(route) {
   if (route === "/") return fs.existsSync(path.join(outDir, "index.html"));
   if (route.endsWith(".txt") || route.endsWith(".xml")) {
@@ -116,6 +118,7 @@ function main() {
   const disclosureMisses = [];
   const externalAnchorHits = [];
   const accessibilityMisses = [];
+  const oversizedImageHits = [];
   for (const file of searchableFiles) {
     const text = fs.readFileSync(file, "utf8");
     for (const pattern of placeholderPatterns) {
@@ -196,6 +199,18 @@ function main() {
     if (!homeText.includes('id="main-content"')) accessibilityMisses.push("index.html missing main content anchor");
   }
 
+  const publicImageDir = path.join(outDir, "images");
+  if (fs.existsSync(publicImageDir)) {
+    for (const file of walk(publicImageDir)) {
+      if (file.match(/\.(png|jpg|jpeg|webp)$/i)) {
+        const size = fs.statSync(file).size;
+        if (size > maxPublicImageBytes) {
+          oversizedImageHits.push(`${path.relative(outDir, file)} is ${Math.round(size / 1024)}KB`);
+        }
+      }
+    }
+  }
+
   console.log(`required_routes=${requiredRoutes.length}`);
   console.log(`missing_required=${missingRequired.length}`);
   console.log(`bad_internal_links=${badLinks.length}`);
@@ -206,6 +221,7 @@ function main() {
   console.log(`accessibility_misses=${accessibilityMisses.length}`);
   console.log(`sitemap_path_misses=${sitemapPathMisses.length}`);
   console.log(`disclosure_misses=${disclosureMisses.length}`);
+  console.log(`oversized_image_hits=${oversizedImageHits.length}`);
 
   if (missingRequired.length) console.log(`Missing required routes:\n${missingRequired.join("\n")}`);
   if (badLinks.length) console.log(`Bad internal links:\n${badLinks.join("\n")}`);
@@ -216,8 +232,9 @@ function main() {
   if (accessibilityMisses.length) console.log(`Accessibility misses:\n${accessibilityMisses.join("\n")}`);
   if (sitemapPathMisses.length) console.log(`Sitemap path misses:\n${sitemapPathMisses.join("\n")}`);
   if (disclosureMisses.length) console.log(`Disclosure misses:\n${disclosureMisses.join("\n")}`);
+  if (oversizedImageHits.length) console.log(`Oversized image hits:\n${oversizedImageHits.join("\n")}`);
 
-  if (missingRequired.length || badLinks.length || placeholderHits.length || highRiskClaimHits.length || missingImageAltHits.length || externalAnchorHits.length || accessibilityMisses.length || sitemapPathMisses.length || disclosureMisses.length) process.exit(1);
+  if (missingRequired.length || badLinks.length || placeholderHits.length || highRiskClaimHits.length || missingImageAltHits.length || externalAnchorHits.length || accessibilityMisses.length || sitemapPathMisses.length || disclosureMisses.length || oversizedImageHits.length) process.exit(1);
 }
 
 main();
