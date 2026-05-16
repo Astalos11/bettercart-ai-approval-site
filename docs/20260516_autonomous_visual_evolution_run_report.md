@@ -44,7 +44,7 @@ Coverage now includes:
 
 ## Live Deployment Status
 
-The temporary Netlify URL still appears stale during this run. Local export contains the expected pages and assets, but live checks still show missing newer routes/assets such as:
+The temporary Netlify URL still appears stale during this run, including after a delayed recheck. Local export contains the expected pages and assets, but live checks still show missing newer routes/assets such as:
 
 - `/program-compliance/`
 - `/humans.txt`
