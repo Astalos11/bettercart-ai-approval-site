@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { comparisons, guides, trustPages } from "../../lib/content";
+import SiteIndexBrowser from "./SiteIndexBrowser";
 
 export const metadata = {
   title: "Site Index",
@@ -16,6 +16,25 @@ const coreLinks = [
 ];
 
 export default function SiteIndexPage() {
+  const groups = [
+    {
+      title: "Core pages",
+      links: coreLinks.map(([href, label]) => ({ href, label }))
+    },
+    {
+      title: "Trust pages",
+      links: Object.entries(trustPages).map(([slug, page]) => ({ href: `/${slug}`, label: page.title }))
+    },
+    {
+      title: "Food guides",
+      links: guides.map((guide) => ({ href: `/guides/${guide.slug}`, label: guide.title }))
+    },
+    {
+      title: "Comparison examples",
+      links: comparisons.map((comparison) => ({ href: `/compare/${comparison.slug}`, label: comparison.title }))
+    }
+  ];
+
   return (
     <section className="section">
       <div className="container">
@@ -33,40 +52,7 @@ export default function SiteIndexPage() {
           <div><strong>🧾 Trust</strong><span>Disclosure, privacy, methodology, and policies.</span></div>
         </div>
 
-        <div className="grid two">
-          <div className="card">
-            <h2>Core pages</h2>
-            <div className="link-list vertical">
-              {coreLinks.map(([href, label]) => (
-                <Link href={href} key={href}>{label}</Link>
-              ))}
-            </div>
-          </div>
-          <div className="card">
-            <h2>Trust pages</h2>
-            <div className="link-list vertical">
-              {Object.entries(trustPages).map(([slug, page]) => (
-                <Link href={`/${slug}`} key={slug}>{page.title}</Link>
-              ))}
-            </div>
-          </div>
-          <div className="card">
-            <h2>Food guides</h2>
-            <div className="link-list vertical">
-              {guides.map((guide) => (
-                <Link href={`/guides/${guide.slug}`} key={guide.slug}>{guide.title}</Link>
-              ))}
-            </div>
-          </div>
-          <div className="card">
-            <h2>Comparison examples</h2>
-            <div className="link-list vertical">
-              {comparisons.map((comparison) => (
-                <Link href={`/compare/${comparison.slug}`} key={comparison.slug}>{comparison.title}</Link>
-              ))}
-            </div>
-          </div>
-        </div>
+        <SiteIndexBrowser groups={groups} />
       </div>
     </section>
   );

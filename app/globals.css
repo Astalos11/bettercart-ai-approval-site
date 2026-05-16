@@ -791,6 +791,30 @@ a.card:focus-visible {
   flex-direction: column;
 }
 
+.site-search {
+  display: grid;
+  gap: 8px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+.site-search label {
+  font-weight: 900;
+}
+
+.site-search input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  min-height: 44px;
+  padding: 0 12px;
+  color: var(--ink);
+  font: inherit;
+}
+
 .sample-data-note {
   border: 1px solid #f2c28f;
   border-radius: 8px;
