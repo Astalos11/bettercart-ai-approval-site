@@ -695,8 +695,18 @@ h3 {
   padding: 20px 22px;
 }
 
-.faq-item h2 {
+.faq-item summary {
+  cursor: pointer;
   font-size: 1.22rem;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.faq-item summary::marker {
+  color: var(--green);
+}
+
+.faq-item p {
   margin-bottom: 10px;
 }
 

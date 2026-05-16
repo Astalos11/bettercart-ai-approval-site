@@ -73,10 +73,10 @@ export default function TrustPage({ params }) {
       {content.faq?.length ? (
         <div className="faq-list">
           {content.faq.map((item) => (
-            <section className="faq-item" key={item.question}>
-              <h2>{item.question}</h2>
+            <details className="faq-item" key={item.question}>
+              <summary>{item.question}</summary>
               <p>{item.answer}</p>
-            </section>
+            </details>
           ))}
         </div>
       ) : (
