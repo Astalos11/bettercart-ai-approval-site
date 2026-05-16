@@ -115,7 +115,8 @@ All checked routes returned `200`:
 - `/content-calendar/`
 - `/robots.txt`
 - `/sitemap.xml`
-- `/images/food-comparison-workspace.png`
+- `/images/food-comparison-visual-v2.webp`
+- `/images/packaged-food-guide-flatlay.webp`
 
 ## Content QA
 
