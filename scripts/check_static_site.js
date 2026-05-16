@@ -210,6 +210,9 @@ function main() {
     const homeText = fs.readFileSync(homePath, "utf8");
     if (!homeText.includes('href="#main-content"')) accessibilityMisses.push("index.html missing skip link");
     if (!homeText.includes('id="main-content"')) accessibilityMisses.push("index.html missing main content anchor");
+    if (!homeText.toLowerCase().includes("static rounded usda-derived examples")) {
+      disclosureMisses.push("index.html missing homepage sample provenance");
+    }
   }
 
   const interactiveSearchChecks = [
