@@ -104,6 +104,7 @@ export default function DemoPage() {
               key={item.id}
               className={item.id === intent ? "active" : ""}
               onClick={() => setIntent(item.id)}
+              aria-pressed={item.id === intent}
               type="button"
             >
               {item.label}
@@ -117,6 +118,7 @@ export default function DemoPage() {
               key={item}
               className={item === category ? "active" : ""}
               onClick={() => setCategory(item)}
+              aria-pressed={item === category}
               type="button"
             >
               {item === "all" ? "All examples" : item}
@@ -229,6 +231,7 @@ export default function DemoPage() {
                 <button
                   className={`button ${isSelected ? "" : "secondary"}`}
                   type="button"
+                  aria-pressed={isSelected}
                   onClick={() => toggleSelected(product.name)}
                 >
                   {isSelected ? "Selected" : "Add to compare"}
