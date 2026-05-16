@@ -3,7 +3,7 @@ import { getSiteUrl } from "../lib/site";
 
 export const dynamic = "force-static";
 
-const lastModified = new Date("2026-05-15");
+const lastModified = new Date("2026-05-16");
 
 export default function sitemap() {
   const baseUrl = getSiteUrl();
