@@ -109,6 +109,8 @@ Before affiliate applications, complete:
 - `docs/20260515_domain_cutover_runbook.md`
 - `docs/20260515_netlify_stale_deploy_troubleshooting.md`
 - `docs/20260515_optimization_qa_report.md`
+- `docs/20260516_visual_interactive_optimization_plan.md`
+- `docs/20260516_visual_interactive_optimization_log.md`
 
 ## Important Pages
 
