@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { comparisons } from "../../lib/content";
+import ComparisonsBrowser from "./ComparisonsBrowser";
 
 const comparisonIcons = ["🍪", "💪", "🥣", "🧒", "🥫", "🥤", "🧊", "🥄"];
 
@@ -41,16 +41,7 @@ export default function CompareIndexPage() {
             <span>Check protein together with calories and sugar.</span>
           </div>
         </div>
-        <div className="grid two">
-          {comparisons.map((comparison, index) => (
-            <Link className="card" href={`/compare/${comparison.slug}`} key={comparison.slug}>
-              <div className="card-icon" aria-hidden="true">{comparisonIcons[index % comparisonIcons.length]}</div>
-              <h3>{comparison.title}</h3>
-              <p>{comparison.intro}</p>
-              <span className="text-link">View sample comparison</span>
-            </Link>
-          ))}
-        </div>
+        <ComparisonsBrowser comparisons={comparisons} icons={comparisonIcons} />
       </div>
     </section>
   );
