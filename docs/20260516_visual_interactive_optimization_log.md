@@ -38,11 +38,18 @@ Primary goals:
 - Converted FAQ entries to native expandable details.
 - Added a searchable Site Index client component.
 - Added searchable guide, comparison, and topic index components with visible result counts.
+- Added quick search chips, clear controls, and active states to searchable indexes.
 - Added demo selected-product summary cards.
 - Added a visual intro panel, selected-count status, and dynamic top-result reasoning to the demo.
+- Added a demo reset selection control.
 - Added reviewer-facing interactive checkpoints for demo, site search, and comparison pages.
 - Expanded visual summary cards across most trust and policy pages.
 - Added a publisher application snapshot matrix to the Publisher Kit page.
+- Added a data source coverage snapshot matrix to the Data Sources page.
+- Added content-type chips and next-step cards to guide and comparison detail pages.
+- Added basic Netlify security headers and QA coverage for their contents.
+- Added WebSite structured data and QA coverage for its presence.
+- Added image loading hints for generated visual assets.
 - Added reduced-motion handling for hover interactions.
 - Added QA coverage for forbidden medical-symbol visuals.
 - Expanded live QA expectations for demo provenance and image assets.
@@ -67,6 +74,11 @@ Coverage includes:
 - sitemap critical paths
 - disclosure checks
 - image size checks
+- homepage sample provenance checks
+- interactive search control checks
+- demo reset control checks
+- security header checks
+- structured data checks
 - docs index checks
 
 ## Live Deployment Note
