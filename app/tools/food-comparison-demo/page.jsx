@@ -40,6 +40,10 @@ function getMetricFocus(intent) {
   return "Sorted by sodium per serving.";
 }
 
+function barWidth(value, max) {
+  return `${Math.max(4, Math.min(100, Math.round((value / max) * 100)))}%`;
+}
+
 export default function DemoPage() {
   const [intent, setIntent] = useState("low_sugar");
   const [category, setCategory] = useState("all");
@@ -181,6 +185,20 @@ export default function DemoPage() {
                 <p className="metric">
                   {product.calories} calories · {product.totalSugar}g sugar · {product.protein}g protein · {product.sodium}mg sodium
                 </p>
+                <div className="metric-bars" aria-label={`Nutrition bars for ${product.name}`}>
+                  <div>
+                    <span>Sugar</span>
+                    <i className="bar orange" style={{ width: barWidth(product.totalSugar, 25) }} />
+                  </div>
+                  <div>
+                    <span>Protein</span>
+                    <i className="bar green" style={{ width: barWidth(product.protein, 20) }} />
+                  </div>
+                  <div>
+                    <span>Sodium</span>
+                    <i className="bar blue" style={{ width: barWidth(product.sodium, 700) }} />
+                  </div>
+                </div>
                 <p className="metric">{product.source}</p>
                 <button
                   className={`button ${isSelected ? "" : "secondary"}`}

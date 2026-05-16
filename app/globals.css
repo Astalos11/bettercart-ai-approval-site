@@ -711,6 +711,43 @@ th {
   white-space: nowrap;
 }
 
+.metric-bars {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.metric-bars div {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.metric-bars span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.bar {
+  display: block;
+  height: 9px;
+  border-radius: 999px;
+}
+
+.bar.green {
+  background: var(--green);
+}
+
+.bar.blue {
+  background: var(--blue);
+}
+
+.bar.orange {
+  background: var(--orange);
+}
+
 .footer {
   margin-top: auto;
   padding: 36px 0;
