@@ -124,6 +124,7 @@ function main() {
   const externalAnchorHits = [];
   const accessibilityMisses = [];
   const oversizedImageHits = [];
+  const interactionMisses = [];
   for (const file of searchableFiles) {
     const text = fs.readFileSync(file, "utf8");
     for (const pattern of placeholderPatterns) {
@@ -210,6 +211,20 @@ function main() {
     if (!homeText.includes('id="main-content"')) accessibilityMisses.push("index.html missing main content anchor");
   }
 
+  const interactiveSearchChecks = [
+    ["guides/index.html", "guide-search"],
+    ["compare/index.html", "comparison-search"],
+    ["site-index/index.html", "site-index-search"]
+  ];
+  for (const [relativePath, id] of interactiveSearchChecks) {
+    const file = path.join(outDir, relativePath);
+    if (!fs.existsSync(file)) {
+      interactionMisses.push(`${relativePath} missing`);
+    } else if (!fs.readFileSync(file, "utf8").includes(id)) {
+      interactionMisses.push(`${relativePath} missing ${id}`);
+    }
+  }
+
   const publicImageDir = path.join(outDir, "images");
   if (fs.existsSync(publicImageDir)) {
     for (const file of walk(publicImageDir)) {
@@ -234,6 +249,7 @@ function main() {
   console.log(`sitemap_path_misses=${sitemapPathMisses.length}`);
   console.log(`disclosure_misses=${disclosureMisses.length}`);
   console.log(`oversized_image_hits=${oversizedImageHits.length}`);
+  console.log(`interaction_misses=${interactionMisses.length}`);
 
   if (missingRequired.length) console.log(`Missing required routes:\n${missingRequired.join("\n")}`);
   if (badLinks.length) console.log(`Bad internal links:\n${badLinks.join("\n")}`);
@@ -246,8 +262,9 @@ function main() {
   if (sitemapPathMisses.length) console.log(`Sitemap path misses:\n${sitemapPathMisses.join("\n")}`);
   if (disclosureMisses.length) console.log(`Disclosure misses:\n${disclosureMisses.join("\n")}`);
   if (oversizedImageHits.length) console.log(`Oversized image hits:\n${oversizedImageHits.join("\n")}`);
+  if (interactionMisses.length) console.log(`Interaction misses:\n${interactionMisses.join("\n")}`);
 
-  if (missingRequired.length || badLinks.length || placeholderHits.length || highRiskClaimHits.length || forbiddenVisualHits.length || missingImageAltHits.length || externalAnchorHits.length || accessibilityMisses.length || sitemapPathMisses.length || disclosureMisses.length || oversizedImageHits.length) process.exit(1);
+  if (missingRequired.length || badLinks.length || placeholderHits.length || highRiskClaimHits.length || forbiddenVisualHits.length || missingImageAltHits.length || externalAnchorHits.length || accessibilityMisses.length || sitemapPathMisses.length || disclosureMisses.length || oversizedImageHits.length || interactionMisses.length) process.exit(1);
 }
 
 main();
