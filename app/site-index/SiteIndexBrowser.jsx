@@ -29,6 +29,7 @@ export default function SiteIndexBrowser({ groups }) {
           onChange={(event) => setQuery(event.target.value)}
           placeholder="Try disclosure, demo, protein, privacy..."
         />
+        <span role="status">{filteredGroups.reduce((total, group) => total + group.links.length, 0)} pages shown</span>
       </div>
 
       {filteredGroups.length ? (

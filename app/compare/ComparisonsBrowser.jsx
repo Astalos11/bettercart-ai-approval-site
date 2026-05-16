@@ -24,6 +24,7 @@ export default function ComparisonsBrowser({ comparisons, icons }) {
           onChange={(event) => setQuery(event.target.value)}
           placeholder="Try snack, protein, beverage, sodium, frozen..."
         />
+        <span role="status">{filteredComparisons.length} comparisons shown</span>
       </div>
 
       {filteredComparisons.length ? (

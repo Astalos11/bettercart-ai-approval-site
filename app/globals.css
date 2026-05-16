@@ -815,6 +815,12 @@ a.card:focus-visible {
   font: inherit;
 }
 
+.site-search span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
 .sample-data-note {
   border: 1px solid #f2c28f;
   border-radius: 8px;

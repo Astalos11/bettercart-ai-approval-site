@@ -24,6 +24,7 @@ export default function GuidesBrowser({ guides, icons }) {
           onChange={(event) => setQuery(event.target.value)}
           placeholder="Try sugar, protein, sodium, cereal, ingredient..."
         />
+        <span role="status">{filteredGuides.length} guides shown</span>
       </div>
 
       {filteredGuides.length ? (
