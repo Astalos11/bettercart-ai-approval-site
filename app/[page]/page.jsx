@@ -21,7 +21,7 @@ const trustVisuals = {
   "publisher-kit": [
     ["📚", "Content publisher"],
     ["🛒", "Shopping comparison"],
-    ["⚕️", "Not medical advice"]
+    ["📌", "Not medical advice"]
   ],
   methodology: [
     ["🎯", "Intent first"],

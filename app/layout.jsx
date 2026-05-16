@@ -70,7 +70,7 @@ function Footer() {
           <div className="footer-badges" aria-label="Site trust status">
             <span>🧾 Sample data labeled</span>
             <span>🔎 Editorial checks</span>
-            <span>⚕️ Not medical advice</span>
+            <span>📌 Not medical advice</span>
           </div>
         </div>
         <div>
