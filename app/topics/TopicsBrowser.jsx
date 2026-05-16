@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export default function TopicsBrowser({ topics }) {
   const [query, setQuery] = useState("");
+  const quickSearches = ["sugar", "beverage", "sodium", "spreads"];
   const normalizedQuery = query.trim().toLowerCase();
   const filteredTopics = useMemo(() => {
     if (!normalizedQuery) return topics;
@@ -29,6 +30,11 @@ export default function TopicsBrowser({ topics }) {
         {query ? (
           <button type="button" onClick={() => setQuery("")}>Clear</button>
         ) : null}
+        <div className="quick-searches" aria-label="Quick topic searches">
+          {quickSearches.map((term) => (
+            <button type="button" key={term} onClick={() => setQuery(term)}>{term}</button>
+          ))}
+        </div>
       </div>
 
       {filteredTopics.length ? (

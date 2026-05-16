@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export default function ComparisonsBrowser({ comparisons, icons }) {
   const [query, setQuery] = useState("");
+  const quickSearches = ["snack", "protein", "beverage", "sodium"];
   const normalizedQuery = query.trim().toLowerCase();
   const filteredComparisons = useMemo(() => {
     if (!normalizedQuery) return comparisons;
@@ -28,6 +29,11 @@ export default function ComparisonsBrowser({ comparisons, icons }) {
         {query ? (
           <button type="button" onClick={() => setQuery("")}>Clear</button>
         ) : null}
+        <div className="quick-searches" aria-label="Quick comparison searches">
+          {quickSearches.map((term) => (
+            <button type="button" key={term} onClick={() => setQuery(term)}>{term}</button>
+          ))}
+        </div>
       </div>
 
       {filteredComparisons.length ? (

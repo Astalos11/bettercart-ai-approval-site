@@ -843,6 +843,17 @@ a.card:focus-visible {
   padding: 0 12px;
 }
 
+.quick-searches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.quick-searches button {
+  min-height: 32px;
+  text-transform: capitalize;
+}
+
 .site-search span {
   color: var(--muted);
   font-size: 0.9rem;

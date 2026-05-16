@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export default function GuidesBrowser({ guides, icons }) {
   const [query, setQuery] = useState("");
+  const quickSearches = ["sugar", "protein", "sodium", "cereal"];
   const normalizedQuery = query.trim().toLowerCase();
   const filteredGuides = useMemo(() => {
     if (!normalizedQuery) return guides;
@@ -28,6 +29,11 @@ export default function GuidesBrowser({ guides, icons }) {
         {query ? (
           <button type="button" onClick={() => setQuery("")}>Clear</button>
         ) : null}
+        <div className="quick-searches" aria-label="Quick guide searches">
+          {quickSearches.map((term) => (
+            <button type="button" key={term} onClick={() => setQuery(term)}>{term}</button>
+          ))}
+        </div>
       </div>
 
       {filteredGuides.length ? (

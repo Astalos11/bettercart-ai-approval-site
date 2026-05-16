@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export default function SiteIndexBrowser({ groups }) {
   const [query, setQuery] = useState("");
+  const quickSearches = ["disclosure", "demo", "privacy", "methodology"];
   const normalizedQuery = query.trim().toLowerCase();
   const filteredGroups = useMemo(() => {
     if (!normalizedQuery) return groups;
@@ -33,6 +34,11 @@ export default function SiteIndexBrowser({ groups }) {
         {query ? (
           <button type="button" onClick={() => setQuery("")}>Clear</button>
         ) : null}
+        <div className="quick-searches" aria-label="Quick site index searches">
+          {quickSearches.map((term) => (
+            <button type="button" key={term} onClick={() => setQuery(term)}>{term}</button>
+          ))}
+        </div>
       </div>
 
       {filteredGroups.length ? (
