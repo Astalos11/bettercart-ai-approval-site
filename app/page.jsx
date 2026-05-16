@@ -43,14 +43,17 @@ const metricPreview = [
 
 const processSteps = [
   {
+    icon: "🎯",
     title: "Start with intent",
     text: "A shopper may want lower sugar, higher protein, lower sodium, or a simpler ingredient list."
   },
   {
+    icon: "📦",
     title: "Compare similar products",
     text: "We keep category context visible so a cereal is compared with cereals and a protein bar with protein bars."
   },
   {
+    icon: "⚖️",
     title: "Show tradeoffs",
     text: "A product can be low in sugar but higher in sodium, or high in protein but higher in calories."
   }
@@ -234,7 +237,8 @@ export default function HomePage() {
           </div>
           <div className="grid three">
             {processSteps.map((step) => (
-              <div className="card" key={step.title}>
+              <div className="workflow-card" key={step.title}>
+                <span aria-hidden="true">{step.icon}</span>
                 <h3>{step.title}</h3>
                 <p>{step.text}</p>
               </div>

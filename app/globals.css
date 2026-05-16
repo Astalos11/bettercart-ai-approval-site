@@ -482,6 +482,29 @@ h3 {
   line-height: 1.25;
 }
 
+.workflow-card {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 22px;
+}
+
+.workflow-card span {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: var(--soft-orange);
+  font-size: 1.45rem;
+  margin-bottom: 14px;
+}
+
+.workflow-card p {
+  color: var(--muted);
+}
+
 .scenario-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
