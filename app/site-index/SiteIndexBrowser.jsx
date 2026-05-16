@@ -30,6 +30,9 @@ export default function SiteIndexBrowser({ groups }) {
           placeholder="Try disclosure, demo, protein, privacy..."
         />
         <span role="status">{filteredGroups.reduce((total, group) => total + group.links.length, 0)} pages shown</span>
+        {query ? (
+          <button type="button" onClick={() => setQuery("")}>Clear</button>
+        ) : null}
       </div>
 
       {filteredGroups.length ? (

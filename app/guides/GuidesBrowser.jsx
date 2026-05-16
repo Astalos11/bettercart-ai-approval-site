@@ -25,6 +25,9 @@ export default function GuidesBrowser({ guides, icons }) {
           placeholder="Try sugar, protein, sodium, cereal, ingredient..."
         />
         <span role="status">{filteredGuides.length} guides shown</span>
+        {query ? (
+          <button type="button" onClick={() => setQuery("")}>Clear</button>
+        ) : null}
       </div>
 
       {filteredGuides.length ? (

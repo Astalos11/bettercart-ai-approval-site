@@ -832,6 +832,17 @@ a.card:focus-visible {
   font: inherit;
 }
 
+.site-search button {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--green-dark);
+  cursor: pointer;
+  font-weight: 800;
+  min-height: 40px;
+  padding: 0 12px;
+}
+
 .site-search span {
   color: var(--muted);
   font-size: 0.9rem;

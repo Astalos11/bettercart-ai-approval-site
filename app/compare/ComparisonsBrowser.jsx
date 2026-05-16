@@ -25,6 +25,9 @@ export default function ComparisonsBrowser({ comparisons, icons }) {
           placeholder="Try snack, protein, beverage, sodium, frozen..."
         />
         <span role="status">{filteredComparisons.length} comparisons shown</span>
+        {query ? (
+          <button type="button" onClick={() => setQuery("")}>Clear</button>
+        ) : null}
       </div>
 
       {filteredComparisons.length ? (

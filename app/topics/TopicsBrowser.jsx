@@ -26,6 +26,9 @@ export default function TopicsBrowser({ topics }) {
           placeholder="Try sugar, beverage, sodium, frozen, spreads..."
         />
         <span role="status">{filteredTopics.length} topics shown</span>
+        {query ? (
+          <button type="button" onClick={() => setQuery("")}>Clear</button>
+        ) : null}
       </div>
 
       {filteredTopics.length ? (
