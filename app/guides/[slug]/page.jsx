@@ -30,7 +30,7 @@ export default function GuidePage({ params }) {
     "@type": "Article",
     headline: guide.title,
     description: guide.excerpt,
-    dateModified: "2026-05-15",
+    dateModified: "2026-05-16",
     author: {
       "@type": "Organization",
       name: "BetterCart AI"
@@ -50,7 +50,7 @@ export default function GuidePage({ params }) {
       <div className="eyebrow">Food guide</div>
       <h1>{guide.title}</h1>
       <div className="article-meta">
-        Updated May 15, 2026 · <Link href="/authors/bettercart-editorial-team">BetterCart AI Editorial Team</Link>
+        Updated May 16, 2026 · <Link href="/authors/bettercart-editorial-team">BetterCart AI Editorial Team</Link>
       </div>
       <p className="lead">{guide.excerpt}</p>
       <img

@@ -58,7 +58,7 @@ export default function ComparisonPage({ params }) {
     "@type": "Article",
     headline: comparison.title,
     description: comparison.intro,
-    dateModified: "2026-05-15",
+    dateModified: "2026-05-16",
     author: {
       "@type": "Organization",
       name: "BetterCart AI"
@@ -78,7 +78,7 @@ export default function ComparisonPage({ params }) {
       <div className="eyebrow">Comparison example</div>
       <h1>{comparison.title}</h1>
       <div className="article-meta">
-        Updated May 15, 2026 · <Link href="/authors/bettercart-editorial-team">BetterCart AI Editorial Team</Link> · Sample editorial data
+        Updated May 16, 2026 · <Link href="/authors/bettercart-editorial-team">BetterCart AI Editorial Team</Link> · Sample editorial data
       </div>
       <p className="lead">{comparison.intro}</p>
       <div className="sample-data-note">
