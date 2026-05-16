@@ -195,6 +195,9 @@ function main() {
     if (!demoText.includes("usda fdc sample")) {
       disclosureMisses.push("tools/food-comparison-demo/index.html missing USDA FDC sample provenance");
     }
+    if (!demoText.includes("reset selection")) {
+      interactionMisses.push("tools/food-comparison-demo/index.html missing reset selection control");
+    }
   }
 
   const contactPath = path.join(outDir, "contact", "index.html");
