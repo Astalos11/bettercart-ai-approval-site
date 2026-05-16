@@ -14,8 +14,9 @@ It did not add real affiliate links, fake reviews, fake traffic claims, live ret
 - Improved the food comparison demo with a visual intro, selected-product count, reset control, top-result reasoning, and clearer USDA sample provenance.
 - Added searchable guides, comparisons, topics, and site index pages with result counts, clear controls, and quick search chips.
 - Added article content-type chips and next-step cards to guide and comparison detail pages.
-- Added publisher, data source, and compliance snapshot matrices for faster reviewer scanning.
+- Added publisher, data source, and program compliance snapshot matrices for faster reviewer scanning.
 - Added WebSite structured data and basic Netlify security header coverage.
+- Added image loading hints and refreshed page/article modified dates.
 - Updated site snapshot, visual optimization log, and affiliate application wording.
 
 ## QA
