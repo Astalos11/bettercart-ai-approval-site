@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { comparisons, guides } from "../../lib/content";
+import TopicsBrowser from "./TopicsBrowser";
 
 export const metadata = {
   title: "Food Comparison Topics",
@@ -113,20 +113,7 @@ export default function TopicsPage() {
           ))}
         </div>
 
-        <div className="grid two">
-          {topics.map((topic) => (
-            <div className="card" key={topic.title}>
-              <div className="card-icon" aria-hidden="true">{topic.icon}</div>
-              <h2>{topic.title}</h2>
-              <p>{topic.text}</p>
-              <div className="link-list">
-                {topic.links.map(([href, label]) => (
-                  <Link href={href} key={href}>{label}</Link>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+        <TopicsBrowser topics={topics} />
 
         <div className="callout">
           <h2>Current content inventory</h2>

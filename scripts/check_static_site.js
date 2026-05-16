@@ -214,7 +214,8 @@ function main() {
   const interactiveSearchChecks = [
     ["guides/index.html", "guide-search"],
     ["compare/index.html", "comparison-search"],
-    ["site-index/index.html", "site-index-search"]
+    ["site-index/index.html", "site-index-search"],
+    ["topics/index.html", "topic-search"]
   ];
   for (const [relativePath, id] of interactiveSearchChecks) {
     const file = path.join(outDir, relativePath);
