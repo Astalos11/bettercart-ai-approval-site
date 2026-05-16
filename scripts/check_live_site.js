@@ -13,6 +13,9 @@ const requiredPages = [
   ["/program-compliance/", "Program Compliance Notes"],
   ["/authors/bettercart-editorial-team/", "BetterCart AI Editorial Team"],
   ["/site-index/", "Browse BetterCart AI"],
+  ["/tools/food-comparison-demo/", "USDA FDC sample"],
+  ["/images/food-comparison-visual-v2.webp", null],
+  ["/images/packaged-food-guide-flatlay.webp", null],
   ["/icon.svg", "<svg"],
   ["/humans.txt", "BetterCart AI"],
   ["/robots.txt", "Sitemap:"],
@@ -44,7 +47,7 @@ async function main() {
   for (const [path, expected] of requiredPages) {
     const url = `${siteUrl}${path}`;
     const { statusCode, data } = await fetchText(url);
-    const hasExpected = data.includes(expected);
+    const hasExpected = expected === null || data.includes(expected);
     const forbiddenHits = forbiddenText.filter((needle) => data.includes(needle));
     console.log(`${statusCode} ${path} expected=${hasExpected} forbidden_hits=${forbiddenHits.length}`);
     if (statusCode !== 200 || !hasExpected || forbiddenHits.length) failed = true;
