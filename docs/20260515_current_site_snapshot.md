@@ -26,6 +26,7 @@ The final domain is not active in the site build until domain review, DNS, HTTPS
 - 1 publisher kit page
 - 1 site index page
 - 1 `humans.txt` reviewer/contact file
+- 1 Netlify `_headers` file for basic static security headers
 - 2 optimized generated WebP visual assets:
   - `/images/food-comparison-visual-v2.webp`
   - `/images/packaged-food-guide-flatlay.webp`
@@ -57,6 +58,10 @@ Current QA coverage includes:
 - docs referenced from README exist
 - oversized public images are blocked
 - demo USDA FDC sample provenance is present
+- homepage demo sample provenance is present
+- interactive search controls are present on guides, comparisons, topics, and site index
+- demo reset selection control is present
+- Netlify `_headers` is exported
 
 ## Current Approval Strengths
 
@@ -65,8 +70,9 @@ Current QA coverage includes:
 - A monetization transparency page explains how affiliate compensation should work without guaranteeing favorable coverage.
 - A program compliance page documents planned promotional methods and prohibited tactics.
 - Reviewer-facing and publisher-facing summary pages exist.
-- Homepage, guide index, guide articles, comparison index, comparison pages, topics, reviewer page, and key trust pages now include visual summaries or image assets.
-- The demo includes intent controls, category filtering, selected-product comparison, a top-sample result card, color-coded metric cells, and metric bars.
+- Homepage, guide index, guide articles, comparison index, comparison pages, topics, reviewer page, and key trust pages now include visual summaries, image assets, emoji cards, content chips, or next-step cards.
+- Guides, comparisons, topics, and site index include searchable browser controls with visible result counts.
+- The demo includes intent controls, category filtering, selected-product comparison, a reset control, a selected count, a top-sample result card, dynamic top-result reasoning, color-coded metric cells, and metric bars.
 - Demo examples are static, rounded USDA-derived samples with FDC provenance labels.
 - Sample data is disclosed on demo and comparison pages.
 - No real affiliate links are present yet, so there are no undisclosed affiliate placements.
