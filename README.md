@@ -89,6 +89,8 @@ Current hosting target:
 
 - Netlify
 
+The static export includes `public/_headers` for basic security headers on Netlify.
+
 Before affiliate applications, complete:
 
 - connect `bettercartai.com`
