@@ -248,6 +248,14 @@ function main() {
     }
   }
 
+  const headersPath = path.join(outDir, "_headers");
+  if (fs.existsSync(headersPath)) {
+    const headersText = fs.readFileSync(headersPath, "utf8");
+    for (const header of ["X-Frame-Options", "X-Content-Type-Options", "Referrer-Policy", "Permissions-Policy"]) {
+      if (!headersText.includes(header)) disclosureMisses.push(`_headers missing ${header}`);
+    }
+  }
+
   console.log(`required_routes=${requiredRoutes.length}`);
   console.log(`missing_required=${missingRequired.length}`);
   console.log(`bad_internal_links=${badLinks.length}`);
