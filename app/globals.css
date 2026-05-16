@@ -272,6 +272,11 @@ h3 {
   margin-bottom: 26px;
 }
 
+.section-head.compact-head {
+  margin-top: 30px;
+  margin-bottom: 16px;
+}
+
 .stats-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -340,6 +345,10 @@ a.card:focus-visible {
   background: var(--soft-blue);
   font-size: 1.5rem;
   margin-bottom: 14px;
+}
+
+.action-card {
+  min-height: 100%;
 }
 
 .text-link {

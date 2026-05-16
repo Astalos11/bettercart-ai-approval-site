@@ -37,6 +37,30 @@ const readinessItems = [
   ["Custom domain", "Pending", "bettercartai.com cutover still requires DNS/HTTPS completion."]
 ];
 
+const interactiveChecks = [
+  {
+    icon: "🧪",
+    title: "Try the demo",
+    text: "Switch shopping intent, filter sample products, and compare up to three USDA-derived examples.",
+    href: "/tools/food-comparison-demo",
+    cta: "Open demo"
+  },
+  {
+    icon: "🔎",
+    title: "Search the site map",
+    text: "Use the searchable index to find disclosure, methodology, privacy, and sample content pages quickly.",
+    href: "/site-index",
+    cta: "Search pages"
+  },
+  {
+    icon: "📊",
+    title: "Scan comparisons",
+    text: "Review color-coded sample comparisons and tradeoff cards without live affiliate links.",
+    href: "/compare",
+    cta: "View comparisons"
+  }
+];
+
 export default function ForReviewersPage() {
   return (
     <section className="section">
@@ -104,6 +128,25 @@ export default function ForReviewersPage() {
               <strong>{item.icon} {item.title}</strong>
               <span>{item.text}</span>
             </div>
+          ))}
+        </div>
+
+        <div className="section-head compact-head">
+          <div className="eyebrow">Hands-on checks</div>
+          <h2>Reviewer actions that are already interactive</h2>
+          <p>
+            These links show the site is more than static policy pages: reviewers can test search, product-style filtering, comparison tables, and sample nutrition tradeoffs.
+          </p>
+        </div>
+
+        <div className="grid three">
+          {interactiveChecks.map((item) => (
+            <Link className="card action-card" href={item.href} key={item.title}>
+              <div className="card-icon" aria-hidden="true">{item.icon}</div>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+              <span className="text-link">{item.cta}</span>
+            </Link>
           ))}
         </div>
 
