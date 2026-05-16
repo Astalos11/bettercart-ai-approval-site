@@ -32,6 +32,7 @@ const requiredRoutes = [
   "/terms/",
   "/faq/",
   "/humans.txt",
+  "/_headers",
   "/robots.txt",
   "/sitemap.xml"
 ];
@@ -73,7 +74,7 @@ const maxPublicImageBytes = 500 * 1024;
 
 function routeExists(route) {
   if (route === "/") return fs.existsSync(path.join(outDir, "index.html"));
-  if (route.endsWith(".txt") || route.endsWith(".xml")) {
+  if (route.endsWith(".txt") || route.endsWith(".xml") || route === "/_headers") {
     return fs.existsSync(path.join(outDir, route.replace(/^\//, "")));
   }
   const trimmed = route.replace(/^\//, "").replace(/\/$/, "");
