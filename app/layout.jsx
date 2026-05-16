@@ -116,6 +116,17 @@ export default function RootLayout({ children }) {
     email: "contact@bettercartai.com",
     description: "Packaged food comparison guides for everyday grocery decisions."
   };
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "BetterCart AI",
+    url: siteUrl,
+    description: "AI-assisted packaged food comparison guides for everyday grocery decisions.",
+    publisher: {
+      "@type": "Organization",
+      name: "BetterCart AI"
+    }
+  };
 
   return (
     <html lang="en">
@@ -123,6 +134,10 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         <div className="site-shell">
           <a className="skip-link" href="#main-content">Skip to main content</a>
