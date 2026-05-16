@@ -95,8 +95,8 @@ export default function HomePage() {
           <div className="product-panel" aria-label="Example product comparison">
             <img
               className="hero-visual"
-              src="/images/food-comparison-workspace.png"
-              alt="Illustration of packaged food comparison cards and a nutrition facts panel"
+              src="/images/food-comparison-visual-v2.png"
+              alt="Illustration of packaged food products, nutrition labels, and an AI comparison dashboard"
             />
             <div className="eyebrow">Example comparison</div>
             {previewProducts.map((product, index) => (
