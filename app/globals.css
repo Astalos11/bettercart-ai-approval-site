@@ -938,6 +938,25 @@ th {
   font-size: 1.9rem;
 }
 
+.reason-card {
+  border: 1px solid #bfd8cf;
+  border-left: 5px solid var(--green);
+  border-radius: 8px;
+  background: #f4fbf7;
+  padding: 16px 18px;
+  margin: -4px 0 18px;
+}
+
+.reason-card strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.reason-card p {
+  color: var(--muted);
+  margin: 0;
+}
+
 .metric-legend {
   display: flex;
   flex-wrap: wrap;

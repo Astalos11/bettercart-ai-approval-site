@@ -48,6 +48,20 @@ function getTopReason(product, intent) {
   return "The balanced view weighs sugar, sodium, calories, and protein together for the sample set.";
 }
 
+function getIntentExplanation(product, intent) {
+  if (!product) return "";
+  if (intent === "low_sugar") {
+    return `This intent looks first at total sugar. ${product.name} appears higher because its sugar value is lower than the other visible examples, while calories, sodium, and protein remain visible as tradeoffs.`;
+  }
+  if (intent === "high_protein") {
+    return `This intent moves protein to the front. ${product.name} appears higher because it has more protein per serving in the current filtered set, but the demo still keeps sugar, sodium, and calories on screen.`;
+  }
+  if (intent === "low_sodium") {
+    return `This intent sorts by sodium. ${product.name} appears higher because its sodium value is lower in this sample set, without hiding sugar, protein, or calorie context.`;
+  }
+  return `This view is intentionally conservative: it combines sugar, sodium, calories, and protein instead of declaring one universal winner.`;
+}
+
 function barWidth(value, max) {
   return `${Math.max(4, Math.min(100, Math.round((value / max) * 100)))}%`;
 }
@@ -159,6 +173,13 @@ export default function DemoPage() {
                 <span className="chip">{topProduct.sodium}mg sodium</span>
               </div>
             </div>
+          </div>
+        ) : null}
+
+        {topProduct ? (
+          <div className="reason-card" aria-live="polite">
+            <strong>Why the demo ranked this sample first</strong>
+            <p>{getIntentExplanation(topProduct, intent)}</p>
           </div>
         ) : null}
 
