@@ -27,6 +27,12 @@ export default function SiteIndexPage() {
           </p>
         </div>
 
+        <div className="visual-strip" aria-label="Site index sections">
+          <div><strong>🏠 Core</strong><span>Homepage, reviewer page, publisher kit, demo.</span></div>
+          <div><strong>📚 Content</strong><span>Food guides, topics, and comparison examples.</span></div>
+          <div><strong>🧾 Trust</strong><span>Disclosure, privacy, methodology, and policies.</span></div>
+        </div>
+
         <div className="grid two">
           <div className="card">
             <h2>Core pages</h2>
