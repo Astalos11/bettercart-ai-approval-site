@@ -101,7 +101,7 @@ export default function HomePage() {
               src="/images/food-comparison-visual-v2.webp"
               alt="Illustration of packaged food products, nutrition labels, and an AI comparison dashboard"
             />
-            <div className="eyebrow">Example comparison</div>
+            <div className="eyebrow">Demo sample preview</div>
             {previewProducts.map((product, index) => (
               <div className="panel-row" key={product.name}>
                 <div>
@@ -113,6 +113,7 @@ export default function HomePage() {
                 </span>
               </div>
             ))}
+            <p className="small-note">Static rounded USDA-derived examples. Not live retailer inventory or paid placement.</p>
           </div>
         </div>
       </section>
