@@ -54,6 +54,10 @@ const highRiskClaimPatterns = [
   /clinically proven/i
 ];
 
+const forbiddenVisualPatterns = [
+  /⚕️/
+];
+
 const requiredSitemapPaths = [
   "/for-reviewers",
   "/publisher-kit",
@@ -114,6 +118,7 @@ function main() {
   const placeholderHits = [];
   const highRiskClaimHits = [];
   const missingImageAltHits = [];
+  const forbiddenVisualHits = [];
   const sitemapPathMisses = [];
   const disclosureMisses = [];
   const externalAnchorHits = [];
@@ -126,6 +131,9 @@ function main() {
     }
     for (const pattern of highRiskClaimPatterns) {
       if (pattern.test(text)) highRiskClaimHits.push(`${path.relative(outDir, file)} matched ${pattern}`);
+    }
+    for (const pattern of forbiddenVisualPatterns) {
+      if (pattern.test(text)) forbiddenVisualHits.push(`${path.relative(outDir, file)} matched ${pattern}`);
     }
     if (file.endsWith(".html")) {
       for (const match of text.matchAll(/<img\b[^>]*>/gi)) {
@@ -219,6 +227,7 @@ function main() {
   console.log(`bad_internal_links=${badLinks.length}`);
   console.log(`placeholder_hits=${placeholderHits.length}`);
   console.log(`high_risk_claim_hits=${highRiskClaimHits.length}`);
+  console.log(`forbidden_visual_hits=${forbiddenVisualHits.length}`);
   console.log(`missing_image_alt_hits=${missingImageAltHits.length}`);
   console.log(`external_anchor_hits=${externalAnchorHits.length}`);
   console.log(`accessibility_misses=${accessibilityMisses.length}`);
@@ -230,6 +239,7 @@ function main() {
   if (badLinks.length) console.log(`Bad internal links:\n${badLinks.join("\n")}`);
   if (placeholderHits.length) console.log(`Placeholder hits:\n${placeholderHits.join("\n")}`);
   if (highRiskClaimHits.length) console.log(`High-risk claim hits:\n${highRiskClaimHits.join("\n")}`);
+  if (forbiddenVisualHits.length) console.log(`Forbidden visual hits:\n${forbiddenVisualHits.join("\n")}`);
   if (missingImageAltHits.length) console.log(`Missing image alt hits:\n${missingImageAltHits.join("\n")}`);
   if (externalAnchorHits.length) console.log(`External anchor hits:\n${externalAnchorHits.join("\n")}`);
   if (accessibilityMisses.length) console.log(`Accessibility misses:\n${accessibilityMisses.join("\n")}`);
@@ -237,7 +247,7 @@ function main() {
   if (disclosureMisses.length) console.log(`Disclosure misses:\n${disclosureMisses.join("\n")}`);
   if (oversizedImageHits.length) console.log(`Oversized image hits:\n${oversizedImageHits.join("\n")}`);
 
-  if (missingRequired.length || badLinks.length || placeholderHits.length || highRiskClaimHits.length || missingImageAltHits.length || externalAnchorHits.length || accessibilityMisses.length || sitemapPathMisses.length || disclosureMisses.length || oversizedImageHits.length) process.exit(1);
+  if (missingRequired.length || badLinks.length || placeholderHits.length || highRiskClaimHits.length || forbiddenVisualHits.length || missingImageAltHits.length || externalAnchorHits.length || accessibilityMisses.length || sitemapPathMisses.length || disclosureMisses.length || oversizedImageHits.length) process.exit(1);
 }
 
 main();
