@@ -2,9 +2,9 @@ import Link from "next/link";
 import { comparisons, guides, trustPages } from "../lib/content";
 
 const previewProducts = [
-  { name: "Sea Salt Lentil Crisps", metric: "1g sugar / serving", label: "Low sugar, check sodium" },
-  { name: "Peanut Butter Protein Bar", metric: "20g protein / serving", label: "Better high-protein fit" },
-  { name: "Chocolate Granola Clusters", metric: "12g sugar / serving", label: "Not a strong low-sugar fit" }
+  { name: "Original Instant Oatmeal", metric: "0g sugar / serving", label: "Lower sugar sample" },
+  { name: "Double Dark Chocolate Protein Bar", metric: "12g protein / serving", label: "Protein-forward sample" },
+  { name: "Natural Vanilla Ice Cream", metric: "25g sugar / serving", label: "Sugar tradeoff sample" }
 ];
 
 const shoppingScenarios = [
