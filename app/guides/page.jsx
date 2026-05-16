@@ -19,8 +19,8 @@ export default function GuidesIndexPage() {
         </div>
         <div className="index-visual-hero">
           <img
-            src="/images/food-comparison-visual-v2.webp"
-            alt="Packaged food comparison workspace with nutrition label cards"
+            src="/images/packaged-food-guide-flatlay.webp"
+            alt="Unbranded packaged foods arranged with nutrition label cards"
           />
           <div>
             <strong>Read the label faster</strong>

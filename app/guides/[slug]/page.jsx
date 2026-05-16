@@ -55,8 +55,8 @@ export default function GuidePage({ params }) {
       <p className="lead">{guide.excerpt}</p>
       <img
         className="article-visual"
-        src="/images/food-comparison-visual-v2.webp"
-        alt="Packaged food labels and comparison cards used as a visual guide example"
+        src="/images/packaged-food-guide-flatlay.webp"
+        alt="Unbranded packaged foods and nutrition label cards used as a guide example"
       />
       {guide.checklist?.length ? (
         <div className="callout">
