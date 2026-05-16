@@ -43,6 +43,10 @@ function getMetricFocus(intent) {
 export default function DemoPage() {
   const [intent, setIntent] = useState("low_sugar");
   const [category, setCategory] = useState("all");
+  const [selectedNames, setSelectedNames] = useState([
+    "Sea Salt Lentil Crisps",
+    "Peanut Butter Protein Bar"
+  ]);
   const sortedProducts = useMemo(() => {
     return demoProducts.filter((product) => category === "all" || product.category === category).sort((a, b) => {
       if (intent === "low_sugar") return a.totalSugar - b.totalSugar;
@@ -54,6 +58,21 @@ export default function DemoPage() {
       return a.sodium - b.sodium;
     });
   }, [intent, category]);
+  const selectedProducts = useMemo(() => {
+    return demoProducts.filter((product) => selectedNames.includes(product.name));
+  }, [selectedNames]);
+
+  function toggleSelected(productName) {
+    setSelectedNames((current) => {
+      if (current.includes(productName)) {
+        return current.filter((name) => name !== productName);
+      }
+      if (current.length >= 3) {
+        return [current[1], current[2], productName];
+      }
+      return [...current, productName];
+    });
+  }
 
   return (
     <section className="section">
@@ -126,9 +145,30 @@ export default function DemoPage() {
           ))}
         </div>
 
+        <div className="compare-tray" aria-label="Selected sample products">
+          <div>
+            <div className="eyebrow">Selected comparison</div>
+            <h2>Compare up to three sample products</h2>
+            <p>
+              Choose products below to see how the same label fields change across a small shopping set.
+            </p>
+          </div>
+          <div className="selected-grid">
+            {selectedProducts.map((product) => (
+              <div className="selected-card" key={product.name}>
+                <strong>{product.name}</strong>
+                <span>{product.totalSugar}g sugar</span>
+                <span>{product.protein}g protein</span>
+                <span>{product.sodium}mg sodium</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="grid three" style={{ marginTop: 22 }}>
           {sortedProducts.map((product) => {
             const fit = getFit(product, intent);
+            const isSelected = selectedNames.includes(product.name);
             return (
               <div className="card" key={product.name}>
                 <span className={`badge ${fit === "Better fit" ? "green" : fit === "Moderate fit" ? "blue" : "orange"}`}>
@@ -141,6 +181,13 @@ export default function DemoPage() {
                 <p className="metric">
                   {product.calories} calories · {product.totalSugar}g sugar · {product.protein}g protein · {product.sodium}mg sodium
                 </p>
+                <button
+                  className={`button ${isSelected ? "" : "secondary"}`}
+                  type="button"
+                  onClick={() => toggleSelected(product.name)}
+                >
+                  {isSelected ? "Selected" : "Add to compare"}
+                </button>
               </div>
             );
           })}
