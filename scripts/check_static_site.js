@@ -182,6 +182,9 @@ function main() {
     for (const phrase of ["sample-data demo", "does not contain affiliate links", "paid placement"]) {
       if (!demoText.includes(phrase)) disclosureMisses.push(`tools/food-comparison-demo/index.html missing ${phrase}`);
     }
+    if (!demoText.includes("usda fdc sample")) {
+      disclosureMisses.push("tools/food-comparison-demo/index.html missing USDA FDC sample provenance");
+    }
   }
 
   const contactPath = path.join(outDir, "contact", "index.html");
