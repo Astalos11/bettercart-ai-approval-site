@@ -30,6 +30,13 @@ const reviewerPath = [
   }
 ];
 
+const readinessItems = [
+  ["Content site shell", "Ready", "Guides, comparisons, topics, and demo are published."],
+  ["Trust pages", "Ready", "Disclosure, privacy, terms, methodology, and compliance pages exist."],
+  ["Affiliate links", "Not active", "No live affiliate links are currently present."],
+  ["Custom domain", "Pending", "bettercartai.com cutover still requires DNS/HTTPS completion."]
+];
+
 export default function ForReviewersPage() {
   return (
     <section className="section">
@@ -74,6 +81,21 @@ export default function ForReviewersPage() {
           <div><strong>{comparisons.length}</strong><span>comparison examples</span></div>
           <div><strong>{Object.keys(trustPages).length}</strong><span>trust pages</span></div>
           <div><strong>0</strong><span>undisclosed affiliate links</span></div>
+        </div>
+
+        <div className="readiness-matrix" aria-label="Affiliate application readiness status">
+          <div className="readiness-row head">
+            <span>Review area</span>
+            <span>Status</span>
+            <span>Note</span>
+          </div>
+          {readinessItems.map(([area, status, note]) => (
+            <div className="readiness-row" key={area}>
+              <strong>{area}</strong>
+              <span className={`badge ${status === "Ready" ? "green" : status === "Pending" ? "orange" : "blue"}`}>{status}</span>
+              <span>{note}</span>
+            </div>
+          ))}
         </div>
 
         <div className="visual-strip" aria-label="Fast reviewer path">
