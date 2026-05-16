@@ -77,6 +77,8 @@ export default function ForReviewersPage() {
           <img
             src="/images/food-comparison-visual-v2.webp"
             alt="Illustration of packaged food comparison dashboard for reviewer context"
+            loading="lazy"
+            decoding="async"
           />
           <div>
             <div className="eyebrow">30-second context</div>

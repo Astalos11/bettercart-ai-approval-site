@@ -21,6 +21,8 @@ export default function CompareIndexPage() {
           <img
             src="/images/food-comparison-visual-v2.webp"
             alt="Sample AI food comparison dashboard with product cards and nutrition metrics"
+            loading="lazy"
+            decoding="async"
           />
           <div>
             <strong>Side-by-side, not score-only</strong>

@@ -21,6 +21,8 @@ export default function GuidesIndexPage() {
           <img
             src="/images/packaged-food-guide-flatlay.webp"
             alt="Unbranded packaged foods arranged with nutrition label cards"
+            loading="lazy"
+            decoding="async"
           />
           <div>
             <strong>Read the label faster</strong>

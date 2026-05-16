@@ -128,6 +128,8 @@ export default function DemoPage() {
           <img
             src="/images/food-comparison-visual-v2.webp"
             alt="Illustration of packaged food comparison cards and nutrition metrics"
+            loading="lazy"
+            decoding="async"
           />
           <div>
             <div className="eyebrow">What to try</div>

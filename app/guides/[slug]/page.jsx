@@ -62,6 +62,8 @@ export default function GuidePage({ params }) {
         className="article-visual"
         src="/images/packaged-food-guide-flatlay.webp"
         alt="Unbranded packaged foods and nutrition label cards used as a guide example"
+        loading="lazy"
+        decoding="async"
       />
       {guide.checklist?.length ? (
         <div className="callout">
