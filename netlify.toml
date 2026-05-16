@@ -3,7 +3,7 @@
   publish = "out"
 
 [build.environment]
-  NEXT_PUBLIC_SITE_URL = "https://illustrious-cranachan-4a01a9.netlify.app"
+  NEXT_PUBLIC_SITE_URL = "https://www.bettercartai.com"
 
 [[headers]]
   for = "/*"

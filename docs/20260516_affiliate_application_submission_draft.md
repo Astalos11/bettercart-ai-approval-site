@@ -7,7 +7,7 @@ Use this after the final domain and contact email are working.
 ## Website
 
 ```text
-https://bettercartai.com
+https://www.bettercartai.com
 ```
 
 ## Contact Email
@@ -53,16 +53,16 @@ The site is newly launched. Current focus is building original editorial content
 
 Use final domain URLs:
 
-- `https://bettercartai.com/for-reviewers/`
-- `https://bettercartai.com/publisher-kit/`
-- `https://bettercartai.com/affiliate-disclosure/`
-- `https://bettercartai.com/how-we-make-money/`
-- `https://bettercartai.com/program-compliance/`
-- `https://bettercartai.com/editorial-policy/`
-- `https://bettercartai.com/privacy/`
-- `https://bettercartai.com/contact/`
-- `https://bettercartai.com/tools/food-comparison-demo/`
-- `https://bettercartai.com/site-index/`
+- `https://www.bettercartai.com/for-reviewers/`
+- `https://www.bettercartai.com/publisher-kit/`
+- `https://www.bettercartai.com/affiliate-disclosure/`
+- `https://www.bettercartai.com/how-we-make-money/`
+- `https://www.bettercartai.com/program-compliance/`
+- `https://www.bettercartai.com/editorial-policy/`
+- `https://www.bettercartai.com/privacy/`
+- `https://www.bettercartai.com/contact/`
+- `https://www.bettercartai.com/tools/food-comparison-demo/`
+- `https://www.bettercartai.com/site-index/`
 
 ## Claims To Avoid In Applications
 

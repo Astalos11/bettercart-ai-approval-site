@@ -34,7 +34,7 @@ const readinessItems = [
   ["Content site shell", "Ready", "Guides, comparisons, topics, and demo are published."],
   ["Trust pages", "Ready", "Disclosure, privacy, terms, methodology, and compliance pages exist."],
   ["Affiliate links", "Not active", "No live affiliate links are currently present."],
-  ["Custom domain", "Pending", "bettercartai.com cutover still requires DNS/HTTPS completion."]
+  ["Custom domain", "Ready", "The public review URL is https://www.bettercartai.com."]
 ];
 
 const interactiveChecks = [

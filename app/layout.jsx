@@ -31,6 +31,9 @@ export const metadata = {
     description:
       "Compare packaged foods by nutrition facts, ingredients, and shopping intent.",
     images: ["/images/food-comparison-visual-v2.webp"]
+  },
+  other: {
+    "fo-verify": "8bc90301-1e4b-4f06-8e86-46a56816ca5b"
   }
 };
 

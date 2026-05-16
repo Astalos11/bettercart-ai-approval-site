@@ -29,7 +29,7 @@ npm run dev
 npm run build
 ```
 
-The Netlify publish directory is:
+The static export directory is:
 
 ```text
 out
@@ -58,15 +58,15 @@ This verifies that README-listed `docs/*.md` files exist.
 
 ## Live QA
 
-After Netlify deploys, run:
+After uploading the latest static export to Alibaba Cloud OSS, run:
 
 ```bash
 npm run check:live
 ```
 
-This checks the live temporary Netlify site for key pages, expected content, and stale invalid-domain metadata.
+This checks the live `www.bettercartai.com` site for key pages, expected content, and stale invalid-domain metadata.
 
-If recently pushed routes return 404 but `npm run build` and `npm run check:static` pass, wait for the latest Netlify production deploy to finish and rerun the live check.
+If recently uploaded routes return old content but `npm run build` and `npm run check:static` pass, confirm the OSS zip was extracted into the bucket root rather than an extra `out/` directory.
 
 ## Full QA
 
@@ -88,18 +88,25 @@ This runs the production build, static export QA, docs QA, and live site QA in s
 
 Current hosting target:
 
-- Netlify
+- Alibaba Cloud OSS static website hosting
+- Bucket: `bettercartai-site`
+- Region: US East / Virginia
+- Public URL: `https://www.bettercartai.com`
 
-Netlify headers are defined in `netlify.toml`; the static export also includes `public/_headers` as a deploy artifact backup.
+Manual OSS deployment package:
 
-Before affiliate applications, complete:
+```text
+approval-site-out.zip
+```
 
-- connect `bettercartai.com`
-- connect `www.bettercartai.com`
-- enable HTTPS
-- update `NEXT_PUBLIC_SITE_URL=https://bettercartai.com`
-- redeploy
-- activate `contact@bettercartai.com`
+The zip must contain files from inside `out/`, not an outer `out/` directory.
+
+Affiliate application baseline:
+
+- use `https://www.bettercartai.com`
+- use `contact@bettercartai.com`
+- keep the bare domain out of application forms until it is explicitly configured
+- keep FlexOffers verification meta in the homepage head
 
 ## Application Docs
 
@@ -116,6 +123,8 @@ Before affiliate applications, complete:
 - `docs/20260516_visual_interactive_optimization_log.md`
 - `docs/20260516_visual_content_guidelines.md`
 - `docs/20260516_autonomous_visual_evolution_run_report.md`
+- `docs/20260516_final_pre_application_audit.md`
+- `docs/20260516_shutdown_summary.md`
 
 ## Important Pages
 
