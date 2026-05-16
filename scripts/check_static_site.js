@@ -216,6 +216,9 @@ function main() {
     if (!homeText.toLowerCase().includes("static rounded usda-derived examples")) {
       disclosureMisses.push("index.html missing homepage sample provenance");
     }
+    if (!homeText.includes('"@type":"WebSite"')) {
+      disclosureMisses.push("index.html missing WebSite structured data");
+    }
   }
 
   const interactiveSearchChecks = [
