@@ -31,7 +31,15 @@ export default function GuidesBrowser({ guides, icons }) {
         ) : null}
         <div className="quick-searches" aria-label="Quick guide searches">
           {quickSearches.map((term) => (
-            <button type="button" key={term} onClick={() => setQuery(term)}>{term}</button>
+            <button
+              type="button"
+              key={term}
+              className={normalizedQuery === term ? "active" : ""}
+              aria-pressed={normalizedQuery === term}
+              onClick={() => setQuery(term)}
+            >
+              {term}
+            </button>
           ))}
         </div>
       </div>

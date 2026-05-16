@@ -854,6 +854,12 @@ a.card:focus-visible {
   text-transform: capitalize;
 }
 
+.quick-searches button.active {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+
 .site-search span {
   color: var(--muted);
   font-size: 0.9rem;
