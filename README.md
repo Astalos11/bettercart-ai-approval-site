@@ -89,7 +89,7 @@ Current hosting target:
 
 - Netlify
 
-The static export includes `public/_headers` for basic security headers on Netlify.
+Netlify headers are defined in `netlify.toml`; the static export also includes `public/_headers` as a deploy artifact backup.
 
 Before affiliate applications, complete:
 
