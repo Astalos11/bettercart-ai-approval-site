@@ -77,6 +77,23 @@ export default function GuidePage({ params }) {
       <div className="disclaimer">
         This guide is for general shopping education and is not medical advice. Always verify current product labels before purchase.
       </div>
+      <div className="grid three article-next-steps" aria-label="Guide next steps">
+        <Link className="card" href="/compare">
+          <div className="card-icon" aria-hidden="true">📊</div>
+          <h2>See comparisons</h2>
+          <p>Open sample side-by-side comparisons for packaged food categories.</p>
+        </Link>
+        <Link className="card" href="/topics">
+          <div className="card-icon" aria-hidden="true">🔎</div>
+          <h2>Browse topics</h2>
+          <p>Find related low sugar, protein, sodium, beverage, and pantry content.</p>
+        </Link>
+        <Link className="card" href="/tools/food-comparison-demo">
+          <div className="card-icon" aria-hidden="true">🧪</div>
+          <h2>Try the demo</h2>
+          <p>Test the static sample comparison flow with USDA-derived examples.</p>
+        </Link>
+      </div>
     </article>
   );
 }

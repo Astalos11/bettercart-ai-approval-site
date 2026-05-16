@@ -699,6 +699,10 @@ a.card:focus-visible {
   margin: 22px 0;
 }
 
+.article-next-steps {
+  margin-top: 24px;
+}
+
 .faq-list {
   display: grid;
   gap: 14px;

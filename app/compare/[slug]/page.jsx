@@ -155,6 +155,23 @@ export default function ComparisonPage({ params }) {
         </div>
       ) : null}
       <div className="disclaimer">Example comparison for editorial demonstration. Verify current labels and retailer information before purchase.</div>
+      <div className="grid three article-next-steps" aria-label="Comparison next steps">
+        <Link className="card" href="/guides">
+          <div className="card-icon" aria-hidden="true">📚</div>
+          <h2>Read guides</h2>
+          <p>Use buying guides to understand serving size, ingredients, and label context.</p>
+        </Link>
+        <Link className="card" href="/tools/food-comparison-demo">
+          <div className="card-icon" aria-hidden="true">🧪</div>
+          <h2>Try the demo</h2>
+          <p>Change shopping intent and watch the sample product set reorder.</p>
+        </Link>
+        <Link className="card" href="/affiliate-disclosure">
+          <div className="card-icon" aria-hidden="true">🧾</div>
+          <h2>Review disclosure</h2>
+          <p>See how affiliate links will be disclosed when they are added.</p>
+        </Link>
+      </div>
     </article>
   );
 }
