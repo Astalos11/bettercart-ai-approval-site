@@ -58,3 +58,26 @@ npm run check:live
 ```
 
 If the same new routes still 404 after a successful deploy, clear Netlify cache and redeploy.
+
+## 2026-05-16 Recheck
+
+`npm run check:live` still returned the same stale-route pattern after multiple successful local builds and GitHub pushes:
+
+- `/program-compliance/` returned 404
+- `/humans.txt` returned 404
+- existing older pages such as `/for-reviewers/`, `/publisher-kit/`, `/affiliate-disclosure/`, `/how-we-make-money/`, and `/site-index/` returned 200
+
+Repo config currently includes:
+
+```toml
+[build]
+  command = "npm run build"
+  publish = "out"
+```
+
+This suggests the next manual check should happen inside Netlify:
+
+- verify the latest production deploy SHA matches GitHub `main`
+- verify Netlify is reading `netlify.toml`
+- verify publish directory is not overridden to `.next` in the Netlify UI
+- trigger "Clear cache and deploy site"
