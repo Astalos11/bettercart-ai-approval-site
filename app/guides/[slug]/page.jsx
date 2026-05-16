@@ -55,12 +55,15 @@ export default function GuidePage({ params }) {
       <p className="lead">{guide.excerpt}</p>
       {guide.checklist?.length ? (
         <div className="callout">
-          <h2>Quick checklist</h2>
-          <ul>
+          <h2>✅ Quick checklist</h2>
+          <div className="checklist-grid">
             {guide.checklist.map((item) => (
-              <li key={item}>{item}</li>
+              <div key={item}>
+                <span aria-hidden="true">✓</span>
+                <strong>{item}</strong>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       ) : null}
       {guide.body.map((paragraph) => (

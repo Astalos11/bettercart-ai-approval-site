@@ -639,6 +639,37 @@ h3 {
   margin-top: 8px;
 }
 
+.checklist-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.checklist-grid div {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 10px;
+  align-items: start;
+  background: #fbfaf7;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.checklist-grid span {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--soft-green);
+  color: var(--green-dark);
+  font-weight: 900;
+}
+
+.checklist-grid strong {
+  line-height: 1.35;
+}
+
 .link-list {
   display: flex;
   flex-wrap: wrap;
