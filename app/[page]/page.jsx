@@ -2,6 +2,34 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { trustPages } from "../../lib/content";
 
+const trustVisuals = {
+  "affiliate-disclosure": [
+    ["🤝", "Affiliate links disclosed"],
+    ["🧾", "Editorial facts stay visible"],
+    ["🚫", "No hidden paid ranking"]
+  ],
+  "how-we-make-money": [
+    ["💵", "Commission may occur later"],
+    ["🔎", "Current pages remain transparent"],
+    ["📌", "No live affiliate links today"]
+  ],
+  "data-sources": [
+    ["🏷️", "Nutrition labels"],
+    ["📦", "Product facts"],
+    ["🧪", "USDA sample demo data"]
+  ],
+  "publisher-kit": [
+    ["📚", "Content publisher"],
+    ["🛒", "Shopping comparison"],
+    ["⚕️", "Not medical advice"]
+  ],
+  methodology: [
+    ["🎯", "Intent first"],
+    ["📊", "Label fields"],
+    ["⚖️", "Tradeoffs shown"]
+  ]
+};
+
 export function generateStaticParams() {
   return Object.keys(trustPages).map((page) => ({ page }));
 }
@@ -32,6 +60,16 @@ export default function TrustPage({ params }) {
       <div className="eyebrow">BetterCart AI</div>
       <h1>{content.title}</h1>
       <div className="article-meta">Updated May 15, 2026</div>
+      {trustVisuals[params.page]?.length ? (
+        <div className="trust-visual-grid" aria-label={`${content.title} summary`}>
+          {trustVisuals[params.page].map(([icon, label]) => (
+            <div key={label}>
+              <span aria-hidden="true">{icon}</span>
+              <strong>{label}</strong>
+            </div>
+          ))}
+        </div>
+      ) : null}
       {content.faq?.length ? (
         <div className="faq-list">
           {content.faq.map((item) => (

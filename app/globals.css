@@ -482,6 +482,30 @@ h3 {
   line-height: 1.25;
 }
 
+.trust-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 20px 0 24px;
+}
+
+.trust-visual-grid div {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.trust-visual-grid span {
+  display: block;
+  font-size: 1.45rem;
+  margin-bottom: 6px;
+}
+
+.trust-visual-grid strong {
+  line-height: 1.25;
+}
+
 .workflow-card {
   position: relative;
   background: var(--paper);
@@ -990,6 +1014,7 @@ th {
   .index-visual-hero,
   .comparison-highlights,
   .topic-map,
+  .trust-visual-grid,
   .stats-row,
   .grid.three,
   .grid.two,
