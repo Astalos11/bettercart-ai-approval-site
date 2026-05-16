@@ -90,6 +90,13 @@ const trustVisuals = {
   ]
 };
 
+const publisherSnapshot = [
+  ["Audience", "US grocery shoppers comparing packaged foods by label facts and shopping intent."],
+  ["Content formats", "Buying guides, sample comparisons, topic hubs, trust pages, and a static demo."],
+  ["Promotion method", "Clearly disclosed editorial links only after network and advertiser approval."],
+  ["Current status", "No live affiliate links, no fake traffic claims, and no direct checkout."]
+];
+
 export function generateStaticParams() {
   return Object.keys(trustPages).map((page) => ({ page }));
 }
@@ -144,6 +151,22 @@ export default function TrustPage({ params }) {
           <p key={paragraph}>{paragraph}</p>
         ))
       )}
+      {params.page === "publisher-kit" ? (
+        <div className="readiness-matrix" aria-label="Publisher application snapshot">
+          <div className="readiness-row head">
+            <span>Application area</span>
+            <span>Status</span>
+            <span>Reviewer note</span>
+          </div>
+          {publisherSnapshot.map(([area, note]) => (
+            <div className="readiness-row" key={area}>
+              <strong>{area}</strong>
+              <span className="badge green">Ready</span>
+              <span>{note}</span>
+            </div>
+          ))}
+        </div>
+      ) : null}
       {params.page === "contact" ? (
         <div className="callout">
           <h2>Email BetterCart AI</h2>
