@@ -17,6 +17,16 @@ export default function GuidesIndexPage() {
           <h1>Food Buying Guides</h1>
           <p className="lead">Simple guides for comparing packaged foods by nutrition facts, ingredients, and shopping intent.</p>
         </div>
+        <div className="index-visual-hero">
+          <img
+            src="/images/food-comparison-visual-v2.webp"
+            alt="Packaged food comparison workspace with nutrition label cards"
+          />
+          <div>
+            <strong>Read the label faster</strong>
+            <span>Guides translate crowded package facts into shopping questions a reviewer can understand quickly.</span>
+          </div>
+        </div>
         <div className="visual-strip" aria-label="Guide topic overview">
           <div>
             <strong>📊 Label-first</strong>

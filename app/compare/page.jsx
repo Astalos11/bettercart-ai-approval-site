@@ -17,6 +17,16 @@ export default function CompareIndexPage() {
           <h1>Food Comparison Examples</h1>
           <p className="lead">Example product comparisons showing how nutrition facts and ingredient context can support everyday grocery decisions.</p>
         </div>
+        <div className="index-visual-hero">
+          <img
+            src="/images/food-comparison-visual-v2.webp"
+            alt="Sample AI food comparison dashboard with product cards and nutrition metrics"
+          />
+          <div>
+            <strong>Side-by-side, not score-only</strong>
+            <span>Comparison pages are designed to show tradeoffs clearly before any purchase link is added.</span>
+          </div>
+        </div>
         <div className="visual-strip" aria-label="Comparison use cases">
           <div>
             <strong>🍬 Low sugar</strong>

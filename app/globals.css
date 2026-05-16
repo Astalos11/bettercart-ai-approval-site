@@ -388,6 +388,40 @@ h3 {
   color: var(--muted);
 }
 
+.index-visual-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(240px, 0.28fr);
+  gap: 16px;
+  align-items: center;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  margin: -6px 0 24px;
+}
+
+.index-visual-hero img {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+
+.index-visual-hero strong,
+.index-visual-hero span {
+  display: block;
+}
+
+.index-visual-hero strong {
+  font-size: 1.15rem;
+}
+
+.index-visual-hero span {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
 .comparison-highlights {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -825,6 +859,7 @@ th {
   .scenario-grid,
   .visual-strip,
   .reviewer-hero-card,
+  .index-visual-hero,
   .comparison-highlights,
   .stats-row,
   .grid.three,
