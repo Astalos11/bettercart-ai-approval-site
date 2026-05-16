@@ -222,17 +222,19 @@ function main() {
   }
 
   const interactiveSearchChecks = [
-    ["guides/index.html", "guide-search"],
-    ["compare/index.html", "comparison-search"],
-    ["site-index/index.html", "site-index-search"],
-    ["topics/index.html", "topic-search"]
+    ["guides/index.html", "guide-search", "protein"],
+    ["compare/index.html", "comparison-search", "beverage"],
+    ["site-index/index.html", "site-index-search", "methodology"],
+    ["topics/index.html", "topic-search", "spreads"]
   ];
-  for (const [relativePath, id] of interactiveSearchChecks) {
+  for (const [relativePath, id, quickSearch] of interactiveSearchChecks) {
     const file = path.join(outDir, relativePath);
     if (!fs.existsSync(file)) {
       interactionMisses.push(`${relativePath} missing`);
-    } else if (!fs.readFileSync(file, "utf8").includes(id)) {
-      interactionMisses.push(`${relativePath} missing ${id}`);
+    } else {
+      const text = fs.readFileSync(file, "utf8");
+      if (!text.includes(id)) interactionMisses.push(`${relativePath} missing ${id}`);
+      if (!text.toLowerCase().includes(quickSearch)) interactionMisses.push(`${relativePath} missing quick search ${quickSearch}`);
     }
   }
 
