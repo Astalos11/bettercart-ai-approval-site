@@ -32,6 +32,15 @@ Primary goals:
 - Added USDA FDC sample provenance inside the demo.
 - Added footer trust badges and updated social image metadata.
 - Added QA coverage for oversized public images and USDA demo provenance.
+- Added a second generated WebP flat lay image for guide index and guide article pages.
+- Removed the unused old PNG workspace image.
+- Added visual summaries to key trust pages and the editorial team page.
+- Converted FAQ entries to native expandable details.
+- Added a searchable Site Index client component.
+- Added demo selected-product summary cards.
+- Added reduced-motion handling for hover interactions.
+- Added QA coverage for forbidden medical-symbol visuals.
+- Expanded live QA expectations for demo provenance and image assets.
 
 ## Current QA
 
@@ -70,4 +79,3 @@ Local static export continues to pass. Treat this as a Netlify deploy/settings i
 - Optional additional generated category imagery if the site still feels too text-heavy.
 - More demo sample coverage if USDA-derived static examples need broader categories.
 - Live Netlify QA after deployment catches up.
-
