@@ -1155,3 +1155,18 @@ th {
     grid-template-columns: 1fr;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .card {
+    transition: none;
+  }
+
+  a.card:hover,
+  a.card:focus-visible {
+    transform: none;
+  }
+}
