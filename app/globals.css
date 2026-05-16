@@ -317,6 +317,14 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 22px;
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+}
+
+a.card:hover,
+a.card:focus-visible {
+  border-color: rgba(37, 111, 91, 0.35);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
 }
 
 .card p {
