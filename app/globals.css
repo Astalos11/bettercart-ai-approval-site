@@ -456,6 +456,32 @@ h3 {
   margin-bottom: 0;
 }
 
+.topic-map {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.topic-map div {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  text-align: center;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 10px;
+}
+
+.topic-map span {
+  font-size: 1.8rem;
+}
+
+.topic-map strong {
+  line-height: 1.25;
+}
+
 .scenario-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -940,6 +966,7 @@ th {
   .reviewer-hero-card,
   .index-visual-hero,
   .comparison-highlights,
+  .topic-map,
   .stats-row,
   .grid.three,
   .grid.two,

@@ -9,6 +9,7 @@ export const metadata = {
 
 const topics = [
   {
+    icon: "🍬",
     title: "Low sugar shopping",
     text: "Guides and comparisons for shoppers trying to compare total sugar, added sugar when available, serving size, and sweetener context.",
     links: [
@@ -17,6 +18,7 @@ const topics = [
     ]
   },
   {
+    icon: "💪",
     title: "High protein options",
     text: "Protein-focused content for bars and packaged snacks, with calories, sugar, sodium, and ingredient style kept visible.",
     links: [
@@ -25,6 +27,7 @@ const topics = [
     ]
   },
   {
+    icon: "🧂",
     title: "Lower sodium decisions",
     text: "Sodium-focused content for pantry foods, snacks, soups, sauces, and shelf-stable products where serving use matters.",
     links: [
@@ -33,6 +36,7 @@ const topics = [
     ]
   },
   {
+    icon: "🥤",
     title: "Beverage comparisons",
     text: "Ready-to-drink beverage content for comparing sugar, calories, serving size, protein drinks, and ingredient context.",
     links: [
@@ -41,6 +45,7 @@ const topics = [
     ]
   },
   {
+    icon: "🏷️",
     title: "Label reading basics",
     text: "Educational content for understanding serving size, nutrition facts, ingredients, allergens, and category context.",
     links: [
@@ -49,6 +54,7 @@ const topics = [
     ]
   },
   {
+    icon: "🧒",
     title: "Household staples and kids snacks",
     text: "Practical packaged-food guides for pantry staples, kids snacks, cereals, and repeat household purchases.",
     links: [
@@ -58,6 +64,7 @@ const topics = [
     ]
   },
   {
+    icon: "🧊",
     title: "Frozen meal tradeoffs",
     text: "Frozen meal content for comparing sodium, calories, protein, serving realism, and meal role.",
     links: [
@@ -66,6 +73,7 @@ const topics = [
     ]
   },
   {
+    icon: "🥄",
     title: "Sauces and condiments",
     text: "Sauce and condiment content for comparing sodium, sugar, small serving sizes, and ingredient style.",
     links: [
@@ -74,6 +82,7 @@ const topics = [
     ]
   },
   {
+    icon: "🥜",
     title: "Nut butters and spreads",
     text: "Spread comparison content for sugar, protein, oils, sodium, serving size, and allergen context.",
     links: [
@@ -95,9 +104,19 @@ export default function TopicsPage() {
           </p>
         </div>
 
+        <div className="topic-map" aria-label="BetterCart AI topic map">
+          {topics.slice(0, 5).map((topic) => (
+            <div key={topic.title}>
+              <span aria-hidden="true">{topic.icon}</span>
+              <strong>{topic.title}</strong>
+            </div>
+          ))}
+        </div>
+
         <div className="grid two">
           {topics.map((topic) => (
             <div className="card" key={topic.title}>
+              <div className="card-icon" aria-hidden="true">{topic.icon}</div>
               <h2>{topic.title}</h2>
               <p>{topic.text}</p>
               <div className="link-list">
