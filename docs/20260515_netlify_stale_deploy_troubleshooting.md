@@ -65,6 +65,8 @@ If the same new routes still 404 after a successful deploy, clear Netlify cache 
 
 - `/program-compliance/` returned 404
 - `/humans.txt` returned 404
+- `/images/food-comparison-visual-v2.webp` returned 404
+- `/images/packaged-food-guide-flatlay.webp` returned 404
 - existing older pages such as `/for-reviewers/`, `/publisher-kit/`, `/affiliate-disclosure/`, `/how-we-make-money/`, and `/site-index/` returned 200
 
 Repo config currently includes:
@@ -80,4 +82,5 @@ This suggests the next manual check should happen inside Netlify:
 - verify the latest production deploy SHA matches GitHub `main`
 - verify Netlify is reading `netlify.toml`
 - verify publish directory is not overridden to `.next` in the Netlify UI
+- verify the latest deploy includes `out/humans.txt`, `out/_headers`, and `out/images/*.webp`
 - trigger "Clear cache and deploy site"
