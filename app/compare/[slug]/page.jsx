@@ -81,6 +81,11 @@ export default function ComparisonPage({ params }) {
         Updated May 16, 2026 · <Link href="/authors/bettercart-editorial-team">BetterCart AI Editorial Team</Link> · Sample editorial data
       </div>
       <p className="lead">{comparison.intro}</p>
+      <div className="chip-row article-chips" aria-label="Comparison content type">
+        <span className="chip">sample data</span>
+        <span className="chip">side-by-side fields</span>
+        <span className="chip">no live retailer feed</span>
+      </div>
       <div className="sample-data-note">
         <strong>Sample data notice:</strong> This page demonstrates comparison format and editorial logic. It is not a paid product placement, live retailer feed, or hands-on product test.
       </div>

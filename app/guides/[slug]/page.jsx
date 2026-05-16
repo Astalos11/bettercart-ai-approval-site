@@ -53,6 +53,11 @@ export default function GuidePage({ params }) {
         Updated May 16, 2026 · <Link href="/authors/bettercart-editorial-team">BetterCart AI Editorial Team</Link>
       </div>
       <p className="lead">{guide.excerpt}</p>
+      <div className="chip-row article-chips" aria-label="Guide content type">
+        <span className="chip">shopping guide</span>
+        <span className="chip">label facts</span>
+        <span className="chip">not medical advice</span>
+      </div>
       <img
         className="article-visual"
         src="/images/packaged-food-guide-flatlay.webp"
