@@ -11,6 +11,10 @@ const intents = [
 ];
 
 const categories = ["all", "snack", "bar", "pantry", "breakfast", "dessert"];
+const defaultSelectedNames = [
+  "Garlic Herb Pita Chips",
+  "Double Dark Chocolate Protein Bar"
+];
 
 function getFit(product, intent) {
   if (intent === "low_sugar") {
@@ -77,10 +81,7 @@ function findByMetric(products, metric, direction) {
 export default function DemoPage() {
   const [intent, setIntent] = useState("low_sugar");
   const [category, setCategory] = useState("all");
-  const [selectedNames, setSelectedNames] = useState([
-    "Garlic Herb Pita Chips",
-    "Double Dark Chocolate Protein Bar"
-  ]);
+  const [selectedNames, setSelectedNames] = useState(defaultSelectedNames);
   const sortedProducts = useMemo(() => {
     return demoProducts.filter((product) => category === "all" || product.category === category).sort((a, b) => {
       if (intent === "low_sugar") return a.totalSugar - b.totalSugar;
@@ -244,6 +245,13 @@ export default function DemoPage() {
             <p className="selection-status" role="status">
               Selected {selectedProducts.length} of 3 sample products.
             </p>
+            <button
+              className="button secondary"
+              type="button"
+              onClick={() => setSelectedNames(defaultSelectedNames)}
+            >
+              Reset selection
+            </button>
           </div>
           <div className="selected-grid">
             {selectedProducts.map((product) => (
