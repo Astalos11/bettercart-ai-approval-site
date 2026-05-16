@@ -1,6 +1,6 @@
 # BetterCart AI 申请站当前状态摘要
 
-日期：2026-05-15
+日期：2026-05-16
 
 ## 一句话结论
 
@@ -8,16 +8,19 @@
 
 它仍然不是成熟内容站，也没有流量历史，但已经具备基础审核所需的站点结构、内容厚度、合规披露和 reviewer-facing 页面。
 
+2026-05-16 进一步补了一轮视觉和互动优化：站点不再只是大量文字页面，而是开始具备图片、emoji、彩色比较表、场景卡片和可操作 demo。
+
 ## 当前站点包含什么
 
 - 12 篇 packaged food buying guides
 - 8 个 sample comparison pages
-- 17 个 trust / policy pages
-- 1 个 food comparison demo
+- 18 个 trust / policy pages
+- 1 个 food comparison demo，包含 12 条 USDA-derived static sample products
 - 1 个 For Reviewers 页面
 - 1 个 Publisher Kit 页面
 - 1 个 Site Index 页面
 - 1 个 humans.txt 审核入口文件
+- 2 张无品牌、无 retailer 截图的优化 WebP 图片资产
 
 ## 当前最重要的提升
 
@@ -27,7 +30,10 @@
 - 有 How We Make Money 和 Program Compliance，解释 affiliate 关系与推广边界。
 - 所有 sample comparison 都明确标注 sample data。
 - Demo 明确说明不是 live retailer inventory、不是 paid placement、不是 affiliate ranking。
+- Demo 现在支持 intent 选择、category filter、选择产品对比、top sample card、颜色图例和营养指标条。
+- 首页、guide、comparison、topics、reviewer、FAQ、trust pages 都加入了不同程度的视觉摘要、图片、emoji 或折叠交互。
 - 静态 QA 会检查关键页面、内部链接、placeholder、高风险 claim、图片 alt、sitemap、sample data disclosure 和非医疗免责声明。
+- 静态 QA 也会检查图片大小和 demo 的 USDA FDC provenance。
 
 ## 当前仍然缺什么
 
