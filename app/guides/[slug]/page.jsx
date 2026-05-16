@@ -53,6 +53,11 @@ export default function GuidePage({ params }) {
         Updated May 15, 2026 · <Link href="/authors/bettercart-editorial-team">BetterCart AI Editorial Team</Link>
       </div>
       <p className="lead">{guide.excerpt}</p>
+      <img
+        className="article-visual"
+        src="/images/food-comparison-visual-v2.webp"
+        alt="Packaged food labels and comparison cards used as a visual guide example"
+      />
       {guide.checklist?.length ? (
         <div className="callout">
           <h2>✅ Quick checklist</h2>
