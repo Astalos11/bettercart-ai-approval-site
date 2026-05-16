@@ -44,6 +44,9 @@ while time_remaining:
   7. 继续下一轮，不要停
 
 优先优化方向：
+- visual readability: add tasteful images, emoji, colored cards, and scan-friendly sections
+- application scenarios: show concrete food comparison examples through visual blocks or color-coded tables
+- demo interactivity: if feasible, expand the sample product demo with filters, comparison controls, and USDA-backed static examples
 - affiliate approval readiness
 - trust pages
 - disclosure / privacy / terms / editorial policy
@@ -104,4 +107,3 @@ while time_remaining:
 - 主要改进
 - 仍需人工处理事项
 ```
-

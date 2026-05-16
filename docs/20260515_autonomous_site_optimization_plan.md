@@ -152,6 +152,9 @@ Exit criteria:
 
 If the main work finishes before the 2-hour window ends, continue with one or more of these low-risk improvements:
 
+- Add tasteful emoji, icons, colored cards, and visual summary blocks to reduce wall-of-text pages.
+- Add application scenario examples using colorful tables or sample product cards.
+- Expand the demo with more static product data and simple interactions if it remains low risk.
 - Add one or two additional practical guide pages.
 - Add a simple FAQ page if it improves approval credibility.
 - Add a lightweight "Advertiser / partner policy" section explaining acceptable promotional methods.
@@ -194,4 +197,3 @@ At the end of the 2-hour optimization run:
   - build result
   - remaining risks
   - next recommended manual actions
-
