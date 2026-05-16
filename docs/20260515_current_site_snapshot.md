@@ -71,8 +71,9 @@ Current QA coverage includes:
 - A program compliance page documents planned promotional methods and prohibited tactics.
 - Reviewer-facing and publisher-facing summary pages exist.
 - Homepage, guide index, guide articles, comparison index, comparison pages, topics, reviewer page, and key trust pages now include visual summaries, image assets, emoji cards, content chips, or next-step cards.
-- Guides, comparisons, topics, and site index include searchable browser controls with visible result counts.
+- Guides, comparisons, topics, and site index include searchable browser controls with visible result counts, quick search chips, clear controls, and active states.
 - The demo includes intent controls, category filtering, selected-product comparison, a reset control, a selected count, a top-sample result card, dynamic top-result reasoning, color-coded metric cells, and metric bars.
+- Publisher Kit, Data Sources, and Program Compliance pages include snapshot matrices for reviewer scanning.
 - Demo examples are static, rounded USDA-derived samples with FDC provenance labels.
 - Sample data is disclosed on demo and comparison pages.
 - No real affiliate links are present yet, so there are no undisclosed affiliate placements.
