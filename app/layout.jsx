@@ -18,9 +18,9 @@ export const metadata = {
     siteName: "BetterCart AI",
     images: [
       {
-        url: "/images/food-comparison-workspace.png",
-        width: 1200,
-        height: 800,
+        url: "/images/food-comparison-visual-v2.webp",
+        width: 1400,
+        height: 788,
         alt: "BetterCart AI packaged food comparison workspace"
       }
     ]
@@ -30,7 +30,7 @@ export const metadata = {
     title: "BetterCart AI | Packaged Food Comparison Guides",
     description:
       "Compare packaged foods by nutrition facts, ingredients, and shopping intent.",
-    images: ["/images/food-comparison-workspace.png"]
+    images: ["/images/food-comparison-visual-v2.webp"]
   }
 };
 
@@ -67,6 +67,11 @@ function Footer() {
           <p>
             AI-assisted packaged food comparison guides for everyday grocery decisions.
           </p>
+          <div className="footer-badges" aria-label="Site trust status">
+            <span>🧾 Sample data labeled</span>
+            <span>🔎 Editorial checks</span>
+            <span>⚕️ Not medical advice</span>
+          </div>
         </div>
         <div>
           <strong>Explore</strong>
