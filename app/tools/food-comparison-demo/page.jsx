@@ -40,6 +40,14 @@ function getMetricFocus(intent) {
   return "Sorted by sodium per serving.";
 }
 
+function getTopReason(product, intent) {
+  if (!product) return "";
+  if (intent === "low_sugar") return `${product.totalSugar}g total sugar per serving is the strongest match in this filtered sample.`;
+  if (intent === "high_protein") return `${product.protein}g protein per serving rises to the top for this intent.`;
+  if (intent === "low_sodium") return `${product.sodium}mg sodium per serving is the lowest match in this filtered sample.`;
+  return "The balanced view weighs sugar, sodium, calories, and protein together for the sample set.";
+}
+
 function barWidth(value, max) {
   return `${Math.max(4, Math.min(100, Math.round((value / max) * 100)))}%`;
 }
@@ -65,6 +73,7 @@ export default function DemoPage() {
   const selectedProducts = useMemo(() => {
     return demoProducts.filter((product) => selectedNames.includes(product.name));
   }, [selectedNames]);
+  const topProduct = sortedProducts[0];
 
   function toggleSelected(productName) {
     setSelectedNames((current) => {
@@ -116,6 +125,23 @@ export default function DemoPage() {
         </div>
 
         <p className="small-note">{getMetricFocus(intent)} Showing {sortedProducts.length} sample products. The demo shows tradeoffs rather than a universal food score.</p>
+
+        {topProduct ? (
+          <div className="top-result-card">
+            <div className="top-result-icon" aria-hidden="true">✨</div>
+            <div>
+              <div className="eyebrow">Current top sample</div>
+              <h2>{topProduct.name}</h2>
+              <p>{getTopReason(topProduct, intent)}</p>
+              <div className="chip-row">
+                <span className="chip">{topProduct.calories} calories</span>
+                <span className="chip">{topProduct.totalSugar}g sugar</span>
+                <span className="chip">{topProduct.protein}g protein</span>
+                <span className="chip">{topProduct.sodium}mg sodium</span>
+              </div>
+            </div>
+          </div>
+        ) : null}
 
         <div className="sample-data-note">
           <strong>Reviewer note:</strong> This is a static sample-data demo using rounded USDA-derived examples. It does not contain affiliate links, live retailer inventory, paid placement, or advertiser-specific ranking.
