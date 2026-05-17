@@ -557,3 +557,14 @@ Reason:
 Change:
 
 - Updated `scripts/check_static_site.js`.
+
+### 18:40 CST - Publisher Kit Facts Added To Live QA
+
+Reason:
+
+- Static QA only protects the latest local export.
+- Since Alibaba OSS upload is manual, live QA should also detect whether the published site has application-critical publisher-kit facts.
+
+Change:
+
+- Updated `scripts/check_live_site.js`.

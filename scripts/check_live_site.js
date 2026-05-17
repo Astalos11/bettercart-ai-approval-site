@@ -7,6 +7,8 @@ const requiredPages = [
   ["/", "BetterCart AI"],
   ["/for-reviewers/", "Fast review path"],
   ["/publisher-kit/", "Publisher Kit"],
+  ["/publisher-kit/", "No live affiliate links"],
+  ["/publisher-kit/", "contact@bettercartai.com"],
   ["/affiliate-disclosure/", "Affiliate Disclosure"],
   ["/how-we-make-money/", "How We Make Money"],
   ["/review-process/", "Review Process"],
