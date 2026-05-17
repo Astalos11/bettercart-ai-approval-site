@@ -165,3 +165,53 @@ Expected value:
 - Better reviewer clarity.
 - Stronger distinction between label evidence and future affiliate links.
 - More product-like demo without adding backend, fake links, or recommendation logic.
+
+### 14:24 CST - Forum / Publisher Experience Added
+
+Reason:
+
+- Official docs explain formal requirements, but operational risk often appears in publisher experience: unexplained rejection, low-traffic skepticism, advertiser-level declines.
+
+Change:
+
+- Updated `docs/20260517_affiliate_approval_reality_check.md` with anecdotal publisher-experience notes.
+
+Conclusion:
+
+- Rejections should be treated as fit / maturity data points, not project invalidation.
+- BetterCart AI should use precise application language, keep reviewer URLs visible, and apply in stages rather than assuming a single network solves access.
+
+### 14:37 CST - Target Advertiser Matrix Added
+
+Reason:
+
+- After network approval, the team needs a practical plan for which advertiser categories to apply to and what fields to inspect.
+- A generic "apply to brands" instruction is too vague for MVP data-access validation.
+
+Change:
+
+- Added `docs/20260517_affiliate_target_advertiser_matrix.md`.
+- Added it to README application docs.
+
+Main points:
+
+- First useful target is not "many brands"; it is 3-5 approved commerce surfaces with stable links or feeds.
+- Better early target is 8-15 useful advertisers / merchants.
+- Feed inspection must happen before building ingestion.
+- Nutrition / ingredients remain external enrichment fields, not assumed affiliate feed fields.
+
+### 14:43 CST - Reviewer Readiness Matrix Updated
+
+Reason:
+
+- The public reviewer page should reflect the current site state: custom domain, contact email, and verification path are now active.
+
+Change:
+
+- Updated `app/for-reviewers/page.jsx`.
+- Added readiness rows for contact path and domain verification.
+
+Expected value:
+
+- Faster reviewer understanding.
+- Less ambiguity during Awin / FlexOffers review.

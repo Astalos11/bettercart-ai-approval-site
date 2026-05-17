@@ -33,6 +33,8 @@ const reviewerPath = [
 const readinessItems = [
   ["Content site shell", "Ready", "Guides, comparisons, topics, and demo are published."],
   ["Trust pages", "Ready", "Disclosure, privacy, terms, methodology, and compliance pages exist."],
+  ["Contact path", "Ready", "Public contact email is contact@bettercartai.com."],
+  ["Domain verification", "Ready", "The site is live on the custom HTTPS domain."],
   ["Affiliate links", "Not active", "No live affiliate links are currently present."],
   ["Custom domain", "Ready", "The public review URL is https://www.bettercartai.com."]
 ];

@@ -127,6 +127,7 @@ Affiliate application baseline:
 - `docs/20260516_shutdown_summary.md`
 - `docs/20260517_main_thread_autonomous_plan.md`
 - `docs/20260517_affiliate_approval_reality_check.md`
+- `docs/20260517_affiliate_target_advertiser_matrix.md`
 
 ## Important Pages
 

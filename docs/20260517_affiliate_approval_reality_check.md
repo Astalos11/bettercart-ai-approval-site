@@ -209,6 +209,8 @@ Likely approval risks for BetterCart AI:
 - negative comparison could conflict with some advertiser preferences
 - sample data pages must not look like fake reviews
 - no active affiliate links yet, so reviewer must understand intended use
+- some networks and programs may decline without detailed reasoning
+- some advertiser programs may prefer traffic proof, conversion history, or a closer niche fit
 
 Mitigations already present:
 
@@ -223,6 +225,25 @@ Mitigations already present:
 - no medical claims
 - demo labels sample data clearly
 
+## Forum / Publisher Experience Notes
+
+Unofficial forum evidence should be treated as weaker than official docs, but it is useful for operational expectations.
+
+Observed recurring themes:
+
+- Some publishers report network or program rejection with little explanation.
+- New sites may be accepted by some networks but still face advertiser-level declines.
+- Traffic proof can matter more for mature advertisers and platforms such as Impact / CJ-style larger programs.
+- A complete, live, specific website with clear ownership and original content is consistently more defensible than a generic or under-construction site.
+- ShareASale as a standalone path is less reliable after its consolidation into Awin; treat it as Awin-related rather than a separate guaranteed easy path.
+
+Operational implication:
+
+```text
+Do not interpret a rejection as product invalidation.
+Treat each network / advertiser decision as one data point about fit, maturity, and trust requirements.
+```
+
 ## Recommended Application Sequence
 
 1. Awin
@@ -232,6 +253,7 @@ Reason:
 - good fit for content publishers and advertiser program model
 - good place to test site-level acceptance
 - can later inspect food / grocery / DTC advertiser availability
+- ShareASale consolidation makes Awin the more current route for legacy ShareASale-style merchant access
 
 2. FlexOffers
 
@@ -282,3 +304,4 @@ Do not build a generalized retailer mapping system until actual feed access show
 - ShareASale help: merchant datafeed requirements and fields.
 - Impact docs: campaign/catalog APIs and partner catalog access.
 - Skimlinks publisher docs: merchant access, publisher approval, monetization behavior.
+- Publisher forum threads about Awin / FlexOffers / ShareASale rejection patterns, treated as anecdotal evidence only.
