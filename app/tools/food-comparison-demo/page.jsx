@@ -15,6 +15,16 @@ const intents = [
 const categories = ["all", ...Array.from(new Set(demoProducts.map((product) => product.category)))];
 const defaultSelectedIds = demoProducts.slice(0, 2).map((product) => product.id);
 const quickSearches = ["protein", "cereal", "chocolate", "juice", "salsa", "bar"];
+const categoryIcons = {
+  all: "🧭",
+  bar: "🍫",
+  beverage: "🥤",
+  breakfast: "🥣",
+  dessert: "🍪",
+  meal: "🍽️",
+  pantry: "🥫",
+  snack: "🥨"
+};
 
 function getFit(product, intent) {
   if (intent === "low_sugar") {
@@ -193,7 +203,7 @@ export default function DemoPage() {
               aria-pressed={item === category}
               type="button"
             >
-              {item === "all" ? "All examples" : item}
+              {categoryIcons[item]} {item === "all" ? "All examples" : item}
             </button>
           ))}
         </div>
@@ -356,7 +366,7 @@ export default function DemoPage() {
                 <span className={`badge ${fit === "Better fit" ? "green" : fit === "Moderate fit" ? "blue" : "orange"}`}>
                   {fit}
                 </span>
-                <span className="badge blue" style={{ marginLeft: 8 }}>{product.category}</span>
+                <span className="badge blue" style={{ marginLeft: 8 }}>{categoryIcons[product.category]} {product.category}</span>
                 <h3 style={{ marginTop: 14 }}>{product.name}</h3>
                 {product.brand ? <p className="metric">Brand / owner: {product.brand}</p> : null}
                 <p>{product.note}</p>

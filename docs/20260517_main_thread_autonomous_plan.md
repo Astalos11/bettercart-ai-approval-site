@@ -674,6 +674,17 @@ Change:
 - Updated `lib/content.js`.
 - Updated the data source snapshot in `app/[page]/page.jsx`.
 
+### 20:27 CST - USDA Demo Category Icons Added
+
+Reason:
+
+- The demo now has 80 real USDA-derived samples, so readability matters more.
+- Category icons make browsing faster without adding fake product imagery.
+
+Change:
+
+- Added category icons to demo category filters and sample cards.
+
 ### 19:58 CST - Affiliate Advertiser Seed List Added
 
 Reason:
