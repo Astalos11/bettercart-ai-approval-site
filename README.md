@@ -84,6 +84,16 @@ npm run check:all
 
 This runs the production build, static export QA, docs QA, and live site QA in sequence.
 
+## OSS Zip QA
+
+Before manually uploading to Alibaba Cloud OSS, run:
+
+```bash
+npm run check:zip
+```
+
+This confirms `approval-site-out.zip` contains `index.html`, `_next/`, and route folders at zip root, without an outer `out/` directory.
+
 ## Deployment Notes
 
 Current hosting target:

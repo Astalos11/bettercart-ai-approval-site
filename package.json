@@ -13,6 +13,7 @@
     "check:static": "node scripts/check_static_site.js",
     "check:live": "node scripts/check_live_site.js",
     "check:docs": "node scripts/check_docs_index.js",
+    "check:zip": "python3 scripts/check_export_zip.py",
     "check:local": "npm run build && npm run check:static && npm run check:docs",
     "check:all": "npm run check:local && npm run check:live"
   },

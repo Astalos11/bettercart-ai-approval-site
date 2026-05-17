@@ -481,3 +481,16 @@ Sources summarized:
 - Awin public food / nutrition-adjacent program examples.
 - Skimlinks merchant / publisher approval model.
 - ShareASale datafeed context.
+
+### 17:43 CST - OSS Zip Structure QA Added
+
+Reason:
+
+- Alibaba OSS deployment depends on uploading a zip whose root directly contains `index.html`, `_next/`, and route folders.
+- This was a real operational footgun during the migration from Netlify.
+
+Change:
+
+- Added `scripts/check_export_zip.py`.
+- Added `npm run check:zip`.
+- Documented the zip check in README.
