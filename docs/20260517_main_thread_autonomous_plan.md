@@ -278,3 +278,22 @@ Conclusion:
 
 - The affiliate-feed UPC seed route is plausible.
 - It remains advertiser-dependent; real feed field inspection is mandatory before building import logic.
+
+### 15:27 CST - Affiliate Application Tracker Template Added
+
+Reason:
+
+- After network approval, the most valuable data will be advertiser statuses, feed availability, and actual feed fields.
+- Without a tracker, the project will lose evidence needed to decide whether affiliate feeds can support the MVP.
+
+Change:
+
+- Added `docs/20260517_affiliate_application_tracker_template.md`.
+- Added it to README docs.
+
+Use:
+
+- Track network applications.
+- Track advertiser applications.
+- Track feed fields such as UPC / GTIN / SKU / MPN / price / product URL.
+- Label each advertiser/feed as useful, partial, or not useful now.
