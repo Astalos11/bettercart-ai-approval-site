@@ -703,6 +703,23 @@ Current package:
 - `approval-site-out.zip`
 - size about `1005K`
 
+### 20:50 CST - USDA Demo JSON Added To Static QA
+
+Reason:
+
+- Page text checks alone do not protect the underlying static USDA-derived demo dataset.
+- The JSON should retain enough rows and required fields for the demo to remain credible.
+
+Change:
+
+- Updated `scripts/check_static_site.js`.
+
+QA now checks:
+
+- `lib/usdaDemoProducts.json` exists.
+- It has at least 80 products.
+- Required demo fields exist: id, name, category, calories, sugar, protein, sodium, serving, source.
+
 ### 19:58 CST - Affiliate Advertiser Seed List Added
 
 Reason:

@@ -3,6 +3,7 @@ const path = require("path");
 
 const root = path.resolve(__dirname, "..");
 const outDir = path.join(root, "out");
+const demoDataPath = path.join(root, "lib", "usdaDemoProducts.json");
 
 const requiredRoutes = [
   "/",
@@ -120,6 +121,7 @@ function main() {
   const highRiskClaimHits = [];
   const missingImageAltHits = [];
   const forbiddenVisualHits = [];
+  const demoDataMisses = [];
   const sitemapPathMisses = [];
   const disclosureMisses = [];
   const externalAnchorHits = [];
@@ -187,6 +189,22 @@ function main() {
   }
 
   const demoPath = path.join(outDir, "tools", "food-comparison-demo", "index.html");
+  if (fs.existsSync(demoDataPath)) {
+    const demoData = JSON.parse(fs.readFileSync(demoDataPath, "utf8"));
+    const products = Array.isArray(demoData.products) ? demoData.products : [];
+    const requiredFields = ["id", "name", "category", "calories", "totalSugar", "protein", "sodium", "serving", "source"];
+    if (products.length < 80) {
+      demoDataMisses.push(`USDA demo data has only ${products.length} products`);
+    }
+    for (const field of requiredFields) {
+      if (products.some((product) => product[field] === undefined || product[field] === null || product[field] === "")) {
+        demoDataMisses.push(`USDA demo data missing field ${field}`);
+      }
+    }
+  } else {
+    demoDataMisses.push("missing lib/usdaDemoProducts.json");
+  }
+
   if (fs.existsSync(demoPath)) {
     const demoText = fs.readFileSync(demoPath, "utf8").toLowerCase();
     for (const phrase of ["sample-data demo", "does not contain affiliate links", "paid placement"]) {
@@ -302,6 +320,7 @@ function main() {
   console.log(`forbidden_visual_hits=${forbiddenVisualHits.length}`);
   console.log(`missing_image_alt_hits=${missingImageAltHits.length}`);
   console.log(`external_anchor_hits=${externalAnchorHits.length}`);
+  console.log(`demo_data_misses=${demoDataMisses.length}`);
   console.log(`accessibility_misses=${accessibilityMisses.length}`);
   console.log(`sitemap_path_misses=${sitemapPathMisses.length}`);
   console.log(`disclosure_misses=${disclosureMisses.length}`);
@@ -315,13 +334,14 @@ function main() {
   if (forbiddenVisualHits.length) console.log(`Forbidden visual hits:\n${forbiddenVisualHits.join("\n")}`);
   if (missingImageAltHits.length) console.log(`Missing image alt hits:\n${missingImageAltHits.join("\n")}`);
   if (externalAnchorHits.length) console.log(`External anchor hits:\n${externalAnchorHits.join("\n")}`);
+  if (demoDataMisses.length) console.log(`Demo data misses:\n${demoDataMisses.join("\n")}`);
   if (accessibilityMisses.length) console.log(`Accessibility misses:\n${accessibilityMisses.join("\n")}`);
   if (sitemapPathMisses.length) console.log(`Sitemap path misses:\n${sitemapPathMisses.join("\n")}`);
   if (disclosureMisses.length) console.log(`Disclosure misses:\n${disclosureMisses.join("\n")}`);
   if (oversizedImageHits.length) console.log(`Oversized image hits:\n${oversizedImageHits.join("\n")}`);
   if (interactionMisses.length) console.log(`Interaction misses:\n${interactionMisses.join("\n")}`);
 
-  if (missingRequired.length || badLinks.length || placeholderHits.length || highRiskClaimHits.length || forbiddenVisualHits.length || missingImageAltHits.length || externalAnchorHits.length || accessibilityMisses.length || sitemapPathMisses.length || disclosureMisses.length || oversizedImageHits.length || interactionMisses.length) process.exit(1);
+  if (missingRequired.length || badLinks.length || placeholderHits.length || highRiskClaimHits.length || forbiddenVisualHits.length || missingImageAltHits.length || externalAnchorHits.length || demoDataMisses.length || accessibilityMisses.length || sitemapPathMisses.length || disclosureMisses.length || oversizedImageHits.length || interactionMisses.length) process.exit(1);
 }
 
 main();
