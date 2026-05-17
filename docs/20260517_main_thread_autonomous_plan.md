@@ -568,3 +568,21 @@ Reason:
 Change:
 
 - Updated `scripts/check_live_site.js`.
+
+### 18:49 CST - User Strategy Decisions Recorded
+
+Reason:
+
+- User clarified three product / operations decisions while present.
+- These decisions change later autonomous work and advertiser application strategy.
+
+Decisions:
+
+- Brand name is fixed for now as `BetterCart AI`.
+- After network approval, apply broadly to advertisers to observe approval rate, while still prioritizing more relevant food / grocery / nutrition / snack / beverage / supplement advertisers.
+- Website should not be limited to the previous "minimum approval site" bar; it should keep improving toward a credible real content site.
+
+Change:
+
+- Added `docs/20260517_affiliate_application_strategy_update.md`.
+- Added it to README docs.
