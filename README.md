@@ -86,7 +86,13 @@ This runs the production build, static export QA, docs QA, and live site QA in s
 
 ## OSS Zip QA
 
-Before manually uploading to Alibaba Cloud OSS, run:
+After `npm run build`, regenerate and verify the Alibaba Cloud OSS upload package:
+
+```bash
+npm run build:zip
+```
+
+Before manually uploading an existing package to Alibaba Cloud OSS, run:
 
 ```bash
 npm run check:zip

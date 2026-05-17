@@ -88,25 +88,10 @@ Current repo stores the ready package as:
 approval-site-out.zip
 ```
 
-Regenerate it with:
+Regenerate it after `npm run build` with:
 
 ```bash
-python3 - <<'PY'
-from pathlib import Path
-from zipfile import ZipFile, ZIP_DEFLATED
-
-root = Path("out")
-zip_path = Path("approval-site-out.zip")
-if zip_path.exists():
-    zip_path.unlink()
-
-with ZipFile(zip_path, "w", ZIP_DEFLATED) as zf:
-    for path in sorted(root.rglob("*")):
-        if path.is_file():
-            zf.write(path, path.relative_to(root).as_posix())
-
-print(zip_path.resolve())
-PY
+npm run build:zip
 ```
 
 ## Upload To OSS
@@ -188,4 +173,3 @@ Do not claim:
 - real-time prices
 - medical advice
 - guaranteed health outcomes
-

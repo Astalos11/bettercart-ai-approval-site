@@ -494,3 +494,16 @@ Change:
 - Added `scripts/check_export_zip.py`.
 - Added `npm run check:zip`.
 - Documented the zip check in README.
+
+### 17:52 CST - OSS Zip Creation Script Added
+
+Reason:
+
+- Zip creation was documented as an inline Python snippet, which is easy to copy incorrectly.
+- The repo should have one canonical command for creating the Alibaba OSS upload package.
+
+Change:
+
+- Added `scripts/create_export_zip.py`.
+- Added `npm run build:zip`.
+- Updated README and Alibaba OSS deployment runbook to use the command.
