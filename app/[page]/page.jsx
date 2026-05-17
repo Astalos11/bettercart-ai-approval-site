@@ -107,7 +107,7 @@ const publisherFacts = [
 ];
 
 const dataSourceSnapshot = [
-  ["Nutrition facts", "Used in demo", "Rounded USDA-derived sample examples for product experience only."],
+  ["Nutrition facts", "Used in demo", "80 rounded USDA-derived canonical sample examples for product experience only."],
   ["Ingredient lists", "Planned", "Used when reliable product labels or structured sources are available."],
   ["Retailer availability", "Future", "Not connected in the current approval site."],
   ["Affiliate feeds", "Future", "Only after network and advertiser approval, with disclosure."]

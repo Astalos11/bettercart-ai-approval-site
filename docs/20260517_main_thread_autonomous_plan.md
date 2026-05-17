@@ -662,6 +662,18 @@ Change:
 - Added `npm run build:demo-data`.
 - Documented the source dataset and output JSON in README.
 
+### 20:16 CST - Public Data Sources Page Updated
+
+Reason:
+
+- The public Data Sources page still described the demo as a small static USDA sample set.
+- The demo now uses 80 rounded USDA-derived canonical samples.
+
+Change:
+
+- Updated `lib/content.js`.
+- Updated the data source snapshot in `app/[page]/page.jsx`.
+
 ### 19:58 CST - Affiliate Advertiser Seed List Added
 
 Reason:
