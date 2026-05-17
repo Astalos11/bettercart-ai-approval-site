@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:demo-data": "python3 scripts/build_usda_demo_products.py",
     "build:zip": "python3 scripts/create_export_zip.py && npm run check:zip",
     "start": "next start",
     "lint": "echo \"No ESLint config is installed; run npm run check:local for project QA.\"",

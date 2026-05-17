@@ -649,3 +649,15 @@ Change:
 
 - Added dataset stats to `/tools/food-comparison-demo/`.
 - Updated static QA to protect the dataset snapshot.
+
+### 19:45 CST - Demo Data Build Command Added
+
+Reason:
+
+- The USDA demo JSON should be reproducible from the local cleaned canonical nutrition dataset.
+- Future agents should not have to infer which script to run.
+
+Change:
+
+- Added `npm run build:demo-data`.
+- Documented the source dataset and output JSON in README.

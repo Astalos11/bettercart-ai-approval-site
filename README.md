@@ -35,6 +35,28 @@ The static export directory is:
 out
 ```
 
+## Demo Data
+
+The interactive food comparison demo uses a static USDA-derived sample dataset:
+
+```text
+lib/usdaDemoProducts.json
+```
+
+Regenerate it from the local cleaned canonical nutrition dataset with:
+
+```bash
+npm run build:demo-data
+```
+
+The source dataset is expected at:
+
+```text
+/home/astalos/usda_food_pipeline/outputs/mvp_hard_filter_nutrition_v0_1.csv
+```
+
+This does not modify raw USDA files or generated CSV outputs.
+
 ## Static QA
 
 After building, run:
