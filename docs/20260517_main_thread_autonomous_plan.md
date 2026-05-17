@@ -445,3 +445,20 @@ Reason:
 Change:
 
 - Updated `scripts/check_docs_index.js` to validate any README `docs/*` reference.
+
+### 17:17 CST - Alibaba OSS Deployment Runbook Added
+
+Reason:
+
+- The older domain cutover runbook still reflects the Netlify deployment path.
+- Current deployment is Alibaba Cloud OSS static hosting, and the most common operational mistake is zipping / uploading an extra `out/` wrapper directory.
+
+Change:
+
+- Added `docs/20260517_aliyun_oss_deployment_runbook.md`.
+- Added it to README docs.
+
+Core rule:
+
+- `approval-site-out.zip` must contain `index.html`, `_next/`, and route folders at zip root.
+- It must not contain `out/index.html`.

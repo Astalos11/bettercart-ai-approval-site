@@ -117,6 +117,7 @@ Affiliate application baseline:
 - `docs/20260515_affiliate_application_notes.md`
 - `docs/20260515_approval_site_review_checklist.md`
 - `docs/20260515_domain_cutover_runbook.md`
+- `docs/20260517_aliyun_oss_deployment_runbook.md`
 - `docs/20260515_netlify_stale_deploy_troubleshooting.md`
 - `docs/20260515_optimization_qa_report.md`
 - `docs/20260516_visual_interactive_optimization_plan.md`
