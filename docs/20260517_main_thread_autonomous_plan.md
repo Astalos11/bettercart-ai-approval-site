@@ -685,6 +685,24 @@ Change:
 
 - Added category icons to demo category filters and sample cards.
 
+### 20:39 CST - Current OSS Upload Note Added
+
+Reason:
+
+- GitHub push does not update Alibaba OSS automatically.
+- The latest version now includes a materially better USDA-derived demo, so manual upload should use the current zip package.
+
+Change:
+
+- Added `docs/20260517_current_oss_upload_note.md`.
+- Added it to README docs.
+
+Current package:
+
+- commit `a83bccd`
+- `approval-site-out.zip`
+- size about `1005K`
+
 ### 19:58 CST - Affiliate Advertiser Seed List Added
 
 Reason:
