@@ -720,6 +720,18 @@ QA now checks:
 - It has at least 80 products.
 - Required demo fields exist: id, name, category, calories, sugar, protein, sodium, serving, source.
 
+### 21:02 CST - Homepage Aligned With USDA Demo Dataset
+
+Reason:
+
+- The homepage still implied a small generic USDA example set.
+- Reviewer-facing homepage stats should surface the richer 80-product static demo.
+
+Change:
+
+- Updated `app/page.jsx` to show the USDA demo sample count.
+- Updated static QA to protect the homepage USDA demo count.
+
 ### 19:58 CST - Affiliate Advertiser Seed List Added
 
 Reason:

@@ -270,6 +270,9 @@ function main() {
     if (!homeText.toLowerCase().includes("static rounded usda-derived examples")) {
       disclosureMisses.push("index.html missing homepage sample provenance");
     }
+    if (!homeText.includes("80") || !homeText.toLowerCase().includes("usda demo samples")) {
+      disclosureMisses.push("index.html missing homepage USDA demo sample count");
+    }
     if (!homeText.includes('"@type":"WebSite"')) {
       disclosureMisses.push("index.html missing WebSite structured data");
     }

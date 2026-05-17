@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { comparisons, guides, trustPages } from "../lib/content";
+import usdaDemoProducts from "../lib/usdaDemoProducts.json";
 
 const previewProducts = [
   { name: "Original Instant Oatmeal", metric: "0g sugar / serving", label: "Lower sugar sample" },
@@ -114,7 +115,7 @@ export default function HomePage() {
                 </span>
               </div>
             ))}
-            <p className="small-note">Static rounded USDA-derived examples. Not live retailer inventory or paid placement.</p>
+            <p className="small-note">{usdaDemoProducts.count} static rounded USDA-derived examples power the demo. Not live retailer inventory or paid placement.</p>
           </div>
         </div>
       </section>
@@ -133,6 +134,10 @@ export default function HomePage() {
             <div>
               <strong>{comparisons.length}</strong>
               <span>comparison examples</span>
+            </div>
+            <div>
+              <strong>{usdaDemoProducts.count}</strong>
+              <span>USDA demo samples</span>
             </div>
             <div>
               <strong>{Object.keys(trustPages).length}</strong>
