@@ -1,7 +1,9 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { demoProducts } from "../../../lib/content";
+import usdaDemoProducts from "../../../lib/usdaDemoProducts.json";
+
+const demoProducts = usdaDemoProducts.products;
 
 const intents = [
   { id: "low_sugar", label: "🍬 Low sugar" },
@@ -10,11 +12,8 @@ const intents = [
   { id: "balanced_snack", label: "⚖️ Balanced snack" }
 ];
 
-const categories = ["all", "snack", "bar", "pantry", "breakfast", "dessert"];
-const defaultSelectedNames = [
-  "Garlic Herb Pita Chips",
-  "Double Dark Chocolate Protein Bar"
-];
+const categories = ["all", ...Array.from(new Set(demoProducts.map((product) => product.category)))];
+const defaultSelectedNames = demoProducts.slice(0, 2).map((product) => product.name);
 
 function getFit(product, intent) {
   if (intent === "low_sugar") {
@@ -91,9 +90,16 @@ function findByMetric(products, metric, direction) {
 export default function DemoPage() {
   const [intent, setIntent] = useState("low_sugar");
   const [category, setCategory] = useState("all");
+  const [query, setQuery] = useState("");
   const [selectedNames, setSelectedNames] = useState(defaultSelectedNames);
   const sortedProducts = useMemo(() => {
-    return demoProducts.filter((product) => category === "all" || product.category === category).sort((a, b) => {
+    const normalizedQuery = query.trim().toLowerCase();
+    return demoProducts.filter((product) => {
+      const matchesCategory = category === "all" || product.category === category;
+      const searchable = `${product.name} ${product.brand} ${product.usdaCategory}`.toLowerCase();
+      const matchesQuery = !normalizedQuery || searchable.includes(normalizedQuery);
+      return matchesCategory && matchesQuery;
+    }).sort((a, b) => {
       if (intent === "low_sugar") return a.totalSugar - b.totalSugar;
       if (intent === "high_protein") return b.protein - a.protein;
       if (intent === "balanced_snack") {
@@ -102,7 +108,7 @@ export default function DemoPage() {
       }
       return a.sodium - b.sodium;
     });
-  }, [intent, category]);
+  }, [intent, category, query]);
   const selectedProducts = useMemo(() => {
     return demoProducts.filter((product) => selectedNames.includes(product.name));
   }, [selectedNames]);
@@ -130,7 +136,7 @@ export default function DemoPage() {
           <div className="eyebrow">Demo</div>
           <h1>Food Comparison Demo</h1>
           <p className="lead">
-            Try a simple example of how BetterCart AI compares packaged foods by shopping intent. This demo uses sample products and is not connected to live retailer inventory.
+            Try a simple example of how BetterCart AI compares packaged foods by shopping intent. This demo uses {usdaDemoProducts.count} USDA FDC sample products from a cleaned canonical dataset and is not connected to live retailer inventory.
           </p>
         </div>
 
@@ -183,6 +189,18 @@ export default function DemoPage() {
           ))}
         </div>
 
+        <div className="site-search demo-search">
+          <label htmlFor="demo-product-search">Search USDA-derived sample products</label>
+          <input
+            id="demo-product-search"
+            type="search"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Try cereal, bar, chocolate, salsa, juice, protein"
+          />
+          <span>{sortedProducts.length} visible out of {usdaDemoProducts.count} static USDA FDC sample products.</span>
+        </div>
+
         <p className="small-note">{getMetricFocus(intent)} Showing {sortedProducts.length} sample products. The demo shows tradeoffs rather than a universal food score.</p>
 
         <div className="metric-legend" aria-label="Demo color legend">
@@ -194,18 +212,20 @@ export default function DemoPage() {
         {topProduct ? (
           <div className="top-result-card">
             <div className="top-result-icon" aria-hidden="true">✨</div>
-            <div>
-              <div className="eyebrow">Current top sample</div>
-              <h2>{topProduct.name}</h2>
-              <p>{getTopReason(topProduct, intent)}</p>
-              <div className="chip-row">
-                <span className="chip">{topProduct.calories} calories</span>
-                <span className="chip">{topProduct.totalSugar}g sugar</span>
-                <span className="chip">{topProduct.protein}g protein</span>
-                <span className="chip">{topProduct.sodium}mg sodium</span>
+              <div>
+                <div className="eyebrow">Current top sample</div>
+                <h2>{topProduct.name}</h2>
+                {topProduct.brand ? <p className="metric">Brand / owner: {topProduct.brand}</p> : null}
+                <p>{getTopReason(topProduct, intent)}</p>
+                <div className="chip-row">
+                  <span className="chip">{topProduct.calories} calories</span>
+                  <span className="chip">{topProduct.totalSugar}g sugar</span>
+                  <span className="chip">{topProduct.protein}g protein</span>
+                  <span className="chip">{topProduct.sodium}mg sodium</span>
+                  <span className="chip">serving {topProduct.serving}</span>
+                </div>
               </div>
             </div>
-          </div>
         ) : null}
 
         {topProduct ? (
@@ -237,7 +257,7 @@ export default function DemoPage() {
         ) : null}
 
         <div className="sample-data-note">
-          <strong>Reviewer note:</strong> This is a static sample-data demo using rounded USDA-derived examples. It does not contain affiliate links, live retailer inventory, paid placement, or advertiser-specific ranking.
+          <strong>Reviewer note:</strong> This is a static sample-data demo using rounded USDA FDC sample products from the local canonical nutrition dataset. It does not contain affiliate links, live retailer inventory, paid placement, or advertiser-specific ranking.
         </div>
 
         <div className="callout">
@@ -259,7 +279,7 @@ export default function DemoPage() {
           </div>
           {sortedProducts.slice(0, 5).map((product) => (
             <div className="demo-table-row" key={product.name}>
-              <strong>{product.name}</strong>
+              <strong>{product.name}<small>{product.usdaCategory}</small></strong>
               <span className={`metric-cell ${product.totalSugar <= 2 ? "green" : product.totalSugar <= 8 ? "blue" : "orange"}`}>{product.totalSugar}g</span>
               <span className={`metric-cell ${product.protein >= 15 ? "green" : product.protein >= 6 ? "blue" : "orange"}`}>{product.protein}g</span>
               <span className={`metric-cell ${product.sodium <= 120 ? "green" : product.sodium <= 260 ? "blue" : "orange"}`}>{product.sodium}mg</span>
@@ -314,10 +334,11 @@ export default function DemoPage() {
                 </span>
                 <span className="badge blue" style={{ marginLeft: 8 }}>{product.category}</span>
                 <h3 style={{ marginTop: 14 }}>{product.name}</h3>
+                {product.brand ? <p className="metric">Brand / owner: {product.brand}</p> : null}
                 <p>{product.note}</p>
                 <p><strong>Tradeoff:</strong> {product.tradeoff}</p>
                 <p className="metric">
-                  {product.calories} calories · {product.totalSugar}g sugar · {product.protein}g protein · {product.sodium}mg sodium
+                  {product.calories} calories · {product.totalSugar}g sugar · {product.protein}g protein · {product.sodium}mg sodium · serving {product.serving}
                 </p>
                 <div className="metric-bars" aria-label={`Nutrition bars for ${product.name}`}>
                   <div>

@@ -204,6 +204,12 @@ function main() {
     if (!demoText.includes("commerce link")) {
       disclosureMisses.push("tools/food-comparison-demo/index.html missing commerce link boundary");
     }
+    if (!demoText.includes("search usda-derived sample products")) {
+      interactionMisses.push("tools/food-comparison-demo/index.html missing USDA sample product search");
+    }
+    if (!demoText.includes("80") || !demoText.includes("static usda fdc sample products")) {
+      disclosureMisses.push("tools/food-comparison-demo/index.html missing 80-product USDA sample dataset count");
+    }
   }
 
   const contactPath = path.join(outDir, "contact", "index.html");

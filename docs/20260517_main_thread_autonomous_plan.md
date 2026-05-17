@@ -586,3 +586,41 @@ Change:
 
 - Added `docs/20260517_affiliate_application_strategy_update.md`.
 - Added it to README docs.
+
+### 19:02 CST - USDA-Derived Demo Dataset Started
+
+Reason:
+
+- User emphasized again that the site should use the existing local product database to power richer demo interaction.
+- The earlier demo used only a small handwritten sample set, which was acceptable for a waterline approval site but weaker for a credible real content-site direction.
+
+Change:
+
+- Added `scripts/build_usda_demo_products.py`.
+- Generated `lib/usdaDemoProducts.json` from `/home/astalos/usda_food_pipeline/outputs/mvp_hard_filter_nutrition_v0_1.csv`.
+- Updated `/tools/food-comparison-demo/` to read the static USDA-derived JSON dataset.
+- Added product search and expanded category filtering.
+
+Boundary:
+
+- Static frontend-only dataset.
+- No backend.
+- No live retailer inventory.
+- No affiliate links.
+- No modification to source USDA CSVs.
+
+### 19:13 CST - USDA Demo Dataset Added To Static QA
+
+Reason:
+
+- The richer USDA-derived demo dataset is now a strategic website feature.
+- Future edits should not accidentally remove product search or collapse the demo back to a tiny hand-authored sample set.
+
+Change:
+
+- Updated `scripts/check_static_site.js`.
+
+Static QA now checks:
+
+- USDA-derived product search exists.
+- The static demo exposes the 80-product USDA FDC sample dataset count.
