@@ -624,3 +624,16 @@ Static QA now checks:
 
 - USDA-derived product search exists.
 - The static demo exposes the 80-product USDA FDC sample dataset count.
+
+### 19:23 CST - USDA Demo Selection Logic Hardened
+
+Reason:
+
+- The new demo uses real canonical product samples.
+- Real datasets can contain similar or duplicate descriptions, so product selection should not rely on display names.
+
+Change:
+
+- Updated demo selection state to use canonical product `id` instead of product name.
+- Added quick search buttons for common reviewer queries.
+- Expanded static QA to protect demo quick searches.

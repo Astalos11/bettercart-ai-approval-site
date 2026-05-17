@@ -207,6 +207,11 @@ function main() {
     if (!demoText.includes("search usda-derived sample products")) {
       interactionMisses.push("tools/food-comparison-demo/index.html missing USDA sample product search");
     }
+    for (const quickSearch of ["protein", "cereal", "chocolate", "juice"]) {
+      if (!demoText.includes(quickSearch)) {
+        interactionMisses.push(`tools/food-comparison-demo/index.html missing quick search ${quickSearch}`);
+      }
+    }
     if (!demoText.includes("80") || !demoText.includes("static usda fdc sample products")) {
       disclosureMisses.push("tools/food-comparison-demo/index.html missing 80-product USDA sample dataset count");
     }

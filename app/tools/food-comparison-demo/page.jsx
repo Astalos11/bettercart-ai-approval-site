@@ -13,7 +13,8 @@ const intents = [
 ];
 
 const categories = ["all", ...Array.from(new Set(demoProducts.map((product) => product.category)))];
-const defaultSelectedNames = demoProducts.slice(0, 2).map((product) => product.name);
+const defaultSelectedIds = demoProducts.slice(0, 2).map((product) => product.id);
+const quickSearches = ["protein", "cereal", "chocolate", "juice", "salsa", "bar"];
 
 function getFit(product, intent) {
   if (intent === "low_sugar") {
@@ -91,7 +92,7 @@ export default function DemoPage() {
   const [intent, setIntent] = useState("low_sugar");
   const [category, setCategory] = useState("all");
   const [query, setQuery] = useState("");
-  const [selectedNames, setSelectedNames] = useState(defaultSelectedNames);
+  const [selectedIds, setSelectedIds] = useState(defaultSelectedIds);
   const sortedProducts = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
     return demoProducts.filter((product) => {
@@ -110,22 +111,22 @@ export default function DemoPage() {
     });
   }, [intent, category, query]);
   const selectedProducts = useMemo(() => {
-    return demoProducts.filter((product) => selectedNames.includes(product.name));
-  }, [selectedNames]);
+    return demoProducts.filter((product) => selectedIds.includes(product.id));
+  }, [selectedIds]);
   const topProduct = sortedProducts[0];
   const selectedLowestSugar = findByMetric(selectedProducts, "totalSugar", "min");
   const selectedHighestProtein = findByMetric(selectedProducts, "protein", "max");
   const selectedLowestSodium = findByMetric(selectedProducts, "sodium", "min");
 
-  function toggleSelected(productName) {
-    setSelectedNames((current) => {
-      if (current.includes(productName)) {
-        return current.filter((name) => name !== productName);
+  function toggleSelected(productId) {
+    setSelectedIds((current) => {
+      if (current.includes(productId)) {
+        return current.filter((id) => id !== productId);
       }
       if (current.length >= 3) {
-        return [current[1], current[2], productName];
+        return [current[1], current[2], productId];
       }
-      return [...current, productName];
+      return [...current, productId];
     });
   }
 
@@ -198,6 +199,21 @@ export default function DemoPage() {
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Try cereal, bar, chocolate, salsa, juice, protein"
           />
+          <div className="quick-searches" aria-label="Quick demo searches">
+            {quickSearches.map((term) => (
+              <button
+                key={term}
+                type="button"
+                className={query.toLowerCase() === term ? "active" : ""}
+                onClick={() => setQuery(term)}
+              >
+                {term}
+              </button>
+            ))}
+            {query ? (
+              <button type="button" onClick={() => setQuery("")}>clear</button>
+            ) : null}
+          </div>
           <span>{sortedProducts.length} visible out of {usdaDemoProducts.count} static USDA FDC sample products.</span>
         </div>
 
@@ -301,7 +317,7 @@ export default function DemoPage() {
             <button
               className="button secondary"
               type="button"
-              onClick={() => setSelectedNames(defaultSelectedNames)}
+              onClick={() => setSelectedIds(defaultSelectedIds)}
             >
               Reset selection
             </button>
@@ -326,7 +342,7 @@ export default function DemoPage() {
         <div className="grid three" style={{ marginTop: 22 }}>
           {sortedProducts.map((product) => {
             const fit = getFit(product, intent);
-            const isSelected = selectedNames.includes(product.name);
+            const isSelected = selectedIds.includes(product.id);
             return (
               <div className="card" key={product.name}>
                 <span className={`badge ${fit === "Better fit" ? "green" : fit === "Moderate fit" ? "blue" : "orange"}`}>
@@ -359,7 +375,7 @@ export default function DemoPage() {
                   className={`button ${isSelected ? "" : "secondary"}`}
                   type="button"
                   aria-pressed={isSelected}
-                  onClick={() => toggleSelected(product.name)}
+                  onClick={() => toggleSelected(product.id)}
                 >
                   {isSelected ? "Selected" : "Add to compare"}
                 </button>
