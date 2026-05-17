@@ -128,6 +128,7 @@ Affiliate application baseline:
 
 - `docs/20260515_launch_and_affiliate_application_checklist.md`
 - `docs/20260516_affiliate_application_submission_draft.md`
+- `docs/20260517_affiliate_application_submission_copy_v2.md`
 - `docs/20260515_current_site_snapshot.md`
 - `docs/20260515_boss_site_status_summary_cn.md`
 - `docs/20260515_affiliate_application_notes.md`

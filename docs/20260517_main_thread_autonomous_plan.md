@@ -507,3 +507,25 @@ Change:
 - Added `scripts/create_export_zip.py`.
 - Added `npm run build:zip`.
 - Updated README and Alibaba OSS deployment runbook to use the command.
+
+### 18:04 CST - Application Submission Copy v2 Added
+
+Reason:
+
+- The previous submission draft was useful, but the project strategy has tightened around transparent sample data, no fake partnership claims, and affiliate links as commerce paths rather than food evidence.
+- Tomorrow's Awin / FlexOffers application should use concise, consistent wording.
+
+Change:
+
+- Added `docs/20260517_affiliate_application_submission_copy_v2.md`.
+- Added it to README docs.
+
+Focus:
+
+- Website URL and contact email.
+- Short / long publisher description.
+- Promotional methods.
+- New-site traffic note.
+- Data / product coverage note.
+- Awin / FlexOffers-specific snippets.
+- Claims to avoid.
