@@ -434,3 +434,14 @@ Fields included:
 - UPC / GTIN / SKU / MPN / brand / category availability
 - comparison-content policy flags
 - MVP usefulness label
+
+### 17:05 CST - Docs Index QA Expanded Beyond Markdown
+
+Reason:
+
+- README now references a tracker CSV under `docs/`.
+- The docs-index check should validate all backticked `docs/*` references, not only `.md` files.
+
+Change:
+
+- Updated `scripts/check_docs_index.js` to validate any README `docs/*` reference.
