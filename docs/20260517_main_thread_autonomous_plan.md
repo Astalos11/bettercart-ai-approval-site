@@ -772,3 +772,15 @@ Boundary:
 
 - Capturing an idea does not force immediate implementation.
 - Ideas should be revisited during planning, shutdown, or task selection.
+
+### 21:13 CST - Evening Change Summary Added
+
+Reason:
+
+- The session has produced many commits and docs.
+- A concise Chinese summary helps tomorrow's human review without reading the whole work log.
+
+Change:
+
+- Added `docs/20260517_evening_change_summary_cn.md`.
+- Added it to README docs.

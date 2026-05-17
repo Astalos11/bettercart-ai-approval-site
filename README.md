@@ -178,6 +178,7 @@ Affiliate application baseline:
 - `docs/20260517_affiliate_advertiser_seed_list_notes.md`
 - `docs/20260517_affiliate_comparison_content_policy.md`
 - `docs/20260517_boss_affiliate_application_summary_cn.md`
+- `docs/20260517_evening_change_summary_cn.md`
 
 ## Important Pages
 
