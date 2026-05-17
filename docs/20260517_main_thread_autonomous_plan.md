@@ -235,3 +235,25 @@ Content:
 - Autonomous work loop.
 - Documentation and commit rules.
 - Website / affiliate and data experiment rules.
+
+### 15:05 CST - Awin Application Runbook Added
+
+Reason:
+
+- "Register Awin tomorrow" should be an executable checklist, not a vague next step.
+
+Change:
+
+- Added `docs/20260517_awin_application_runbook.md`.
+- Added it to README docs.
+
+Contents:
+
+- Exact website URL and contact email.
+- Short / long description copy.
+- Promotional methods wording.
+- Reviewer URLs.
+- Claims to avoid.
+- Network approval checklist.
+- Post-approval advertiser/feed inspection checklist.
+- Fallback if declined.
