@@ -379,3 +379,22 @@ Note:
 
 - Current Awin FAQ describes a small `1 EUR/GBP/USD` or `$1` deposit used for compliance / identity checks and credited back after the first payment threshold.
 - Older Awin materials mention a higher deposit, so the applicant should follow the current signup screen.
+
+### 16:32 CST - Boss-Facing Affiliate Summary Added
+
+Reason:
+
+- The research and website readiness work now spans many docs.
+- A boss-facing summary should state the practical decision: the site is ready enough to test, but real MVP feasibility depends on advertiser approval and feed field quality.
+
+Change:
+
+- Added `docs/20260517_boss_affiliate_application_summary_cn.md`.
+- Added it to README docs.
+
+Main points:
+
+- `https://www.bettercartai.com` is ready enough for Awin / FlexOffers application attempts.
+- Network approval is only gate one; advertiser approval, feed access, and field usefulness remain separate gates.
+- MVP needs roughly `3-5` useful commerce surfaces minimum, with `8-15` as a stronger early target.
+- Affiliate feeds should be treated as commerce / identity seeds, not nutrition evidence.
