@@ -215,3 +215,23 @@ Expected value:
 
 - Faster reviewer understanding.
 - Less ambiguity during Awin / FlexOffers review.
+
+### 14:52 CST - Main Thread AI Workflow Documented
+
+Reason:
+
+- User explicitly wants global project and AI workflow cognition, not only website edits.
+- The project needs a durable convention for long-running autonomous Main Thread sessions.
+
+Change:
+
+- Added `/home/astalos/usda_food_pipeline/project_ops/conventions/main_thread_ai_workflow.md`.
+- Added a reference to it in `/home/astalos/usda_food_pipeline/AGENTS.md`.
+
+Content:
+
+- Human / ChatGPT / Codex / repo-docs workflow.
+- Main Thread vs specialized thread responsibilities.
+- Autonomous work loop.
+- Documentation and commit rules.
+- Website / affiliate and data experiment rules.
