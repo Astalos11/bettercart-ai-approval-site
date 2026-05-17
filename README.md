@@ -125,6 +125,8 @@ Affiliate application baseline:
 - `docs/20260516_autonomous_visual_evolution_run_report.md`
 - `docs/20260516_final_pre_application_audit.md`
 - `docs/20260516_shutdown_summary.md`
+- `docs/20260517_main_thread_autonomous_plan.md`
+- `docs/20260517_affiliate_approval_reality_check.md`
 
 ## Important Pages
 

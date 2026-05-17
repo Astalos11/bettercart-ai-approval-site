@@ -66,6 +66,16 @@ function getIntentExplanation(product, intent) {
   return `This view is intentionally conservative: it combines sugar, sodium, calories, and protein instead of declaring one universal winner.`;
 }
 
+function getEvidenceRows(product) {
+  if (!product) return [];
+  return [
+    ["Product evidence", product.source, "Static USDA-derived sample used for demo context."],
+    ["Nutrition fields", `${product.calories} kcal, ${product.totalSugar}g sugar, ${product.protein}g protein, ${product.sodium}mg sodium`, "Rounded serving-level display values."],
+    ["Commerce link", "Not active", "No affiliate URL, live price, or retailer inventory is used in this demo."],
+    ["Review status", "Sample only", "A production flow would verify current labels and retailer page details before linking."]
+  ];
+}
+
 function barWidth(value, max) {
   return `${Math.max(4, Math.min(100, Math.round((value / max) * 100)))}%`;
 }
@@ -202,6 +212,27 @@ export default function DemoPage() {
           <div className="reason-card" aria-live="polite">
             <strong>Why the demo ranked this sample first</strong>
             <p>{getIntentExplanation(topProduct, intent)}</p>
+          </div>
+        ) : null}
+
+        {topProduct ? (
+          <div className="evidence-panel" aria-label="Current sample evidence profile">
+            <div>
+              <div className="eyebrow">Evidence profile</div>
+              <h2>{topProduct.name}</h2>
+              <p>
+                The demo separates label evidence from future commerce links. This is the same boundary a production affiliate flow needs before ranking or linking products.
+              </p>
+            </div>
+            <div className="evidence-grid">
+              {getEvidenceRows(topProduct).map(([layer, value, note]) => (
+                <div className="evidence-row" key={layer}>
+                  <strong>{layer}</strong>
+                  <span>{value}</span>
+                  <small>{note}</small>
+                </div>
+              ))}
+            </div>
           </div>
         ) : null}
 
