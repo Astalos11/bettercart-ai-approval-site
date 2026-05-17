@@ -91,6 +91,7 @@ Before submitting:
 - `robots.txt` and `sitemap.xml` are live.
 - Homepage does not show under-construction language.
 - Application description matches the site content.
+- Payment method is ready for Awin's small publisher joining deposit. Current Awin FAQ describes a `1 EUR/GBP/USD` or `$1` deposit used for compliance / identity checks and credited back to the publisher account after the first payment threshold. Older Awin materials mention a higher deposit, so follow the current signup screen.
 
 ## After Awin Approval
 

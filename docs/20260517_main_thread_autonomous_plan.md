@@ -363,3 +363,19 @@ Wording change:
 
 - Comparison language should stay factual, evidence-based, and focused on shopping-intent fit.
 - Program compliance now explicitly avoids brand-disparaging language such as `worst`, `dangerous`, or `avoid this brand`.
+
+### 16:18 CST - Awin Payment Readiness Note Added
+
+Reason:
+
+- Awin application can be blocked by a small publisher joining deposit / payment step.
+- This is not a website feature, but it is part of application readiness.
+
+Change:
+
+- Updated `docs/20260517_awin_application_runbook.md`.
+
+Note:
+
+- Current Awin FAQ describes a small `1 EUR/GBP/USD` or `$1` deposit used for compliance / identity checks and credited back after the first payment threshold.
+- Older Awin materials mention a higher deposit, so the applicant should follow the current signup screen.
