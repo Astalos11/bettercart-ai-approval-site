@@ -5,7 +5,7 @@ Date: 2026-05-17
 Upload package content baseline:
 
 ```text
-a83bccd
+5d762f7
 ```
 
 Later docs-only commits may advance the GitHub repo without changing the uploaded static site package.

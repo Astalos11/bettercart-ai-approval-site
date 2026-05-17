@@ -699,7 +699,7 @@ Change:
 
 Current package:
 
-- package content baseline commit `a83bccd`
+- package content baseline commit `5d762f7`
 - `approval-site-out.zip`
 - size about `1005K`
 
