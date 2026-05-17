@@ -154,12 +154,20 @@ export default function DemoPage() {
             <div className="chip-row">
               <span className="chip">intent controls</span>
               <span className="chip">category filter</span>
+              <span className="chip">product search</span>
               <span className="chip">up to 3 selected products</span>
             </div>
             <p>
               This keeps the demo visual and reviewer-friendly while avoiding fake retailer inventory or undisclosed paid placement.
             </p>
           </div>
+        </div>
+
+        <div className="stats-row" aria-label="USDA demo dataset snapshot">
+          <div><strong>{usdaDemoProducts.count}</strong><span>USDA-derived samples</span></div>
+          <div><strong>{categories.length - 1}</strong><span>demo categories</span></div>
+          <div><strong>0</strong><span>live affiliate links</span></div>
+          <div><strong>0</strong><span>retailer inventory calls</span></div>
         </div>
 
         <div className="demo-controls" aria-label="Choose a shopping intent">

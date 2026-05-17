@@ -207,6 +207,9 @@ function main() {
     if (!demoText.includes("search usda-derived sample products")) {
       interactionMisses.push("tools/food-comparison-demo/index.html missing USDA sample product search");
     }
+    if (!demoText.includes("usda-derived samples") || !demoText.includes("retailer inventory calls")) {
+      disclosureMisses.push("tools/food-comparison-demo/index.html missing USDA dataset snapshot");
+    }
     for (const quickSearch of ["protein", "cereal", "chocolate", "juice"]) {
       if (!demoText.includes(quickSearch)) {
         interactionMisses.push(`tools/food-comparison-demo/index.html missing quick search ${quickSearch}`);

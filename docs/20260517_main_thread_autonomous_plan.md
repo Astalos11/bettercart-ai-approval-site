@@ -637,3 +637,15 @@ Change:
 - Updated demo selection state to use canonical product `id` instead of product name.
 - Added quick search buttons for common reviewer queries.
 - Expanded static QA to protect demo quick searches.
+
+### 19:34 CST - USDA Demo Dataset Snapshot Added
+
+Reason:
+
+- The demo should communicate at a glance that it now uses a meaningful static USDA-derived sample set.
+- It should also keep the no-affiliate-link and no-retailer-inventory boundaries visible.
+
+Change:
+
+- Added dataset stats to `/tools/food-comparison-demo/`.
+- Updated static QA to protect the dataset snapshot.
