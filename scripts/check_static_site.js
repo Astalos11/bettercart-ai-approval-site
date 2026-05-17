@@ -214,6 +214,22 @@ function main() {
     }
   }
 
+  const publisherKitPath = path.join(outDir, "publisher-kit", "index.html");
+  if (fs.existsSync(publisherKitPath)) {
+    const publisherText = fs.readFileSync(publisherKitPath, "utf8").toLowerCase();
+    for (const phrase of [
+      "https://www.bettercartai.com",
+      "contact@bettercartai.com",
+      "content publisher",
+      "no live affiliate links",
+      "sample data"
+    ]) {
+      if (!publisherText.includes(phrase)) {
+        disclosureMisses.push(`publisher-kit/index.html missing ${phrase}`);
+      }
+    }
+  }
+
   const homePath = path.join(outDir, "index.html");
   if (fs.existsSync(homePath)) {
     const homeText = fs.readFileSync(homePath, "utf8");

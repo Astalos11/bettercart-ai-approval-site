@@ -546,3 +546,14 @@ Boundary:
 
 - No new claims were introduced.
 - The panel repeats existing application-readiness facts and keeps `No live affiliate links` visible.
+
+### 18:33 CST - Publisher Kit Facts Added To Static QA
+
+Reason:
+
+- The publisher facts panel contains application-critical text.
+- Future edits should not accidentally remove the public URL, contact email, publisher type, no-live-affiliate-links status, or sample-data boundary.
+
+Change:
+
+- Updated `scripts/check_static_site.js`.
