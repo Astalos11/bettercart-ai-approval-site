@@ -462,3 +462,22 @@ Core rule:
 
 - `approval-site-out.zip` must contain `index.html`, `_next/`, and route folders at zip root.
 - It must not contain `out/index.html`.
+
+### 17:31 CST - Affiliate Feed Source Notes Added
+
+Reason:
+
+- Current strategy depends on public claims about feed fields, merchant access, and network behavior.
+- These should be preserved as source notes rather than left as unsourced memory.
+
+Change:
+
+- Added `docs/20260517_affiliate_feed_access_source_notes.md`.
+- Added it to README docs.
+
+Sources summarized:
+
+- FlexOffers data feed subscriptions and Product Files.
+- Awin public food / nutrition-adjacent program examples.
+- Skimlinks merchant / publisher approval model.
+- ShareASale datafeed context.
