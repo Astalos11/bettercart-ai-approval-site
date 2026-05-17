@@ -297,3 +297,35 @@ Use:
 - Track advertiser applications.
 - Track feed fields such as UPC / GTIN / SKU / MPN / price / product URL.
 - Label each advertiser/feed as useful, partial, or not useful now.
+
+### 15:38 CST - Global Affiliate Coverage Decision Added
+
+Reason:
+
+- The MVP threshold should be recorded in project_ops, not only in website docs.
+
+Change:
+
+- Added `/home/astalos/usda_food_pipeline/project_ops/decisions/2026-05-17-affiliate-coverage-threshold.md`.
+
+Decision:
+
+- Minimum useful threshold: 3-5 approved commerce surfaces.
+- Stronger early target: 8-15 useful advertisers / merchants.
+- Do not build generalized feed ingestion before inspecting real approved feed fields.
+
+### 15:44 CST - Demo Evidence Boundary Added To QA
+
+Reason:
+
+- The demo evidence profile is strategically important for reviewer trust.
+- Future edits should not accidentally remove the separation between label evidence and commerce links.
+
+Change:
+
+- Updated `scripts/check_static_site.js`.
+
+New checks:
+
+- demo page must include `evidence profile`.
+- demo page must include `commerce link` boundary language.

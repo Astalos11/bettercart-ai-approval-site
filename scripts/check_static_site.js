@@ -198,6 +198,12 @@ function main() {
     if (!demoText.includes("reset selection")) {
       interactionMisses.push("tools/food-comparison-demo/index.html missing reset selection control");
     }
+    if (!demoText.includes("evidence profile")) {
+      disclosureMisses.push("tools/food-comparison-demo/index.html missing evidence profile");
+    }
+    if (!demoText.includes("commerce link")) {
+      disclosureMisses.push("tools/food-comparison-demo/index.html missing commerce link boundary");
+    }
   }
 
   const contactPath = path.join(outDir, "contact", "index.html");
