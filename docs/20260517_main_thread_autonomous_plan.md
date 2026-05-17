@@ -348,3 +348,18 @@ Policy:
 - Avoid `bad / unhealthy / worst / avoid this brand`.
 - Avoid strong purchase CTAs beside poor-fit signals unless advertiser terms allow.
 - Track advertiser flags such as `allows_comparative_content`, `no_disparagement_clause`, and `requires_preapproval`.
+
+### 16:05 CST - Public Partner / Compliance Pages Aligned
+
+Reason:
+
+- The public trust pages should match the new affiliate comparison content policy.
+
+Change:
+
+- Updated `lib/content.js` for `partner-policy` and `program-compliance`.
+
+Wording change:
+
+- Comparison language should stay factual, evidence-based, and focused on shopping-intent fit.
+- Program compliance now explicitly avoids brand-disparaging language such as `worst`, `dangerous`, or `avoid this brand`.
