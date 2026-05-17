@@ -329,3 +329,22 @@ New checks:
 
 - demo page must include `evidence profile`.
 - demo page must include `commerce link` boundary language.
+
+### 15:57 CST - Affiliate Comparison Content Policy Added
+
+Reason:
+
+- The product may eventually compare products unfavorably, which creates advertiser / affiliate terms risk.
+- The site and future product need a reusable language boundary.
+
+Change:
+
+- Added `docs/20260517_affiliate_comparison_content_policy.md`.
+- Added it to README docs.
+
+Policy:
+
+- Use `fit / not a strong fit / tradeoff / evidence flag`.
+- Avoid `bad / unhealthy / worst / avoid this brand`.
+- Avoid strong purchase CTAs beside poor-fit signals unless advertiser terms allow.
+- Track advertiser flags such as `allows_comparative_content`, `no_disparagement_clause`, and `requires_preapproval`.

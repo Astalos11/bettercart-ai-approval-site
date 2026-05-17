@@ -130,6 +130,7 @@ Affiliate application baseline:
 - `docs/20260517_affiliate_target_advertiser_matrix.md`
 - `docs/20260517_awin_application_runbook.md`
 - `docs/20260517_affiliate_application_tracker_template.md`
+- `docs/20260517_affiliate_comparison_content_policy.md`
 
 ## Important Pages
 
