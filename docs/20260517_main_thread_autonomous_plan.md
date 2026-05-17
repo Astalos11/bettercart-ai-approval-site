@@ -661,3 +661,44 @@ Change:
 
 - Added `npm run build:demo-data`.
 - Documented the source dataset and output JSON in README.
+
+### 19:58 CST - Affiliate Advertiser Seed List Added
+
+Reason:
+
+- User clarified that after network approval, the project should apply broadly to learn advertiser approval rate.
+- A seed list makes that operational rather than vague.
+
+Change:
+
+- Added `docs/20260517_affiliate_advertiser_seed_list.csv`.
+- Added `docs/20260517_affiliate_advertiser_seed_list_notes.md`.
+- Added both to README docs.
+
+Sources used:
+
+- Public FlexOffers iHerb affiliate program page.
+- Public Awin merchant profiles for nutrition / food-adjacent advertisers.
+- Public Skimlinks merchant / network pages.
+
+Boundary:
+
+- Seed advertisers are not current partners.
+- List is for application planning and approval-rate observation only.
+
+### 20:08 CST - Idea Capture Workflow Added
+
+Reason:
+
+- User clarified that useful thoughts are also valuable contributions, even when not immediately implemented.
+- Autonomous work should preserve these points so they can later become tasks, experiments, or decisions.
+
+Change:
+
+- Added idea-capture rule to website `AGENTS.md`.
+- Added global `project_ops/ideas/` backlog in the main project repo.
+
+Boundary:
+
+- Capturing an idea does not force immediate implementation.
+- Ideas should be revisited during planning, shutdown, or task selection.

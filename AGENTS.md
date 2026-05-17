@@ -27,6 +27,18 @@ Only stop before the time box ends if:
 
 If the current workstream is complete, choose the next highest-value improvement within scope and continue.
 
+## Idea Capture
+
+Valuable ideas are project contributions even when they are not immediately implemented.
+
+When a useful site, affiliate, product, data, or workflow idea appears:
+
+- record it in the main project ideas backlog when it affects the broader project
+- use `/home/astalos/usda_food_pipeline/project_ops/ideas/` for global ideas
+- include enough context to recover why the idea mattered
+- do not force immediate implementation if it would interrupt higher-priority work
+- revisit captured ideas during planning, shutdown, or when choosing the next task
+
 ## Current Scope
 
 This repo is the BetterCart AI affiliate approval / publisher website.
@@ -46,4 +58,3 @@ Do not add:
 - fake affiliate partnerships
 - medical or disease-treatment claims
 - live affiliate links unless explicitly provided and approved
-

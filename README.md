@@ -173,6 +173,8 @@ Affiliate application baseline:
 - `docs/20260517_awin_application_runbook.md`
 - `docs/20260517_affiliate_application_tracker_template.md`
 - `docs/20260517_affiliate_application_tracker.csv`
+- `docs/20260517_affiliate_advertiser_seed_list.csv`
+- `docs/20260517_affiliate_advertiser_seed_list_notes.md`
 - `docs/20260517_affiliate_comparison_content_policy.md`
 - `docs/20260517_boss_affiliate_application_summary_cn.md`
 
