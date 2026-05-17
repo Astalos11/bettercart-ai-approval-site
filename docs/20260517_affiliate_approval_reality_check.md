@@ -47,6 +47,8 @@ Observed behavior:
 - Publishers apply to individual advertiser programs after account setup.
 - Awin documents advertiser application review and common rejection reasons such as inaccessible sites, poor fit, or incomplete account descriptions.
 - Product feeds are available as a mechanism for deep links, product names, descriptions, prices, images, and vertical-specific fields.
+- Awin enhanced product feeds follow a Google-style product data specification where `gtin`, `mpn`, `brand`, product URL, image URL, price, availability, and product category can exist.
+- Older / accepted feed formats also expose fields such as EAN / UPC depending on advertiser feed quality.
 - Some advertisers may support easier approval / auto-join patterns, but this should not be assumed across food brands.
 
 Implication:
@@ -63,6 +65,7 @@ Observed behavior:
 - FlexOffers has many advertisers and publisher-facing feed tooling.
 - Data feed subscriptions are tied to approved affiliate programs.
 - FlexOffers exposes feed metadata such as advertiser, status, update time, and product count.
+- FlexOffers Product Files can include product pricing, image, UPC, SKU, MPN, and other product attributes.
 - Food / beverage / supplement merchants exist, but nutrition and ingredients should not be assumed as feed fields.
 
 Implication:
@@ -177,11 +180,11 @@ Expected affiliate feed strengths:
 - price / sale price
 - category
 - SKU
+- UPC / GTIN / MPN when the advertiser feed provides product identifiers
 - availability-ish feed status
 
 Expected weak or missing fields:
 
-- UPC / GTIN
 - ingredients
 - nutrition facts
 - serving size

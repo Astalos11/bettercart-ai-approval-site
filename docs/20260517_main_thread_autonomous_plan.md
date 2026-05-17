@@ -257,3 +257,24 @@ Contents:
 - Network approval checklist.
 - Post-approval advertiser/feed inspection checklist.
 - Fallback if declined.
+
+### 15:17 CST - Product Feed Identifier Evidence Strengthened
+
+Reason:
+
+- We need to know whether affiliate feeds are even plausible UPC seed sources.
+
+Additional evidence:
+
+- FlexOffers Product Files can include UPC, SKU, MPN, price, image, and product attributes.
+- Awin enhanced feeds can follow Google product spec and include `gtin`, `mpn`, `brand`, product links, images, price, availability, and category.
+
+Docs updated:
+
+- `docs/20260517_affiliate_approval_reality_check.md`
+- `docs/20260517_affiliate_target_advertiser_matrix.md`
+
+Conclusion:
+
+- The affiliate-feed UPC seed route is plausible.
+- It remains advertiser-dependent; real feed field inspection is mandatory before building import logic.

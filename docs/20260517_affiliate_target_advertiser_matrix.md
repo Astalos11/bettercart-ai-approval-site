@@ -179,6 +179,25 @@ For each approved advertiser / feed, record:
 - data usage restrictions
 - negative comparison / content restrictions
 
+## Identifier Reality Check
+
+Positive signal:
+
+- FlexOffers Product Files may contain UPC, SKU, MPN, price, image, and other product attributes.
+- Awin enhanced feeds may contain Google-style `gtin`, `mpn`, `brand`, product URLs, images, prices, and categories.
+
+Risk:
+
+- Field support does not mean every advertiser populates the field.
+- A feed can be technically available but sparse, stale, or missing identifiers.
+- UPC / GTIN fields may be absent for private label, bundles, multipacks, supplements, or imported products.
+
+Decision:
+
+```text
+Inspect real fields per approved advertiser before building import logic.
+```
+
 ## MVP Threshold
 
 Minimum:
