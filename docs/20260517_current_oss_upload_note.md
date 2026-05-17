@@ -2,11 +2,13 @@
 
 Date: 2026-05-17
 
-Current website repo commit:
+Upload package content baseline:
 
 ```text
-935432e
+a83bccd
 ```
+
+Later docs-only commits may advance the GitHub repo without changing the uploaded static site package.
 
 Current upload package:
 
@@ -83,4 +85,3 @@ Confirm the demo mentions:
 ```text
 80 static USDA FDC sample products
 ```
-
