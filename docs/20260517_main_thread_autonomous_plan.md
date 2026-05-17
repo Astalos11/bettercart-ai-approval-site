@@ -529,3 +529,20 @@ Focus:
 - Data / product coverage note.
 - Awin / FlexOffers-specific snippets.
 - Claims to avoid.
+
+### 18:25 CST - Publisher Kit Reviewer Facts Panel Added
+
+Reason:
+
+- The publisher kit had the right information, but reviewers still had to read paragraphs.
+- A compact facts panel makes the application URL, contact email, publisher type, link status, commerce model, and data boundary scannable.
+
+Change:
+
+- Updated `app/[page]/page.jsx`.
+- Updated `app/globals.css`.
+
+Boundary:
+
+- No new claims were introduced.
+- The panel repeats existing application-readiness facts and keeps `No live affiliate links` visible.

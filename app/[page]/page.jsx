@@ -97,6 +97,15 @@ const publisherSnapshot = [
   ["Current status", "No live affiliate links, no fake traffic claims, and no direct checkout."]
 ];
 
+const publisherFacts = [
+  ["Site URL", "https://www.bettercartai.com"],
+  ["Contact", "contact@bettercartai.com"],
+  ["Publisher type", "Content publisher / shopping guide / comparison site"],
+  ["Current links", "No live affiliate links"],
+  ["Commerce model", "Future disclosed editorial links only"],
+  ["Data boundary", "Sample data and USDA-derived demo examples are labeled"]
+];
+
 const dataSourceSnapshot = [
   ["Nutrition facts", "Used in demo", "Rounded USDA-derived sample examples for product experience only."],
   ["Ingredient lists", "Planned", "Used when reliable product labels or structured sources are available."],
@@ -166,20 +175,31 @@ export default function TrustPage({ params }) {
         ))
       )}
       {params.page === "publisher-kit" ? (
-        <div className="readiness-matrix" aria-label="Publisher application snapshot">
-          <div className="readiness-row head">
-            <span>Application area</span>
-            <span>Status</span>
-            <span>Reviewer note</span>
+        <>
+          <div className="publisher-facts" aria-label="Publisher application facts">
+            {publisherFacts.map(([label, value]) => (
+              <div key={label}>
+                <span>{label}</span>
+                <strong>{value}</strong>
+              </div>
+            ))}
           </div>
-          {publisherSnapshot.map(([area, note]) => (
-            <div className="readiness-row" key={area}>
-              <strong>{area}</strong>
-              <span className="badge green">Ready</span>
-              <span>{note}</span>
+
+          <div className="readiness-matrix" aria-label="Publisher application snapshot">
+            <div className="readiness-row head">
+              <span>Application area</span>
+              <span>Status</span>
+              <span>Reviewer note</span>
             </div>
-          ))}
-        </div>
+            {publisherSnapshot.map(([area, note]) => (
+              <div className="readiness-row" key={area}>
+                <strong>{area}</strong>
+                <span className="badge green">Ready</span>
+                <span>{note}</span>
+              </div>
+            ))}
+          </div>
+        </>
       ) : null}
       {params.page === "data-sources" ? (
         <div className="readiness-matrix" aria-label="Data source coverage snapshot">
