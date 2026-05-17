@@ -414,3 +414,23 @@ Checks:
 Change:
 
 - Regenerated `approval-site-out.zip` from inside `out/`, with no outer `out/` directory.
+
+### 16:58 CST - Affiliate Tracker CSV Added
+
+Reason:
+
+- The tracker template is useful as documentation, but actual Awin / FlexOffers work needs a fillable sheet.
+- The important evidence is advertiser approval, feed availability, field quality, and comparison-policy risk.
+
+Change:
+
+- Added `docs/20260517_affiliate_application_tracker.csv`.
+- Added it to README docs.
+
+Fields included:
+
+- network / advertiser / category / status
+- feed availability and field coverage
+- UPC / GTIN / SKU / MPN / brand / category availability
+- comparison-content policy flags
+- MVP usefulness label
