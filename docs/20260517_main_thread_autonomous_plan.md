@@ -398,3 +398,19 @@ Main points:
 - Network approval is only gate one; advertiser approval, feed access, and field usefulness remain separate gates.
 - MVP needs roughly `3-5` useful commerce surfaces minimum, with `8-15` as a stronger early target.
 - Affiliate feeds should be treated as commerce / identity seeds, not nutrition evidence.
+
+### 16:47 CST - Local / Live QA Passed And OSS Zip Refreshed
+
+Reason:
+
+- After documentation and application-readiness changes, the deploy package should not drift from the latest static export.
+- Alibaba OSS deployment remains manual, so the zip package needs to be correct even when live upload is not performed by Codex.
+
+Checks:
+
+- `npm run check:local` passed.
+- `npm run check:live` passed against `https://www.bettercartai.com`.
+
+Change:
+
+- Regenerated `approval-site-out.zip` from inside `out/`, with no outer `out/` directory.
